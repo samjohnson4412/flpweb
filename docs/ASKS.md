@@ -24,11 +24,11 @@ What's still needed, roughly in order of how much it unblocks.
    placeholder in `src/consts.ts`. The live site's Ch. 496 disclosure is missing
    both this and the toll-free number.
 5. ~~Legal name~~ — **RESOLVED**: `Florida Lantern Project, Inc.` Updated.
-6. ~~Sandra's title~~ — **RESOLVED**: board. **Follow-up: is there a current
-   treasurer to list?**
-7. **Story permissions** — Peter, Maria, and Amy (see [STORIES.md](STORIES.md))
-   were named at a private ticketed gala. Publishing them on the open web is a
-   different act. Get written sign-off, or use first name + initial.
+6. ~~Sandra's title~~ — **RESOLVED**: board. **No current treasurer** — this is
+   a governance gap sitting directly upstream of the "can't verify EIN" /
+   "needs state tax exempt" sponsorship rejections. See STRATEGY.md #1.
+7. ~~Story permissions~~ — **RESOLVED**: permission granted. Peter, Maria, and
+   Amy can be used by name.
 8. **Mayor Castor's endorsement** — recorded for the gala. Can it be used
    publicly, and is there a quotable line?
 
@@ -62,6 +62,16 @@ What's still needed, roughly in order of how much it unblocks.
 18. **Cutover plan** — build the whole site then switch DNS, or run in parallel
     on a subdomain first? (Recommend parallel on `new.floridalanternproject.org`,
     then switch.)
+
+## Newly raised by the data
+
+19. **Auction fulfilment** — 36 of 47 sold items have no confirmed delivery
+    ($2,846 worth); 4 are recorded as not fulfilled. Unrelated to the website but
+    more urgent than it. See STRATEGY.md #4.
+20. **How many Lantern Keepers did the gala produce?** Determines how hard the
+    whole site pushes recurring giving.
+21. **Form 990s and the IRS determination letter** — needed for the transparency
+    page. Do you have PDFs?
 
 ## Nice to have
 

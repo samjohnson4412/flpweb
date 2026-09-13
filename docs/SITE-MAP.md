@@ -14,6 +14,10 @@ has to translate "what I need" into "which menu item."
 /                         Home
 /about                    Story, mission, values, board, impact numbers
 /about/press              Media coverage (NBC Nightly News leads)
+/about/transparency       HIGHEST ROI — legal name, EIN, state registration,
+                          determination letter, 990s, board roles, impact
+                          numbers. See STRATEGY.md #1: procedural
+                          "can't verify" rejections are costing sponsorships.
 
 /help                     Get Help — hub, routed by timeline
   /help/prepare           Before: workshops, readiness kits, weather stations
