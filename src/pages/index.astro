@@ -9,6 +9,7 @@ import Story from '../components/Story.astro';
 import CallToAction from '../components/CallToAction.astro';
 import Figure from '../components/Figure.astro';
 import lightShow from '../assets/photos/light-show-crowd.jpg';
+import audience from '../assets/photos/light-show-audience.jpg';
 import { ORG } from '../consts';
 ---
 
@@ -95,6 +96,23 @@ import { ORG } from '../consts';
       caption="Sylvan Ramble Lights, South Tampa. On peak nights more than 500 people came."
     />
     <p class="more"><a href="/about">Our story &rarr;</a> &nbsp;·&nbsp; <a href="/about/press">Press coverage &rarr;</a></p>
+  </Section>
+
+  <Section tone="surface" title="The light show is coming back">
+    <p class="intro">
+      From 2015 to 2023 the Sylvan Ramble light show drew more than 20,000
+      neighbours to one South Tampa street. It's returning as
+      <strong>Lanterns of Hope</strong> — a holiday display where sponsored
+      lanterns fund storm recovery for Florida families.
+    </p>
+    <Figure
+      src={audience}
+      alt="A large crowd seated and standing on a lawn under oak trees, watching the light show at dusk."
+      caption="The audience it built. Lanterns of Hope starts from here."
+    />
+    <p class="more">
+      <a class="btn" href="/events/lanterns-of-hope">About Lanterns of Hope</a>
+    </p>
   </Section>
 
   <CallToAction title="Storms don't wait for fundraisers" href="/give/lantern-keeper" cta="Become a Lantern Keeper">

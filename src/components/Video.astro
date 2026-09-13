@@ -1,0 +1,71 @@
+---
+import type { Video } from '../data/videos';
+
+interface Props { video: Video; }
+const { video } = Astro.props;
+
+/**
+ * Facade embed: we render a poster and only load YouTube's iframe on click.
+ * A bare <iframe> pulls ~1 MB of third-party JS on page load and sets cookies
+ * before anyone has chosen to watch anything.
+ */
+const src = video.youtubeId
+  ? `https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1&rel=0`
+  : null;
+const poster = video.youtubeId
+  ? `https://i.ytimg.com/vi/${video.youtubeId}/maxresdefault.jpg`
+  : null;
+---
+
+{src && (
+  <figure class="video" data-reveal>
+    <div class="frame" data-video-embed data-src={src}>
+      <img src={poster} alt="" loading="lazy" decoding="async" />
+      <button type="button" aria-label={`Play: ${video.title}`}>
+        <svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true">
+          <path d="M66.5 7.7a8.6 8.6 0 0 0-6-6C55.3 0 34 0 34 0S12.7 0 7.5 1.7a8.6 8.6 0 0 0-6 6A89.6 89.6 0 0 0 0 24a89.6 89.6 0 0 0 1.5 16.3 8.6 8.6 0 0 0 6 6C12.7 48 34 48 34 48s21.3 0 26.5-1.7a8.6 8.6 0 0 0 6-6A89.6 89.6 0 0 0 68 24a89.6 89.6 0 0 0-1.5-16.3z" fill="#11112d" opacity="0.85"/>
+          <path d="M27 34V14l18 10z" fill="#fff"/>
+        </svg>
+      </button>
+    </div>
+    <figcaption><strong>{video.title}</strong> {video.description}</figcaption>
+  </figure>
+)}
+
+<style>
+  .video { margin: var(--space-md) 0 0; }
+  .frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--flp-navy-900);
+  }
+  .frame img { width: 100%; height: 100%; object-fit: cover; }
+  .frame button {
+    position: absolute; inset: 0;
+    display: grid; place-items: center;
+    background: none; border: 0; cursor: pointer; padding: 0;
+  }
+  .frame button svg { transition: transform var(--dur-fast) var(--ease-out); }
+  .frame button:hover svg { transform: scale(1.08); }
+  .frame :global(iframe) { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  figcaption { margin-top: 0.6rem; font-size: var(--step--1); color: var(--color-text-muted); max-width: var(--measure); }
+  figcaption strong { display: block; color: var(--color-text); font-family: var(--font-display); }
+  @media (prefers-reduced-motion: reduce) { .frame button:hover svg { transform: none; } }
+</style>
+
+<script is:inline>
+  document.querySelectorAll('[data-video-embed]').forEach(function (frame) {
+    if (frame.dataset.wired) return;
+    frame.dataset.wired = '1';
+    frame.querySelector('button').addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = frame.dataset.src;
+      f.title = 'Video player';
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture';
+      f.allowFullscreen = true;
+      frame.replaceChildren(f);
+    });
+  });
+</script>

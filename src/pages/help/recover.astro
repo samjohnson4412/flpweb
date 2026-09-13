@@ -6,6 +6,10 @@ import Grid from '../../components/Grid.astro';
 import Card from '../../components/Card.astro';
 import Story from '../../components/Story.astro';
 import CallToAction from '../../components/CallToAction.astro';
+import Figure from '../../components/Figure.astro';
+import roof from '../../assets/photos/roof-inspection-drone.jpg';
+import Video from '../../components/Video.astro';
+import { VIDEOS } from '../../data/videos';
 ---
 <BaseLayout
   title="After a Storm"
@@ -77,6 +81,7 @@ import CallToAction from '../../components/CallToAction.astro';
         the inspection.
       </p>
     </Story>
+    <Video video={VIDEOS.roofs} />
   </Section>
 
   <CallToAction title="Storm damage to document?" href="/help/request" cta="Request an inspection">

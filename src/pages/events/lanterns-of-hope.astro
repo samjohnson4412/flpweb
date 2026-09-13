@@ -4,6 +4,7 @@ import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
 import Figure from '../../components/Figure.astro';
 import lightShow from '../../assets/photos/light-show-crowd.jpg';
+import audience from '../../assets/photos/light-show-audience.jpg';
 import { ORG } from '../../consts';
 ---
 <BaseLayout
@@ -42,6 +43,14 @@ import { ORG } from '../../consts';
       Where Love Grows, who received $9,014.45 toward fighting child hunger.
     </p>
     <p><a href="/about/press">The press coverage &rarr;</a></p>
+  </Section>
+
+  <Section title="The audience it built">
+    <Figure
+      src={audience}
+      alt="A large crowd seated and standing on a lawn under oak trees, watching the light show at dusk."
+      caption="Families arrived early and stayed. This is the audience Lanterns of Hope starts from."
+    />
   </Section>
 
   <Section tone="surface" title="What people said">

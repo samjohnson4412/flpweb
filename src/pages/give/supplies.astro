@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
+import Figure from '../../components/Figure.astro';
+import truck from '../../assets/photos/supply-truck.jpg';
 import { ORG } from '../../consts';
 ---
 <BaseLayout
@@ -42,6 +44,12 @@ import { ORG } from '../../consts';
       it — supplies collected in September are already where they need to be when
       a storm forms in October.
     </p>
+    <Figure
+      src={truck}
+      alt="The inside of a box truck packed with donated furniture, boxes and household supplies."
+      caption="A single drive, loaded. This is what a church car park produces in an afternoon."
+      ratio="3 / 4"
+    />
     <p><a class="btn" href={`mailto:${ORG.email}?subject=Hosting%20a%20supply%20drive`}>Set up a drive</a></p>
   </Section>
 

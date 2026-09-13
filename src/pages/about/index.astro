@@ -4,6 +4,8 @@ import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
 import Stats from '../../components/Stats.astro';
 import { BOARD } from '../../consts';
+import Video from '../../components/Video.astro';
+import { VIDEOS } from '../../data/videos';
 
 const VALUES = [
   { name: 'Family-Centered Support', body: 'Every decision prioritizes the well-being and stability of families affected by disaster — which in practice usually means counting the pets too.' },
@@ -60,6 +62,7 @@ const VALUES = [
       <a href="/response">response pages</a>.
     </p>
     <Stats />
+    <Video video={VIDEOS.mayor} />
   </Section>
 
   <Section title="Mission and vision">

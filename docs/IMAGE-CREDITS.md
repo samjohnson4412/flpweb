@@ -10,10 +10,35 @@ Every image shipped in this repo is listed here with its source and licence.
 | --- | --- | --- | --- |
 | `src/assets/photos/light-show-crowd.jpg` | FLP, Google Drive `FLP Media/LightShow/IMG_7822.jpeg` | Owned by FLP | Sylvan Ramble Lights, South Tampa. Crowd on a public street at a public event. |
 | `src/assets/photos/mobile-connectivity.jpg` | FLP, Google Drive `FLP Media/Roof Inspections/IMG_2337.jpeg` | Owned by FLP | Satellite uplink on a vehicle roof rack. No identifiable people. |
+| `src/assets/photos/roof-inspection-drone.jpg` | FLP, Drive `flp/roof1.jpeg` | Owned by FLP | Overhead drone survey of a damaged tile roof. No people. |
+| `src/assets/photos/supply-truck.jpg` | FLP, Drive `flp/IMG_1006.jpeg` | Owned by FLP | Box truck loaded from a supply drive. No people. |
+| `src/assets/photos/light-show-audience.jpg` | FLP, Drive `flp/IMG_2885.jpeg` | Owned by FLP | Light show crowd, public event. |
+| `src/assets/photos/storm-briefing.jpg` | FLP, Drive `flp/75AB121E-....jpeg` | Owned by FLP | FLP's own briefing graphic over a surge forecast map. |
 | `public/brand/logo-full-navy.png` | FLP, Google Drive `flp/Logo Blue (1).png` | Owned by FLP | Primary lockup. |
 | `public/brand/logo-full-white.png` | FLP, Google Drive `flp/Logo White (1).png` | Owned by FLP | Reversed lockup. |
 | `public/brand/icon-light.png`, `icon-dark.png` | Previous FLP website | Owned by FLP | Favicons, 64px. |
 | `public/brand/og-default.png` | Previous FLP website | Owned by FLP | Open Graph card. |
+
+All source files are capped at 2000px and re-encoded at quality 84; Astro
+generates the responsive sizes at build time. Don't commit 5 MB originals.
+
+## Video
+
+The three gala films are too large to ship from this repo — 464 MB, 354 MB and
+63 MB against a 25 MB per-file limit on Cloudflare static assets. Upload each
+to YouTube (unlisted is fine) and paste the ID into `src/data/videos.ts`. The
+`Video` component renders nothing until an id is present, so pages stay correct
+until then, and it uses a click-to-load facade so YouTube's scripts and cookies
+only load if someone actually presses play.
+
+| File in Drive `flp/` | Goes to | Key in videos.ts |
+| --- | --- | --- |
+| `2_The RoadToSafety.mp4` | `/response/milton-2024` | `roadToSafety` |
+| `3_Roofs.mp4` | `/help/recover` | `roofs` |
+| `5_Mayor.mp4` | `/about` | `mayor` |
+
+`1_` and `4_` from the gala running order (*From Lights to Lifelines* and
+*Guiding Families to Safety*) are not in the folder yet.
 
 ## Still worth pulling from Drive
 

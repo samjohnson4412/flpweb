@@ -11,10 +11,10 @@ export const ORG = {
   phone: '(813) 733-8806',
   phoneHref: '+18137338806',
   address: {
-    street: '4412 W Sylvan Ramble St.',
+    street: '6706 Camden Bay Dr, Ste 205',
     city: 'Tampa',
     region: 'FL',
-    postalCode: '33609',
+    postalCode: '33635',
     country: 'US',
   },
   social: {
@@ -48,6 +48,7 @@ export const BOARD = [
 export const NAV = [
   { href: '/help', label: 'Get Help' },
   { href: '/response', label: 'Our Response' },
+  { href: '/events', label: 'Events' },
   { href: '/about', label: 'About' },
   { href: '/give', label: 'Give' },
   { href: '/contact', label: 'Contact' },
@@ -81,12 +82,19 @@ export const FOOTER_NAV = [
     ],
   },
   {
+    heading: 'Events',
+    links: [
+      { href: '/events/lanterns-of-hope', label: 'Lanterns of Hope' },
+      { href: '/events/beacons-of-hope', label: 'Beacons of Hope gala' },
+      { href: '/sponsors', label: 'Our sponsors' },
+    ],
+  },
+  {
     heading: 'About',
     links: [
       { href: '/about', label: 'Our story' },
       { href: '/about/transparency', label: 'Transparency' },
       { href: '/about/press', label: 'Press' },
-      { href: '/sponsors', label: 'Our sponsors' },
       { href: '/news', label: 'News' },
     ],
   },
