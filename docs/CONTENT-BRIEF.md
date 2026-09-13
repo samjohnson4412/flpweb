@@ -34,18 +34,30 @@ Aly Foley (Secretary) · Sandra Jimenez (Board)
 - **2015** — Sam Johnson starts a computerized holiday light show at the Sylvan
   Ramble house. Grows into one of the largest in the Tampa area: 17,000+
   individually controllable lights (later described as 200,000+ channels),
-  flame effects, water, smoke, synced to music, ~20 minutes. Featured on
-  national news.
+  flame effects, water, smoke, synced to music, ~20 minutes. Covered by
+  **NBC Nightly News**, Fox 13, WFLA, ABC Action News, Bay News 9, and the
+  Tampa Bay Times — see [MEDIA.md](MEDIA.md).
 - **2021** — incorporated as Sylvan Ramble Lights, Inc.
 - Original mission: *"to support children and youth by providing funds and
   awareness to local initiatives through the joy of the holidays."* Ran Halloween
   and Christmas shows, silent auctions, and drives as fundraisers for **other**
   local nonprofits. 2023 focus was wardrobes and nutritious meals for Tampa Bay
-  kids. Raised ~$50,000 cumulatively.
-- **2023** — final season of the light show at the Sylvan Ramble location.
+  kids.
+- Cumulative light-show results: **$50,000 raised**, **20,000+ unique visitors**,
+  thousands each October and December, 500+ on peak nights. Beneficiaries
+  included Clothes To Kids ($9,000+ = 180 weekly wardrobes) and Where Love Grows
+  ($9,014.45).
+- **2023** — final season. The show outgrew a residential property; rather than
+  chase a larger venue the team chose to change the mission. (A neighbor
+  complaint also features in the Aug 2024 announcement — see the handling note
+  in [TESTIMONIALS.md](TESTIMONIALS.md). Recommend not carrying that framing
+  onto the site.)
 - **2024** — pivots to disaster relief after Hurricanes Helene and Milton.
-  Emergency shelter, transportation, cleanup support to **50+ families** in the
-  first year.
+  **50+ individuals and families** served **on no budget**, via hotel and
+  community partnerships: discounted Hilton rooms in Orlando ($68/night with
+  breakfast and parking), free eSIM phone plans, free roof and home inspections,
+  transportation, cleanup, and 100% pass-through financial aid.
+  Full timeline in [DISASTER-RESPONSE.md](DISASTER-RESPONSE.md).
 - **2025** — rebrands to Florida Lantern Project. June 7: *Beacons of Hope: A
   Culinary Journey Through Florida* gala (1001 N Florida Ave, Tampa) — raised
   $7,259 of a $50,000 goal from 49 supporters, with a silent auction.
@@ -87,16 +99,14 @@ Wawa, ZooTampa, The Florida Aquarium, MOSI, Chipotle, Crossroads Technology.
 6. **"Our Impact — Coming Soon!"** on the About page, directly beneath a
    paragraph containing the actual impact numbers.
 
+## Related documents
+
+- [PROGRAMS.md](PROGRAMS.md) — full service catalog, revenue model, budget, board
+- [DISASTER-RESPONSE.md](DISASTER-RESPONSE.md) — Helene & Milton, 2024
+- [MEDIA.md](MEDIA.md) — press coverage
+- [TESTIMONIALS.md](TESTIMONIALS.md) — quotes, with handling notes
+- [SITE-MAP.md](SITE-MAP.md) — proposed architecture
+
 ## Open questions
 
-- **OPEN** Florida charitable registration number (`CH#####`)?
-- **OPEN** Helene/Milton specifics — families served, counties, inspections
-  completed, photos. (Facebook blocks scraping; needs an export or a paste.)
-- **OPEN** Does the light show come back? Sam mentioned wanting to revive it.
-  If so it needs a home in the IA — its own section, or a program page?
-- **OPEN** Silent auction: stays on Givebutter, or does the site need its own
-  auction surface? Givebutter renders auctions client-side, so lots can't be
-  mirrored by scraping.
-- **OPEN** Which sponsor URL tree wins, and do redirects need to be preserved
-  for the retired one?
-- **OPEN** Newsletter — where does the signup currently post to?
+See `ASKS.md` for the current list.
