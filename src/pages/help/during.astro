@@ -7,6 +7,7 @@ import Card from '../../components/Card.astro';
 import Story from '../../components/Story.astro';
 import Figure from '../../components/Figure.astro';
 import connectivity from '../../assets/photos/mobile-connectivity.jpg';
+import gusts from '../../assets/photos/wind-gust-forecast.jpg';
 ---
 <BaseLayout
   title="During a Storm"
@@ -55,6 +56,14 @@ import connectivity from '../../assets/photos/mobile-connectivity.jpg';
         </p>
       </Card>
     </Grid>
+  </Section>
+
+  <Section title="What we're watching">
+    <Figure
+      src={gusts}
+      alt="A NOAA GFS model chart showing the maximum ten-metre wind gust swath across Florida for the next 108 hours, with the strongest core crossing the Gulf coast."
+      caption="Maximum wind gust swath, four days out from Milton. We read these so callers don't have to."
+    />
   </Section>
 
   <Section tone="surface" title="The questions we actually get">

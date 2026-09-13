@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
+import Figure from '../../components/Figure.astro';
+import boat from '../../assets/photos/storm-aftermath-boat.jpg';
 ---
 <BaseLayout
   title="Hurricane Helene, 2024"
@@ -42,6 +44,12 @@ import Section from '../../components/Section.astro';
   </Section>
 
   <Section tone="surface" title="What we did">
+    <Figure
+      src={boat}
+      alt="A sailboat driven ashore and left leaning across a coastal road at first light after the storm."
+      caption="What the surge left on the road. Boats move; so does everything else."
+      priority={true}
+    />
     <ul class="did">
       <li><strong>Direct financial assistance</strong> — 100% pass-through, no administrative deduction</li>
       <li><strong>Emergency shelter</strong> — through hotel partnerships negotiated in the days before landfall</li>

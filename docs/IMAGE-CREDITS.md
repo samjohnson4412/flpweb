@@ -14,6 +14,11 @@ Every image shipped in this repo is listed here with its source and licence.
 | `src/assets/photos/supply-truck.jpg` | FLP, Drive `flp/IMG_1006.jpeg` | Owned by FLP | Box truck loaded from a supply drive. No people. |
 | `src/assets/photos/light-show-audience.jpg` | FLP, Drive `flp/IMG_2885.jpeg` | Owned by FLP | Light show crowd, public event. |
 | `src/assets/photos/storm-briefing.jpg` | FLP, Drive `flp/75AB121E-....jpeg` | Owned by FLP | FLP's own briefing graphic over a surge forecast map. |
+| `src/assets/photos/storm-aftermath-boat.jpg` | FLP, Drive `flp/IMG_0878.jpeg` | Owned by FLP | Sailboat driven ashore. No people. |
+| `src/assets/photos/flood-damage-interior.jpg` | FLP, Drive `flp/IMG_0819.jpeg` | Owned by FLP | Storm-damaged garage interior. No people, no identifying detail. |
+| `src/assets/photos/donated-toys.jpg` | FLP, Drive `flp/IMG_1009.jpeg` | Owned by FLP | Box of donated toys. No people. |
+| `src/assets/photos/light-show-halloween.jpg` | FLP, Drive `flp/IMG_2886.jpeg` | Owned by FLP | The house under Halloween lighting. No people. |
+| `src/assets/photos/wind-gust-forecast.jpg` | NOAA GFS via weathermodels.com, screenshot in Drive `flp/` | US Government work, public domain | NOAA model output is not copyrightable (17 U.S.C. §105). Attributed in the caption. |
 | `public/brand/logo-full-navy.png` | FLP, Google Drive `flp/Logo Blue (1).png` | Owned by FLP | Primary lockup. |
 | `public/brand/logo-full-white.png` | FLP, Google Drive `flp/Logo White (1).png` | Owned by FLP | Reversed lockup. |
 | `public/brand/icon-light.png`, `icon-dark.png` | Previous FLP website | Owned by FLP | Favicons, 64px. |
@@ -62,6 +67,16 @@ All owned by FLP, all in `FLP Media`:
 - Any press photograph from the outlets listed in `docs/MEDIA.md`. Link to
   their coverage; never reproduce their images. This is exactly the category
   that produced the AP claim.
+
+## Reviewed and deliberately not used
+
+| File | Why |
+| --- | --- |
+| `flp/IMG_1043.jpeg` | **Two young children, faces clearly identifiable.** Needs written parental consent before it goes anywhere public. Strong photo; ask first. |
+| `flp/IMG_1044`, `IMG_1045`, `IMG_1047` | Screenshots of private thank-you messages from people FLP helped. No names shown, but they are private correspondence. Would be good content **if** the senders agree — worth asking, they are genuinely moving. |
+| `flp/IMG_0760.jpeg` | A screenshot of Sam's own Facebook post rather than a photograph. The drone images inside it are usable; the **FAA authorisation** it mentions is now stated on `/help/recover`. |
+| `flp/IMG_1625.jpeg` | Appears to be flight or route tracks across Florida. Unclear what it documents — ask Sam before publishing. |
+| `flp/IMG_1018.jpeg` | Volunteer driving, gloved hand on the wheel. Usable, just not needed yet. |
 
 ## People in photographs
 

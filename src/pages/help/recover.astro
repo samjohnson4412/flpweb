@@ -8,6 +8,8 @@ import Story from '../../components/Story.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import Figure from '../../components/Figure.astro';
 import roof from '../../assets/photos/roof-inspection-drone.jpg';
+import interior from '../../assets/photos/flood-damage-interior.jpg';
+import toys from '../../assets/photos/donated-toys.jpg';
 import Video from '../../components/Video.astro';
 import { VIDEOS } from '../../data/videos';
 ---
@@ -56,6 +58,20 @@ import { VIDEOS } from '../../data/videos';
         </p>
       </Card>
     </Grid>
+    <div class="pair-figs">
+      <Figure
+        src={interior}
+        alt="The inside of a storm-damaged garage: soaked debris across the floor, stained walls and a waterline above the skirting."
+        caption="Inside, after the water went down."
+        ratio="3 / 4"
+      />
+      <Figure
+        src={toys}
+        alt="A cardboard box filled with donated toys and building blocks, ready for distribution."
+        caption="Care packages go out with the cleanup crews. Children lose their things too."
+        ratio="3 / 4"
+      />
+    </div>
   </Section>
 
   <Section tone="surface" title="Maria's story">
@@ -89,3 +105,11 @@ import { VIDEOS } from '../../data/videos';
     else is better placed, we'll point you at them.
   </CallToAction>
 </BaseLayout>
+
+<style>
+  .pair-figs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+    gap: var(--space-md);
+  }
+</style>

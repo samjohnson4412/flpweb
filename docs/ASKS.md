@@ -93,6 +93,20 @@ What's still needed, roughly in order of how much it unblocks.
 24. **More photos** — see `docs/IMAGE-CREDITS.md` for the Drive folders worth
     pulling next, including `Mayor.mp4` and `PeterISO.mp3`.
 
+## From the photo review
+
+25. **Consent for `IMG_1043`** — two young children, faces clear. Needs written
+    parental permission before publication. It's a good photo; worth asking.
+26. **Consent for the thank-you texts** (`IMG_1044/1045/1047`) — messages from
+    people FLP helped: *"It's beautiful thank you so much I'm going to sleep so
+    well after today"*. No names visible. With permission these would be among
+    the most persuasive content on the site.
+27. **What is `IMG_1625`?** Looks like flight or route tracks across Florida. If
+    it's drone coverage or response routes, it's a good infographic.
+28. **FAA authorisation** — now stated on `/help/recover` based on Sam's own
+    Facebook post. Confirm the current wording (Part 107 certificate? a specific
+    waiver?) so the claim is precise.
+
 ## Nice to have
 
 17. Brand guide, if one exists — exact hex values, type scale, logo clear-space.
