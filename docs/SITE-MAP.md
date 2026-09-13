@@ -21,18 +21,18 @@ has to translate "what I need" into "which menu item."
   /help/recover           After: inspections, cleanup, repairs, aid navigation
   /help/request           Intake form (replaces "PM us on Facebook")
 
-/give                     Give — hub
-  /give/donate            → Givebutter
+/give                     Give — hub, the five gala calls to action
+  /give/lantern-keeper    PRIMARY — monthly giving program
+  /give/donate            One-time → Givebutter
   /give/sponsor           Corporate/business sponsorship
   /give/volunteer         Volunteer + ambassador program
-  /give/drive             Host a supply drive
+  /give/supplies          Donate supplies / host a drive / Amazon wishlist
+  /give/board             Board service inquiry
 
 /response                 Disaster Response — the archive that's missing today
   /response/helene-2024   Hurricane Helene
   /response/milton-2024   Hurricane Milton
-  /response/melissa-2025  Hurricane Melissa / Lanterns for Jamaica
-    /response/melissa-2025/adopt-a-school
-    /response/melissa-2025/host-a-drive
+  /response/melissa-2025  Hurricane Melissa (concluded — see note)
 
 /events                   Events — hub
   /events/beacons-of-hope Annual gala + silent auction (→ Givebutter)
@@ -71,14 +71,26 @@ names it. `/events/lanterns-of-hope` is where the 2015–2023 history lives too 
 the media coverage, the $50,000, the 20,000+ visitors. The archive and the
 revival share one home.
 
+**6. "Help In Jamaica" is no longer the primary CTA.** The Melissa campaign has
+wound down. The header CTA becomes **Become a Lantern Keeper** — the monthly
+giving program named in the gala script, with a donor match up to $5,000/year.
+Recurring revenue is the strategic priority; a concluded campaign in the top-
+right corner of every page is not.
+
+**7. Jamaica gets archived honestly, not deleted.** `/response/melissa-2025`
+keeps the campaign with a clear "this campaign has concluded" state and whatever
+was accomplished. The three current `/jamaica/*` URLs are live in printed
+material and social posts, so they redirect there rather than 404. Quietly
+deleting a campaign looks worse than closing one out.
+
 ## Redirects required
 
 | From | To |
 | --- | --- |
 | `/about/impact/<slug>` | `/sponsors/<slug>` |
 | `/jamaica` | `/response/melissa-2025` |
-| `/jamaica/adopt` | `/response/melissa-2025/adopt-a-school` |
-| `/jamaica/host` | `/response/melissa-2025/host-a-drive` |
+| `/jamaica/adopt` | `/response/melissa-2025` |
+| `/jamaica/host` | `/response/melissa-2025` |
 | `/blog/*` | `/news/*` |
 | `/gala/sponsors` | `/events/beacons-of-hope` |
 

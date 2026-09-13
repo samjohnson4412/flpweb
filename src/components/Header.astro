@@ -8,8 +8,7 @@ const isCurrent = (href: string) =>
 <header class="site-header">
   <div class="wrap bar">
     <a href="/" class="brand" aria-label={`${ORG.name} — home`}>
-      <img src="/brand/icon-light.png" alt="" width="32" height="32" />
-      <span>{ORG.name}</span>
+      <img src="/brand/logo-full-white.png" alt={ORG.name} width="1200" height="475" />
     </a>
 
     <nav aria-label="Main">
@@ -43,13 +42,11 @@ const isCurrent = (href: string) =>
     gap: var(--space-sm);
     padding-block: var(--space-sm);
   }
-  .brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-family: var(--font-display);
-    font-weight: 700;
-    text-decoration: none;
+  .brand { display: inline-flex; text-decoration: none; }
+  /* Lockup is 1200x475; cap by height so it scales predictably. */
+  .brand img { width: auto; height: 46px; }
+  @media (max-width: 600px) {
+    .brand img { height: 38px; }
   }
   nav ul {
     display: flex;

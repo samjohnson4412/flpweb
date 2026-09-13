@@ -1,7 +1,7 @@
 /** Organization facts, sourced from the live site + IRS/state filings. */
 export const ORG = {
   name: 'Florida Lantern Project',
-  legalName: 'Sylvan Ramble Lights, Inc.',
+  legalName: 'Florida Lantern Project, Inc.',
   tagline: 'No family should face disaster alone.',
   ein: '86-3574323',
   email: 'info@floridalanternproject.org',
@@ -36,5 +36,9 @@ export const NAV = [
   { href: '/contact', label: 'Contact' },
 ] as const;
 
-/** Highlighted call-to-action in the header. Swap as campaigns change. */
-export const NAV_CTA = { href: '/jamaica', label: 'Help In Jamaica' } as const;
+/**
+ * Highlighted call-to-action in the header.
+ * Was "Help In Jamaica" — that campaign has concluded. The monthly giving
+ * program (named in the 2025 gala script) is the standing priority instead.
+ */
+export const NAV_CTA = { href: '/give/lantern-keeper', label: 'Become a Lantern Keeper' } as const;

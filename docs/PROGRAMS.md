@@ -78,16 +78,21 @@ Actual 2025 gala result: $7,259 from 49 supporters (Givebutter).
 | Samuel Johnson | Director & President | President |
 | Dominic Schaefer | Director & Vice-President | Vice-President |
 | Aly Foley | Director & Secretary | Secretary |
-| Sandra Jimenez | **Director & Treasurer** | "Board" |
+| Sandra Jimenez | Director & Treasurer *(outdated)* | **Board** ✓ confirmed |
 
 ## Discrepancies to resolve
 
-1. **Sandra Jimenez is Treasurer**, not generic "Board." A 501(c)(3) that shows
-   no treasurer publicly looks less governed than it is. Easy credibility win.
-2. **Legal name change** was planned for Fall 2025 ("DBA until official legal
-   name change"). The footer still reads `Sylvan Ramble Lights, Inc.`
-   **OPEN: did it complete?** Affects the footer, the Ch. 496 registration, and
-   donation receipts.
-3. **"Beacons of Hope" vs "Beacon of Hope Gala"** — the plan uses both. Pick one.
+1. ~~Sandra Jimenez's title~~ — **RESOLVED**: she is board, not treasurer. The
+   business plan is outdated here. **OPEN: is there a current treasurer?** A
+   501(c)(3) listing no treasurer is a small credibility gap.
+2. ~~Legal name change~~ — **RESOLVED**: the legal name is now
+   **Florida Lantern Project, Inc.** Updated in `src/consts.ts`. The live Framer
+   site's footer still shows the old name and should be corrected there too,
+   along with donation receipts and the state registration.
+3. **"Beacons of Hope" vs "Beacon of Hope Gala"** — the plan uses both; the gala
+   script and Givebutter both use **Beacons of Hope**. Standardize on that.
 4. **Light show revival already has a name**: "Lanterns of Hope," the holiday
    fundraiser in the plan. It is nowhere on the site.
+5. **"Lantern Network Membership" is now "Lantern Keeper."** The gala script uses
+   Lantern Keeper for the monthly giving program, with a donor match up to
+   $5,000/year. Better name; use it.
