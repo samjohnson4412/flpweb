@@ -1,0 +1,25 @@
+---
+interface Props {
+  title?: string;
+  lede?: string;
+  tone?: 'default' | 'surface' | 'navy';
+  id?: string;
+}
+const { title, lede, tone = 'default', id } = Astro.props;
+---
+
+<section class:list={['sec', `sec--${tone}`]} id={id}>
+  <div class="wrap">
+    {title && <h2>{title}</h2>}
+    {lede && <p class="lede">{lede}</p>}
+    <slot />
+  </div>
+</section>
+
+<style>
+  .sec { padding-block: var(--space-lg); }
+  .sec--surface { background: var(--color-surface); }
+  .sec--navy { background: var(--flp-navy-900); color: var(--flp-white); }
+  .lede { font-size: var(--step-1); color: var(--color-text-muted); max-width: 62ch; }
+  .sec--navy .lede { color: rgba(255, 255, 255, 0.8); }
+</style>

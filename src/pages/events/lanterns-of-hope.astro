@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import { ORG } from '../../consts';
+---
+<BaseLayout
+  title="Lanterns of Hope"
+  description="The Sylvan Ramble light show is coming back as Lanterns of Hope — a holiday fundraiser where sponsored lanterns fund storm recovery."
+>
+  <Hero
+    eyebrow="In development"
+    title="Lanterns of Hope"
+    lede="The light show is coming back. This time the lights pay for hotel rooms in October."
+  />
+
+  <Section title="What it was">
+    <p class="intro">
+      From 2015 to 2023, a front yard on Sylvan Ramble Street in South Tampa ran
+      one of the largest synchronized light shows in the region — thousands of
+      individually controllable lights, flame effects, water, smoke, all
+      choreographed to music across a twenty-minute show, for Halloween and again
+      at Christmas.
+    </p>
+    <ul class="totals">
+      <li><strong>20,000+</strong><span>visitors across the show's lifetime</span></li>
+      <li><strong>~$50,000</strong><span>raised for local charities</span></li>
+      <li><strong>500+</strong><span>people on peak nights</span></li>
+      <li><strong>NBC</strong><span>Nightly News coverage</span></li>
+    </ul>
+    <p>
+      Every dollar went to other organizations — including Clothes To Kids, who
+      turned more than $9,000 into over 180 weekly wardrobes for children, and
+      Where Love Grows, who received $9,014.45 toward fighting child hunger.
+    </p>
+    <p><a href="/about/press">The press coverage &rarr;</a></p>
+  </Section>
+
+  <Section tone="surface" title="What people said">
+    <div class="quotes">
+      <blockquote>
+        <p>We have been bringing our little boy since he was 3 and he asks every year. You make the holidays special for so many.</p>
+        <cite>Neil and Kim Lamis</cite>
+      </blockquote>
+      <blockquote>
+        <p>Ingenious! Best and most creative light show. Extremely well organized. Handicap welcomed. Great for the young and the older audience.</p>
+        <cite>Google review</cite>
+      </blockquote>
+      <blockquote>
+        <p>This became a family tradition of ours for years. So thankful for the show, donations and good spirits!</p>
+        <cite>Michelle Leigh</cite>
+      </blockquote>
+    </div>
+  </Section>
+
+  <Section title="What it's becoming">
+    <p class="intro">
+      Lanterns of Hope takes the same idea and points it at our own work: a
+      holiday display where <strong>sponsored lanterns</strong> light the way and
+      fund storm recovery for Florida families.
+    </p>
+    <p>
+      The show outgrew a residential street, so this one needs a venue, sponsors,
+      and a crew. If you want a hand in bringing it back — as a host site, a
+      sponsor, or a volunteer who knows their way around a controller — now is
+      the moment to say so.
+    </p>
+    <p>
+      <a class="btn" href={`mailto:${ORG.email}?subject=Lanterns%20of%20Hope`}>Help bring it back</a>
+      <a class="btn btn--ghost" href="/give/volunteer">Volunteer</a>
+    </p>
+  </Section>
+
+  <Section tone="surface" title="Be told first">
+    <p>
+      If you came to the light show and want to know when it returns, we'll write
+      to you — and only about this, unless you tell us otherwise.
+    </p>
+    <p><a class="btn btn--ghost" href="/contact">Join the list</a></p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .intro { font-size: var(--step-1); }
+  .totals { list-style: none; padding: 0; margin: var(--space-md) 0; display: grid; gap: var(--space-md); grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr)); }
+  .totals li { border-top: 3px solid var(--color-accent); padding-top: var(--space-sm); }
+  .totals strong { display: block; font-family: var(--font-display); font-size: var(--step-2); line-height: 1; }
+  .totals span { display: block; margin-top: 0.3rem; color: var(--color-text-muted); font-size: var(--step--1); }
+  .quotes { display: grid; gap: var(--space-md); grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); margin-top: var(--space-md); }
+  blockquote { margin: 0; border-left: 4px solid var(--color-accent); padding-left: var(--space-sm); }
+  blockquote p { font-style: italic; }
+  cite { font-size: var(--step--1); color: var(--color-text-muted); font-style: normal; }
+</style>

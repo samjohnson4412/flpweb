@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+---
+<BaseLayout
+  title="Hurricane Helene, 2024"
+  description="How the Florida Lantern Project responded to Hurricane Helene in September 2024 — the storm that turned a light show charity into a disaster relief organization."
+>
+  <Hero
+    eyebrow="September 2024"
+    title="Hurricane Helene"
+    lede="The storm that changed what this organization is for."
+  />
+
+  <Section title="What happened">
+    <p class="intro">
+      Helene came up Florida's Gulf coast in late September 2024. At the time we
+      were still Sylvan Ramble Lights — a holiday light show charity that raised
+      money for other people's causes and had never run a relief operation.
+    </p>
+    <p>
+      On 27 September we posted this:
+    </p>
+    <blockquote class="pull">
+      <p>
+        <strong>URGENT.</strong> We are stepping outside of our normal mission to
+        provide urgent support for those impacted by Hurricane Helene. If you are
+        in need of assistance or would like to donate to those in need, visit our
+        website.
+      </p>
+      <p>
+        100% of the funds raised will go directly to those in need, ensuring they
+        receive immediate help during this challenging time.
+      </p>
+    </blockquote>
+    <p>
+      We had no disaster budget, no protocols, and no staff. What we had was a
+      community that trusted us, a list of businesses who had said yes before, and
+      a willingness to make phone calls.
+    </p>
+  </Section>
+
+  <Section tone="surface" title="What we did">
+    <ul class="did">
+      <li><strong>Direct financial assistance</strong> — 100% pass-through, no administrative deduction</li>
+      <li><strong>Emergency shelter</strong> — through hotel partnerships negotiated in the days before landfall</li>
+      <li><strong>Transportation</strong> — for families who had no way to leave</li>
+      <li><strong>Cleanup support</strong> — volunteer crews in the days afterwards</li>
+    </ul>
+  </Section>
+
+  <Section title="Then it happened again">
+    <p class="intro">
+      Nine days after Helene's landfall, Hurricane Milton formed. It reached Florida
+      on 9 October.
+    </p>
+    <p>
+      Families we had just helped were hit a second time before insurance adjusters
+      could reach the first round of damage. One of them was Amy — a single mother
+      with two children, two cats and a dog, whose house Helene had flooded and
+      whose car it had totalled.
+    </p>
+    <p><a class="btn" href="/response/milton-2024">Hurricane Milton &rarr;</a></p>
+  </Section>
+
+  <Section tone="surface" title="What we learned">
+    <ul class="learned">
+      <li>
+        <strong>Speed beats process.</strong> Every hour spent designing an
+        intake procedure was an hour a family spent not knowing if help was
+        coming. We got faster by deciding sooner, not by planning better.
+      </li>
+      <li>
+        <strong>Existing relationships are the whole asset.</strong> We had no
+        money. What we had was eight years of local businesses knowing who we
+        were, and that turned out to be convertible into hotel rooms.
+      </li>
+      <li>
+        <strong>Storms don't queue.</strong> Planning for one event at a time is
+        planning wrong.
+      </li>
+    </ul>
+  </Section>
+</BaseLayout>
+
+<style>
+  .intro { font-size: var(--step-1); }
+  .pull {
+    margin: var(--space-md) 0; padding: var(--space-md);
+    background: var(--color-surface); border-left: 4px solid var(--flp-red-500);
+    border-radius: var(--radius);
+  }
+  .pull p:last-child { margin-bottom: 0; }
+  .did, .learned { list-style: none; padding: 0; display: grid; gap: var(--space-sm); margin-top: var(--space-md); }
+  .did li, .learned li { border-left: 4px solid var(--color-accent); padding-left: var(--space-sm); max-width: var(--measure); }
+</style>

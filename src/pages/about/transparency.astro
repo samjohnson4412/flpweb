@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Stats from '../../components/Stats.astro';
+import { ORG, BOARD } from '../../consts';
+---
+<BaseLayout
+  title="Transparency & Financials"
+  description="Legal name, EIN 86-3574323, state registration, board of directors, financial filings, and impact numbers for the Florida Lantern Project."
+>
+  <Hero
+    eyebrow="Transparency"
+    title="Everything you need to check us out"
+    lede="If you're a grantmaker, a corporate giving officer, or a donor doing due diligence, this page exists so you don't have to email us first."
+  />
+
+  <Section title="Organization details">
+    <dl class="facts">
+      <div><dt>Legal name</dt><dd>{ORG.legalName}</dd></div>
+      <div><dt>Formerly known as</dt><dd>{ORG.formerName} — name changed 2025</dd></div>
+      <div><dt>Doing business as</dt><dd>{ORG.name}</dd></div>
+      <div><dt>EIN</dt><dd><strong>{ORG.ein}</strong></dd></div>
+      <div><dt>Tax status</dt><dd>501(c)(3) public charity</dd></div>
+      <div><dt>State of incorporation</dt><dd>Florida, {ORG.incorporated}</dd></div>
+      <div><dt>Florida charitable registration</dt><dd>{ORG.flRegistrationNumber}</dd></div>
+      <div><dt>Principal address</dt><dd>{ORG.address.street}<br />{ORG.address.city}, {ORG.address.region} {ORG.address.postalCode}</dd></div>
+      <div><dt>Contact</dt><dd><a href={`mailto:${ORG.email}`}>{ORG.email}</a> &middot; <a href={`tel:${ORG.phoneHref}`}>{ORG.phone}</a></dd></div>
+    </dl>
+    <p class="note">
+      Our legal name changed in 2025. If your system has us as
+      “{ORG.formerName}”, that is the same organization and the same EIN.
+      This trips up a lot of matching-gift portals.
+    </p>
+  </Section>
+
+  <Section tone="surface" title="Documents">
+    <p>
+      {/* TODO(sam): drop PDFs into public/documents/ and link them here. */}
+      We will provide any of the following on request, usually the same day:
+    </p>
+    <ul class="docs">
+      <li>IRS determination letter</li>
+      <li>Form 990 filings</li>
+      <li>Florida Solicitation of Contributions registration</li>
+      <li>Certificate of incorporation</li>
+      <li>W-9</li>
+      <li>Certificate of insurance</li>
+    </ul>
+    <p><a class="btn" href={`mailto:${ORG.email}?subject=Document%20request`}>Request documents</a></p>
+  </Section>
+
+  <Section title="Governance">
+    <ul class="board">
+      {BOARD.map((m) => (<li><strong>{m.name}</strong><span>{m.role}</span></li>))}
+    </ul>
+    <p class="gap">
+      <strong>We do not currently have a treasurer.</strong> We would rather
+      disclose that than have you discover it. Recruiting one is our highest
+      governance priority, and if that's you, <a href="/give/board">we'd like to talk</a>.
+    </p>
+    <p>The board meets quarterly. No board member is compensated.</p>
+  </Section>
+
+  <Section tone="surface" title="Where the money went">
+    <p class="intro">
+      Through the 2024 storms we operated on <strong>no budget at all</strong>.
+      Assistance was delivered through donated hotel capacity, volunteer labor,
+      and in-kind partnerships rather than cash reserves.
+    </p>
+    <Stats />
+    <p class="note">
+      Figures cover Hurricanes Helene and Milton in 2024 and the Sylvan Ramble
+      Lights era from 2015 to 2023. Audited financials are not yet available; our
+      Form 990 filings are the authoritative source and we'll send them on request.
+    </p>
+  </Section>
+
+  <Section title="How we talk about numbers">
+    <p>
+      Two commitments, because charity arithmetic is often optimistic:
+    </p>
+    <ul class="commitments">
+      <li>
+        <strong>We publish what we realized, not what things were nominally worth.</strong>
+        Goods donated to our 2025 auction carried a stated retail value of about
+        $11,700 and realized about $3,300. The second number is the real one.
+      </li>
+      <li>
+        <strong>We don't count the same dollar twice.</strong> Donated goods and
+        cash raised are reported separately, never summed into a single
+        impressive-looking total.
+      </li>
+    </ul>
+  </Section>
+
+  <Section tone="surface" title="Policies">
+    <p>
+      <a href="/privacy-policy">Privacy policy</a> &nbsp;·&nbsp;
+      <a href="/non-discrimination-policy">Non-discrimination policy</a>
+    </p>
+    <p class="note">
+      Our programs, services, and volunteer opportunities are inclusive of all
+      gender identities and sexual orientations.
+    </p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .facts { display: grid; margin: var(--space-md) 0; }
+  .facts > div {
+    display: grid; grid-template-columns: minmax(10rem, 16rem) 1fr; gap: var(--space-sm);
+    padding: 0.7rem 0; border-bottom: 1px solid var(--color-border);
+  }
+  dt { font-weight: 700; }
+  dd { margin: 0; }
+  @media (max-width: 560px) { .facts > div { grid-template-columns: 1fr; gap: 0.1rem; } }
+  .note { font-size: var(--step--1); color: var(--color-text-muted); max-width: var(--measure); }
+  .intro { font-size: var(--step-1); }
+  .docs { columns: 2 15rem; margin: var(--space-md) 0; }
+  .docs li { break-inside: avoid; }
+  .board { list-style: none; padding: 0; margin: var(--space-md) 0; display: grid; gap: var(--space-sm); grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
+  .board li { border-left: 4px solid var(--color-accent); padding-left: var(--space-sm); }
+  .board span { display: block; color: var(--color-text-muted); font-size: var(--step--1); }
+  .gap { background: var(--color-surface); border-radius: var(--radius); padding: var(--space-sm) var(--space-md); max-width: var(--measure); }
+  .commitments { list-style: none; padding: 0; display: grid; gap: var(--space-sm); margin-top: var(--space-md); }
+  .commitments li { border-left: 4px solid var(--color-accent); padding-left: var(--space-sm); max-width: var(--measure); }
+</style>

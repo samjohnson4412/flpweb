@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import { ORG } from '../../consts';
+---
+<BaseLayout
+  title="Donate Supplies"
+  description="Donate emergency supplies or host a supply drive for the Florida Lantern Project."
+>
+  <Hero
+    eyebrow="In-kind giving"
+    title="Donate supplies or run a drive"
+    lede="Not everything useful is money. Some of the most valuable things we hand out cost a few dollars each."
+  />
+
+  <Section title="What we need">
+    <ul class="needs">
+      <li>Flashlights and batteries</li>
+      <li>Toiletries and hygiene supplies</li>
+      <li>Non-perishable food and bottled water</li>
+      <li>First aid supplies</li>
+      <li>Tarps, work gloves, and heavy-duty trash bags</li>
+      <li>Phone chargers and power banks</li>
+      <li>Pet food and basic pet supplies</li>
+      <li>Books and small toys for children</li>
+    </ul>
+    <p class="note">
+      Pet supplies matter more than people expect. Families arriving at a hotel
+      with an animal usually left in a hurry and brought nothing for it.
+    </p>
+  </Section>
+
+  <Section tone="surface" title="Host a supply drive">
+    <p class="intro">
+      Businesses, schools, and congregations run some of our most effective
+      collections. We'll give you a list, a poster, and a collection point, and
+      we'll handle pickup.
+    </p>
+    <p>
+      Drives work best in the weeks <em>before</em> hurricane season, not during
+      it — supplies collected in September are already where they need to be when
+      a storm forms in October.
+    </p>
+    <p><a class="btn" href={`mailto:${ORG.email}?subject=Hosting%20a%20supply%20drive`}>Set up a drive</a></p>
+  </Section>
+
+  <Section title="Wishlist">
+    <p>
+      {/* TODO(sam): add the Amazon wishlist URL referenced in the 2025 gala script. */}
+      We maintain an online wishlist so you can send items directly.
+      <a href={`mailto:${ORG.email}?subject=Wishlist%20link`}>Ask us for the current link</a>
+      and we'll send it over.
+    </p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .needs { columns: 2 16rem; gap: var(--space-md); margin: var(--space-md) 0; }
+  .needs li { break-inside: avoid; margin-bottom: 0.3rem; }
+  .note { font-size: var(--step--1); color: var(--color-text-muted); }
+  .intro { font-size: var(--step-1); }
+</style>

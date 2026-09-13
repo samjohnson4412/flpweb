@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+---
+<BaseLayout
+  title="Hurricane Melissa & Lanterns for Jamaica"
+  description="Our 2025 Lanterns for Jamaica campaign following Hurricane Melissa. This campaign has concluded."
+>
+  <Hero
+    eyebrow="2025 · concluded"
+    title="Hurricane Melissa"
+    lede="Lanterns for Jamaica set out to turn Florida's hurricane-tested compassion into organized recovery in the Caribbean. It didn't reach the scale we hoped for."
+  />
+
+  <Section>
+    <p class="status">
+      <strong>This campaign has concluded</strong> and we are not currently
+      collecting donations or supplies for Jamaica. If you arrived here from an
+      older link, that's why.
+    </p>
+  </Section>
+
+  <Section title="What we set out to do">
+    <p class="intro">
+      After Hurricane Melissa devastated Jamaica, we tried to extend what we'd
+      learned in Florida across the Caribbean — working through trusted
+      partnerships and verified relief networks to help rebuild schools and
+      support families.
+    </p>
+    <p>The campaign had three strands:</p>
+    <ul class="strands">
+      <li><strong>Supply drives</strong> — hosted by Florida businesses, schools, and congregations</li>
+      <li><strong>Adopt-a-School</strong> — pairing Florida organizations with damaged Jamaican schools</li>
+      <li><strong>Direct giving</strong> — routed through verified partners on the ground</li>
+    </ul>
+  </Section>
+
+  <Section tone="surface" title="What actually happened">
+    <p>
+      Not enough. The campaign generated far less support than our Florida work,
+      and we've wound it down rather than keep an under-resourced international
+      effort on life support.
+    </p>
+    <p>
+      We're leaving this page up because quietly deleting a campaign is worse than
+      closing one honestly. People gave to it, and they're entitled to know where
+      it landed.
+    </p>
+  </Section>
+
+  <Section title="What we took from it">
+    <ul class="learned">
+      <li>
+        <strong>Our credibility is local.</strong> In Tampa Bay, we have ten years
+        of history and people who know us. In Jamaica we were strangers asking for
+        trust we hadn't earned, and it showed in the response.
+      </li>
+      <li>
+        <strong>Distance breaks the model.</strong> What we're good at is being
+        there within hours — a hotel room tonight, a drone over a roof tomorrow.
+        That doesn't translate to 1,500 miles away.
+      </li>
+      <li>
+        <strong>Our supporters respond to concrete offers, not abstractions.</strong>
+        The Hilton rooms post was shared 700 times. General appeals for a distant
+        disaster were not.
+      </li>
+    </ul>
+  </Section>
+
+  <Section tone="surface" title="Where our focus is now">
+    <p>
+      Florida. Before, during, and after the storms that hit the communities we
+      actually live in.
+    </p>
+    <p>
+      <a class="btn" href="/response">See our Florida response</a>
+      <a class="btn btn--ghost" href="/help">Get help</a>
+    </p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .status {
+    background: var(--color-surface); border-left: 4px solid var(--flp-navy-700);
+    padding: var(--space-sm) var(--space-md); border-radius: var(--radius); max-width: none;
+  }
+  .intro { font-size: var(--step-1); }
+  .strands, .learned { list-style: none; padding: 0; display: grid; gap: var(--space-sm); margin-top: var(--space-md); }
+  .strands li, .learned li { border-left: 4px solid var(--color-accent); padding-left: var(--space-sm); max-width: var(--measure); }
+</style>

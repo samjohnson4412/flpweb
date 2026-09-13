@@ -1,0 +1,21 @@
+---
+interface Props { title: string; href: string; cta: string; }
+const { title, href, cta } = Astro.props;
+---
+<aside class="cta-band">
+  <div class="wrap inner">
+    <div>
+      <h2>{title}</h2>
+      <p><slot /></p>
+    </div>
+    <p class="act"><a class="btn" href={href}>{cta}</a></p>
+  </div>
+</aside>
+
+<style>
+  .cta-band { background: var(--flp-navy-700); color: var(--flp-white); padding-block: var(--space-lg); }
+  .inner { display: flex; flex-wrap: wrap; gap: var(--space-md); align-items: center; justify-content: space-between; }
+  .cta-band h2 { font-size: var(--step-2); }
+  .cta-band p { max-width: 52ch; margin: 0; color: rgba(255,255,255,0.85); }
+  .act { flex: none; }
+</style>

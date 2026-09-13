@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Grid from '../../components/Grid.astro';
+import Card from '../../components/Card.astro';
+---
+<BaseLayout
+  title="Give"
+  description="Five ways to support the Florida Lantern Project — monthly giving, one-time donations, volunteering, supplies, and corporate sponsorship."
+>
+  <Hero
+    eyebrow="Give"
+    title="Five ways to help, and only two involve money"
+    lede="We need hands as much as funds, and we need both before the storm rather than after it."
+  />
+
+  <Section>
+    <Grid>
+      <Card title="Become a Lantern Keeper" href="/give/lantern-keeper" meta="Most useful">
+        <p>Give monthly. It's what lets us say yes within the hour instead of waiting to see what comes in.</p>
+      </Card>
+      <Card title="Make a donation" href="/give/donate" meta="One-time">
+        <p>Hurricane season arrives whether or not we're ready for it. One-time gifts fund the response directly.</p>
+      </Card>
+      <Card title="Volunteer" href="/give/volunteer" meta="Hands, not funds">
+        <p>Hotlines, supply distribution, inspections, debris clearing. Some of it is skilled and some of it is just showing up.</p>
+      </Card>
+      <Card title="Donate supplies" href="/give/supplies" meta="In kind">
+        <p>Emergency kits, flashlights, toiletries. Bring items, organize a drive, or order from our wishlist.</p>
+      </Card>
+      <Card title="Sponsor us" href="/give/sponsor" meta="Business">
+        <p>Businesses can sponsor a program, an event, or a specific disaster response.</p>
+      </Card>
+      <Card title="Join the board" href="/give/board" meta="Leadership">
+        <p>We meet quarterly and we are actively looking for people who want to shape where this goes — including a treasurer.</p>
+      </Card>
+    </Grid>
+  </Section>
+
+  <Section tone="surface" title="Check us first">
+    <p>
+      Our legal name, EIN, board, and financial filings are all published. If
+      you're deciding whether to trust us with money, start there rather than here.
+    </p>
+    <p><a class="btn btn--ghost" href="/about/transparency">Transparency &amp; financials</a></p>
+  </Section>
+</BaseLayout>

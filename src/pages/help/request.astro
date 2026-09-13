@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import { ORG } from '../../consts';
+
+/**
+ * TODO(sam): point this at a real handler before launch.
+ * Options, cheapest first:
+ *   1. Cloudflare Pages Function at /functions/api/request.ts (no third party)
+ *   2. Formspree / Web3Forms endpoint (fastest, free tier)
+ * Until then the form is disabled and the page routes people to email and
+ * phone, which work today. A form that silently drops requests during a
+ * hurricane is worse than no form.
+ */
+const FORM_ENDPOINT: string | null = null;
+---
+<BaseLayout
+  title="Request Assistance"
+  description="Request help from the Florida Lantern Project — emergency lodging, storm inspections, cleanup, or aid navigation."
+>
+  <Hero
+    eyebrow="Request assistance"
+    title="Tell us what you need"
+    lede="One form, read by people who can act on it. If we can help, we will. If someone else is better placed, we'll tell you who."
+  />
+
+  <Section>
+    <p class="urgent">
+      <strong>If you are in immediate danger, call 911.</strong> This form is not
+      monitored around the clock and is not an emergency service.
+    </p>
+
+    {FORM_ENDPOINT ? (
+      <form class="form" method="POST" action={FORM_ENDPOINT}>
+        <div class="row">
+          <label>
+            <span>Your name <abbr title="required">*</abbr></span>
+            <input type="text" name="name" required autocomplete="name" />
+          </label>
+          <label>
+            <span>Phone <abbr title="required">*</abbr></span>
+            <input type="tel" name="phone" required autocomplete="tel" />
+          </label>
+        </div>
+
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" autocomplete="email" />
+        </label>
+
+        <label>
+          <span>Where are you? <abbr title="required">*</abbr></span>
+          <input type="text" name="location" required placeholder="City, or street and ZIP" />
+        </label>
+
+        <fieldset>
+          <legend>What do you need? <abbr title="required">*</abbr></legend>
+          <label class="check"><input type="checkbox" name="need" value="lodging" /> Somewhere safe to stay</label>
+          <label class="check"><input type="checkbox" name="need" value="transport" /> Transportation or evacuation help</label>
+          <label class="check"><input type="checkbox" name="need" value="inspection" /> Roof or property inspection</label>
+          <label class="check"><input type="checkbox" name="need" value="cleanup" /> Cleanup or debris removal</label>
+          <label class="check"><input type="checkbox" name="need" value="repairs" /> Emergency repairs</label>
+          <label class="check"><input type="checkbox" name="need" value="aid" /> Help with FEMA, SBA, or grants</label>
+          <label class="check"><input type="checkbox" name="need" value="wellness" /> A wellness check on someone</label>
+          <label class="check"><input type="checkbox" name="need" value="other" /> Something else</label>
+        </fieldset>
+
+        <div class="row">
+          <label>
+            <span>How many people?</span>
+            <input type="number" name="people" min="1" />
+          </label>
+          <label>
+            <span>Any pets? How many, and what kind?</span>
+            <input type="text" name="pets" placeholder="e.g. two cats and a dog" />
+          </label>
+        </div>
+
+        <label>
+          <span>Tell us what's happening</span>
+          <textarea name="details" rows="5"></textarea>
+        </label>
+
+        <button class="btn" type="submit">Send request</button>
+      </form>
+    ) : (
+      <div class="fallback">
+        <h2>Reach us directly</h2>
+        <p>
+          Our request form is being rebuilt. In the meantime these reach the same
+          people, and they're the fastest routes:
+        </p>
+        <p class="contact">
+          <a class="btn" href={`tel:${ORG.phoneHref}`}>Call {ORG.phone}</a>
+          <a class="btn btn--ghost" href={`mailto:${ORG.email}?subject=Request%20for%20assistance`}>Email us</a>
+        </p>
+        <h3>Please include</h3>
+        <ul>
+          <li>Your name and a phone number we can reach you on</li>
+          <li>Where you are — city, or street and ZIP</li>
+          <li>What you need</li>
+          <li>How many people, <strong>and any pets</strong> — this changes which options are open to us</li>
+        </ul>
+      </div>
+    )}
+  </Section>
+
+  <Section tone="surface" title="Why we ask about pets">
+    <p>
+      Because most shelters won't take them, and because families routinely
+      refuse to evacuate rather than leave an animal behind. Telling us up front
+      means we look for the right room the first time instead of the second.
+    </p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .urgent {
+    background: rgba(215, 38, 56, 0.08);
+    border-left: 4px solid var(--flp-red-500);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius);
+    max-width: none;
+  }
+  .form { display: grid; gap: var(--space-sm); max-width: 46rem; margin-top: var(--space-md); }
+  .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: var(--space-sm); }
+  label > span, legend { display: block; font-weight: 700; margin-bottom: 0.3rem; }
+  input, textarea {
+    width: 100%; padding: 0.6em 0.8em; font: inherit;
+    border: 1px solid var(--color-border); border-radius: var(--radius);
+    background: var(--color-surface); color: inherit;
+  }
+  fieldset { border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-sm); }
+  .check { display: block; font-weight: 400; margin-bottom: 0.3rem; }
+  .check input { width: auto; margin-right: 0.4rem; }
+  abbr { color: var(--flp-red-500); text-decoration: none; }
+  .fallback { background: var(--color-surface); border-radius: var(--radius); padding: var(--space-md); margin-top: var(--space-md); }
+  .contact { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+</style>

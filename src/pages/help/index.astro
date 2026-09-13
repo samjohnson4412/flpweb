@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Grid from '../../components/Grid.astro';
+import Card from '../../components/Card.astro';
+---
+<BaseLayout
+  title="Get Help"
+  description="Emergency lodging, evacuation help, storm inspections, cleanup, and aid navigation for Florida families — before, during, and after a disaster."
+>
+  <Hero
+    eyebrow="Get Help"
+    title="Tell us where you are in the storm"
+    lede="Our services are organized around when you need them, not around how we're structured internally."
+  />
+
+  <Section>
+    <p class="urgent">
+      <strong>If you are in immediate danger, call 911.</strong> We are not an
+      emergency service. For urgent needs during an active storm, contact your
+      city or county emergency hotline first.
+    </p>
+    <Grid>
+      <Card title="Before a storm" href="/help/prepare" meta="Prepare">
+        <p>Preparedness workshops, emergency readiness kits, and weather stations that improve hyper-local forecasting for your neighborhood.</p>
+      </Card>
+      <Card title="During a storm" href="/help/during" meta="Ride it out or get out">
+        <p>Evacuation and transportation assistance, emergency lodging including pets, connectivity, and a storm support hotline.</p>
+      </Card>
+      <Card title="After a storm" href="/help/recover" meta="Recover">
+        <p>Wellness checks, roof and property inspections, emergency repairs, debris removal, family stability support, and aid navigation.</p>
+      </Card>
+    </Grid>
+  </Section>
+
+  <Section tone="surface" title="How to reach us">
+    <p>
+      The fastest way to request help is the form — it goes straight to the people
+      who can act on it, and nothing gets lost in a social media inbox.
+    </p>
+    <p><a class="btn" href="/help/request">Request assistance</a></p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .urgent {
+    background: rgba(215, 38, 56, 0.08);
+    border-left: 4px solid var(--flp-red-500);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius);
+    max-width: none;
+  }
+</style>

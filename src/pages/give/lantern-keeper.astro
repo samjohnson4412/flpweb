@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Grid from '../../components/Grid.astro';
+import Card from '../../components/Card.astro';
+import { ORG } from '../../consts';
+
+/** TODO(sam): replace with the recurring-gift URL once the Givebutter plan exists. */
+const GIVE_URL = ORG.social.givebutter;
+---
+<BaseLayout
+  title="Become a Lantern Keeper"
+  description="Lantern Keepers give monthly, so the Florida Lantern Project can say yes to a family within the hour instead of waiting to see what comes in."
+>
+  <Hero
+    eyebrow="Lantern Keepers"
+    title="The answer has to be ready before the storm has a name"
+    lede="When someone calls at 9pm the night before landfall, there is no time to run a fundraiser. Either the money is already there or the answer is no."
+  >
+    <p class="actions"><a class="btn" href={GIVE_URL}>Give monthly</a></p>
+  </Hero>
+
+  <Section title="What a Lantern Keeper is">
+    <p class="intro">
+      A Lantern Keeper gives a set amount every month. That's the whole idea. It
+      is unglamorous and it is the single most useful thing a supporter can do
+      for a disaster relief organization.
+    </p>
+    <p>
+      Nearly everything else we raise is episodic — a gala, a campaign, a storm
+      that makes the news. But the calls don't arrive on that schedule, and the
+      expensive moment is always the one before landfall, when a room has to be
+      booked tonight and reimbursement is a problem for later.
+    </p>
+    <p>
+      Monthly gifts are the reserve that lets us commit first and account
+      afterwards.
+    </p>
+  </Section>
+
+  <Section tone="surface" title="What it pays for">
+    <Grid>
+      <Card title="$10 a month" meta="Readiness">
+        <p>Builds toward emergency readiness kits and keeps the storm hotline staffed through a season.</p>
+      </Card>
+      <Card title="$25 a month" meta="Documentation">
+        <p>Roughly a post-storm drone inspection every year — the report a family hands to an insurer, or that unlocks an SBA loan.</p>
+      </Card>
+      <Card title="$50 a month" meta="Shelter">
+        <p>Several nights of emergency lodging a year for a family with nowhere to go and animals no shelter will take.</p>
+      </Card>
+      <Card title="$100 a month" meta="Infrastructure">
+        <p>Contributes to a neighborhood weather station feeding open-source forecasting for everyone around it, not just one address.</p>
+      </Card>
+    </Grid>
+    <p class="note">
+      These are honest illustrations of what things cost us, not restricted
+      designations. Gifts go to wherever the need is sharpest that month.
+    </p>
+  </Section>
+
+  <Section title="Why monthly beats an annual gift of the same size">
+    <ul class="reasons">
+      <li>
+        <strong>It arrives before the storm.</strong> A December gift doesn't help
+        a family evacuating in October.
+      </li>
+      <li>
+        <strong>It lets us commit fast.</strong> Knowing what next month looks like
+        is the difference between “we'll see what we can do” and “we've booked it.”
+      </li>
+      <li>
+        <strong>It costs almost nothing to steward.</strong> No venue, no auction,
+        no printing. Close to the entire gift reaches the work.
+      </li>
+      <li>
+        <strong>It makes us fundable.</strong> Grantmakers look for a stable base
+        before they'll commit. Recurring donors are that base.
+      </li>
+    </ul>
+    <p class="cta-row">
+      <a class="btn" href={GIVE_URL}>Become a Lantern Keeper</a>
+      <a class="btn btn--ghost" href="/give/donate">Prefer a one-time gift?</a>
+    </p>
+  </Section>
+
+  <Section tone="surface" title="Where the money goes">
+    <p>
+      We publish our legal name, EIN, board, and financial filings, and we'd
+      rather you check them than take our word for it.
+    </p>
+    <p><a class="btn btn--ghost" href="/about/transparency">See our transparency page</a></p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .actions { margin-top: var(--space-md); }
+  .intro { font-size: var(--step-1); }
+  .note { font-size: var(--step--1); color: var(--color-text-muted); margin-top: var(--space-md); }
+  .reasons { list-style: none; padding: 0; display: grid; gap: var(--space-sm); margin: var(--space-md) 0; }
+  .reasons li { border-left: 4px solid var(--color-accent); padding-left: var(--space-sm); max-width: var(--measure); }
+  .cta-row { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-md); }
+</style>

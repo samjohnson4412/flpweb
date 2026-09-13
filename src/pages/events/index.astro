@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Grid from '../../components/Grid.astro';
+import Card from '../../components/Card.astro';
+---
+<BaseLayout
+  title="Events"
+  description="Beacons of Hope, our annual gala, and Lanterns of Hope — the return of the light show that started it all."
+>
+  <Hero eyebrow="Events" title="Where we gather" lede="Two annual events. One is a dinner. The other is the reason any of this exists." />
+  <Section>
+    <Grid>
+      <Card title="Beacons of Hope" href="/events/beacons-of-hope" meta="Annual gala">
+        <p>A multi-sensory dinner and silent auction in support of disaster relief.</p>
+      </Card>
+      <Card title="Lanterns of Hope" href="/events/lanterns-of-hope" meta="Holiday · in development">
+        <p>The light show returns — as a holiday fundraiser where sponsored lanterns fund storm recovery.</p>
+      </Card>
+    </Grid>
+  </Section>
+</BaseLayout>

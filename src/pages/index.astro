@@ -1,56 +1,104 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import Grid from '../components/Grid.astro';
+import Card from '../components/Card.astro';
+import Stats from '../components/Stats.astro';
+import Story from '../components/Story.astro';
+import CallToAction from '../components/CallToAction.astro';
 import { ORG } from '../consts';
-
-// NOTE: placeholder hero using the organization's existing verified copy, so the
-// design system is visible end to end. Real homepage content is pending Sam's
-// content brief — see docs/CONTENT-BRIEF.md.
 ---
 
 <BaseLayout
   title={ORG.name}
-  description="The Florida Lantern Project is a Tampa-based 501(c)(3) providing emergency shelter, cleanup support, preparedness workshops, and post-storm inspections to families across Florida and the Caribbean."
+  description="A Tampa 501(c)(3) providing emergency lodging, storm inspections, cleanup, and preparedness support to Florida families — stepping in where the official answer doesn't fit."
 >
-  <section class="hero">
-    <div class="wrap">
-      <h1>No Family Should<br />Face Disaster Alone</h1>
-      <p class="lede">
-        Rapid relief. Real impact. Rooted in community.
-      </p>
-      <p class="actions">
-        <a class="btn" href="/give/lantern-keeper">Become a Lantern Keeper</a>
-        <a class="btn btn--ghost" href="/about">Learn More About Us</a>
-      </p>
-    </div>
-  </section>
-
-  <section class="wrap intro">
-    <p>
-      The Florida Lantern Project began as a holiday light show — now we bring light
-      to families when it’s needed most. From emergency shelter and cleanup support
-      to preparedness workshops and post-storm inspections, we stand with Florida
-      communities before, during, and after disaster.
+  <Hero
+    title="No family should face disaster alone"
+    lede="When a storm is coming, the official advice is to seek shelter. But shelters turn away pets. Adjusters can't beat the next hurricane. Aid programs go unmentioned. We are what happens when the standard answer doesn't fit your situation."
+  >
+    <p class="actions">
+      <a class="btn" href="/help">Get help</a>
+      <a class="btn btn--ghost" href="/give/lantern-keeper">Become a Lantern Keeper</a>
     </p>
-  </section>
+  </Hero>
+
+  <Section tone="surface" title="What we actually did">
+    <p class="intro">
+      In 2024, Hurricanes Helene and Milton hit Florida two weeks apart. We had no
+      budget and no staff. We had hotel partnerships, a drone, volunteers, and a
+      phone that kept ringing.
+    </p>
+    <Stats />
+    <p class="more"><a href="/response">See the full response &rarr;</a></p>
+  </Section>
+
+  <Section title="Wherever you are in the storm">
+    <Grid>
+      <Card title="Before" href="/help/prepare" meta="Prepare">
+        <p>Preparedness workshops, readiness kits, and neighborhood weather stations that feed open-source forecasting.</p>
+      </Card>
+      <Card title="During" href="/help/during" meta="Ride it out or get out">
+        <p>Evacuation and transportation help, emergency lodging that takes pets, and a storm hotline that answers real questions.</p>
+      </Card>
+      <Card title="After" href="/help/recover" meta="Recover">
+        <p>Roof and property inspections, emergency repairs, debris removal, and help navigating FEMA, SBA, and local grants.</p>
+      </Card>
+    </Grid>
+  </Section>
+
+  <Section tone="surface" title="One night in October">
+    <Grid min="320px">
+      <Story name="Peter" context="Hurricane Milton · emergency lodging">
+        <p>
+          A college student, ordered out of their dorm. No family nearby. Shelters
+          wouldn't take their cat — their only companion. When they called us, they
+          were planning to ride out the storm in their car.
+        </p>
+        <p>We put them both in a hotel that night.</p>
+        <blockquote>
+          My cat and I have only been able to safely make it through Hurricane
+          Milton because of the help given to us by this organization.
+        </blockquote>
+      </Story>
+      <Story name="Amy" context="Helene, then Milton · relocation">
+        <p>
+          A single mother with two kids, two cats, and a dog. Helene flooded her
+          house and totaled her car. Days later — before an adjuster could even
+          visit — Milton arrived.
+        </p>
+        <p>
+          We moved all six of them more than a hundred miles inland, hours before
+          landfall. No forms. No waitlist.
+        </p>
+      </Story>
+    </Grid>
+    <p class="more"><a href="/response">Read more stories &rarr;</a></p>
+  </Section>
+
+  <Section title="Where we came from">
+    <p class="intro">
+      We started in 2015 as Sylvan Ramble Lights — a front-yard holiday light show
+      in South Tampa that drew more than 20,000 neighbors and raised around
+      $50,000 for local charities. It landed us on NBC Nightly News.
+    </p>
+    <p class="intro">
+      In 2024 the storms came, and the same equipment, volunteers, and stubbornness
+      got pointed somewhere new. We still bring light. We just do it earlier now.
+    </p>
+    <p class="more"><a href="/about">Our story &rarr;</a> &nbsp;·&nbsp; <a href="/about/press">Press coverage &rarr;</a></p>
+  </Section>
+
+  <CallToAction title="Storms don't wait for fundraisers" href="/give/lantern-keeper" cta="Become a Lantern Keeper">
+    Monthly giving is what lets us say yes within the hour instead of waiting to
+    see what comes in. Even $10 a month keeps the answer ready before the next
+    storm has a name.
+  </CallToAction>
 </BaseLayout>
 
 <style>
-  .hero {
-    background: var(--flp-navy-900);
-    color: var(--flp-white);
-    padding-block: var(--space-xl);
-  }
-  .lede {
-    font-family: var(--font-display);
-    font-size: var(--step-1);
-    color: var(--color-accent);
-  }
-  .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    margin-top: var(--space-md);
-  }
-  .intro { padding-block: var(--space-lg); }
-  .intro p { font-size: var(--step-1); }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-md); }
+  .intro { font-size: var(--step-1); }
+  .more { margin-top: var(--space-md); font-family: var(--font-display); font-weight: 600; }
 </style>

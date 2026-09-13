@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import Grid from '../components/Grid.astro';
+import Card from '../components/Card.astro';
+---
+<BaseLayout title="Page Not Found" description="That page doesn't exist.">
+  <Hero
+    title="We can't find that page"
+    lede="We rebuilt this site in 2026 and some addresses moved. Here's where things live now."
+  />
+  <Section>
+    <Grid>
+      <Card title="Get help" href="/help" meta="Before, during, after" />
+      <Card title="Our storm response" href="/response" meta="Helene, Milton, Melissa" />
+      <Card title="Give" href="/give" meta="Five ways to help" />
+      <Card title="Our sponsors" href="/sponsors" meta="46 businesses" />
+      <Card title="About us" href="/about" meta="The story" />
+      <Card title="Contact" href="/contact" meta="Reach a person" />
+    </Grid>
+  </Section>
+</BaseLayout>

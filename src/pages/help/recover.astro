@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Grid from '../../components/Grid.astro';
+import Card from '../../components/Card.astro';
+import Story from '../../components/Story.astro';
+import CallToAction from '../../components/CallToAction.astro';
+---
+<BaseLayout
+  title="After a Storm"
+  description="Roof and property inspections, emergency repairs, debris removal, wellness checks, and help navigating FEMA, SBA, and local grants."
+>
+  <Hero
+    eyebrow="After a storm"
+    title="The hardest part usually comes after the wind stops"
+    lede="A collapsed roof is a problem. An insurer asking for documentation you don't have, while you're living in a damaged house, is a different kind of problem."
+  />
+
+  <Section>
+    <Grid>
+      <Card title="Roof & property inspections" meta="Free after a declared storm">
+        <p>
+          Aerial drone surveys and a written inspection report you can hand
+          directly to an insurer. After Milton we inspected dozens of properties
+          across Tampa Bay at no cost to the homeowner.
+        </p>
+      </Card>
+      <Card title="Aid navigation" meta="Free">
+        <p>
+          FEMA, SBA, and local grant programs, explained by someone who has filled
+          the forms out before. Most people don't know what they qualify for —
+          that gap costs families more than the paperwork does.
+        </p>
+      </Card>
+      <Card title="Emergency repairs" meta="Free / sliding scale">
+        <p>Immediate basic repairs to make a damaged home safe enough to occupy.</p>
+      </Card>
+      <Card title="Cleanup & debris removal" meta="Volunteer crews">
+        <p>We mobilize volunteers to help families clear damage and haul debris.</p>
+      </Card>
+      <Card title="Wellness & safety checks" meta="Free">
+        <p>
+          If you can't reach a relative after a storm — particularly someone
+          elderly or medically vulnerable — we will go and check.
+        </p>
+      </Card>
+      <Card title="Family stability support" meta="Free">
+        <p>
+          Connecting parents with financial aid, childcare, and essentials, plus
+          care packages, books and toys for children.
+        </p>
+      </Card>
+    </Grid>
+  </Section>
+
+  <Section tone="surface" title="Maria's story">
+    <Story name="Maria" context="Hurricane Milton · inspection and aid navigation">
+      <p>
+        Maria had bought her first home less than a year before Milton. The storm
+        badly damaged her roof.
+      </p>
+      <p>
+        We inspected the property, wrote a full report, and recommended repairs —
+        at no cost. More importantly, we told her she might qualify for an SBA
+        disaster loan, something she had no idea was available to a homeowner
+        rather than a business.
+      </p>
+      <p>
+        She followed through. Months later she called to tell us the loan covered
+        the damage <em>and</em> funded work to prevent the same thing happening
+        again: no interest for twelve months, a year before payments began, at
+        under 4%.
+      </p>
+      <p>
+        The inspection was free. What it unlocked was worth considerably more than
+        the inspection.
+      </p>
+    </Story>
+  </Section>
+
+  <CallToAction title="Storm damage to document?" href="/help/request" cta="Request an inspection">
+    Tell us what happened and where you are. If we can help, we will; if someone
+    else is better placed, we'll point you at them.
+  </CallToAction>
+</BaseLayout>

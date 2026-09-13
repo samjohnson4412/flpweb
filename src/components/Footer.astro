@@ -1,27 +1,13 @@
 ---
-import { ORG } from '../consts';
+import { ORG, FOOTER_NAV } from '../consts';
 const year = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
   <div class="wrap cols">
-    <div>
-      <p class="charity">A 501(c)(3) public charity.<br />EIN: {ORG.ein}</p>
-    </div>
-
-    <nav aria-label="Footer">
-      <h2>Pages</h2>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/sponsors">Sponsors</a></li>
-        <li><a href="/privacy-policy">Privacy Policy</a></li>
-        <li><a href="/non-discrimination-policy">Non-Discrimination</a></li>
-      </ul>
-    </nav>
-
-    <div>
-      <h2>Our Address</h2>
+    <div class="brandcol">
+      <img src="/brand/logo-full-white.png" alt={ORG.name} width="1200" height="475" />
+      <p class="charity">A 501(c)(3) public charity<br />EIN {ORG.ein}</p>
       <address>
         {ORG.address.street}<br />
         {ORG.address.city}, {ORG.address.region} {ORG.address.postalCode}<br />
@@ -29,16 +15,31 @@ const year = new Date().getFullYear();
         <a href={`tel:${ORG.phoneHref}`}>{ORG.phone}</a>
       </address>
     </div>
+
+    {FOOTER_NAV.map((col) => (
+      <nav aria-label={col.heading}>
+        <h2>{col.heading}</h2>
+        <ul>
+          {col.links.map((l) => (
+            <li><a href={l.href}>{l.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+    ))}
   </div>
 
   <div class="wrap legal">
+    <p class="policies">
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/non-discrimination-policy">Non-Discrimination Policy</a>
+    </p>
     <p>
       A COPY OF THE OFFICIAL REGISTRATION ({ORG.flRegistrationNumber}) AND FINANCIAL
       INFORMATION MAY BE OBTAINED FROM THE DIVISION OF CONSUMER SERVICES BY CALLING
       TOLL-FREE (800-435-7352) WITHIN THE STATE. REGISTRATION DOES NOT IMPLY
       ENDORSEMENT, APPROVAL, OR RECOMMENDATION BY THE STATE.
     </p>
-    <p>&copy; 2021 – {year} {ORG.legalName}</p>
+    <p>&copy; {ORG.incorporated} – {year} {ORG.legalName}. Formerly {ORG.formerName}.</p>
   </div>
 </footer>
 
@@ -46,32 +47,36 @@ const year = new Date().getFullYear();
   .site-footer {
     background: var(--flp-navy-900);
     color: var(--flp-white);
-    margin-top: var(--space-xl);
     padding-block: var(--space-lg) var(--space-md);
   }
   .cols {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
     gap: var(--space-md);
   }
+  .brandcol { min-width: 0; }
+  .brandcol img { width: auto; height: 52px; margin-bottom: var(--space-sm); }
   .site-footer h2 {
-    font-size: var(--step-0);
+    font-size: var(--step--1);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     color: var(--color-accent);
   }
   .site-footer ul { list-style: none; margin: 0; padding: 0; }
-  .site-footer li { margin-bottom: 0.35rem; }
+  .site-footer li { margin-bottom: 0.4rem; }
   .site-footer a { text-decoration: none; }
-  address { font-style: normal; }
-  .charity { font-family: var(--font-display); font-size: var(--step-1); }
+  .site-footer a:hover { color: var(--color-accent); }
+  address { font-style: normal; font-size: var(--step--1); line-height: 1.7; }
+  .charity { font-family: var(--font-display); font-weight: 600; margin-bottom: var(--space-sm); }
+  .policies { display: flex; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-sm); }
+  .policies a { font-size: var(--step--1); }
   .legal {
     margin-top: var(--space-md);
     padding-top: var(--space-sm);
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     font-size: 0.72rem;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.65);
   }
   .legal p { max-width: none; }
 </style>

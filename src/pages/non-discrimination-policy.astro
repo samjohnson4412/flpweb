@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+/* Ported from the previous site (effective 05/11/2025). Substance unchanged;
+   fixed a typo ("safet" -> "safety") in the opening paragraph. */
+---
+<BaseLayout title="Non-Discrimination Policy" description="The Florida Lantern Project does not discriminate, and stands in solidarity with LGBTQ+ and immigrant communities.">
+  <Hero eyebrow="Effective 11 May 2025" title="Non-Discrimination Policy" tone="cream" />
+
+  <Section>
+    <div class="legal">
+      <p>
+        The Florida Lantern Project (FLP) is committed to fostering an inclusive,
+        equitable, and respectful environment in all of our programs, partnerships,
+        and services. We believe that every person deserves access to support,
+        dignity, and safety — especially in times of crisis.
+      </p>
+
+      <h2>FLP does not and shall not discriminate on the basis of</h2>
+      <ul class="grounds">
+        <li>Race</li><li>Color</li><li>Ethnicity</li><li>National origin</li>
+        <li>Citizenship or immigration status</li><li>Age</li>
+        <li>Religion or creed</li><li>Disability, physical or mental</li>
+        <li>Gender</li><li>Gender identity or expression</li>
+        <li>Sexual orientation</li><li>Marital or parental status</li>
+        <li>Socioeconomic status</li>
+        <li>Any other characteristic protected by applicable law</li>
+      </ul>
+
+      <div class="emphasis">
+        <p>
+          We stand in firm solidarity with LGBTQ+ individuals and families, and we
+          actively work to create a welcoming space for transgender, nonbinary, and
+          queer people. Our programs, services, and volunteer opportunities are
+          inclusive of all gender identities and sexual orientations.
+        </p>
+      </div>
+
+      <p>
+        We also recognize the vital contributions and unique vulnerabilities of
+        immigrant and undocumented communities. <strong>We do not require proof of
+        citizenship to receive aid</strong> or participate in our programs, and we
+        strongly oppose policies or actions that place immigrant communities at
+        greater risk during times of crisis. If you have concerns about
+        immigration, please see section 3 of our
+        <a href="/privacy-policy">privacy policy</a>.
+      </p>
+
+      <p>
+        This policy applies to all aspects of our operations, including hiring,
+        volunteer recruitment, outreach, services offered, partnerships, and the
+        design and implementation of all programs. Violations may be grounds for
+        termination of employment, volunteer service, or vendor relationship.
+      </p>
+
+      <p>
+        FLP affirms the inherent worth of every person. We believe our strength
+        comes from our diversity, and our mission is only fulfilled when all are
+        included.
+      </p>
+    </div>
+  </Section>
+</BaseLayout>
+
+<style>
+  .legal { max-width: var(--measure); }
+  .legal h2 { font-size: var(--step-1); margin-top: var(--space-md); }
+  .grounds { columns: 2 13rem; gap: var(--space-md); }
+  .grounds li { break-inside: avoid; }
+  .emphasis {
+    background: var(--color-surface); border-left: 4px solid var(--color-accent);
+    padding: var(--space-sm) var(--space-md); border-radius: var(--radius); margin: var(--space-md) 0;
+  }
+  .emphasis p:last-child { margin-bottom: 0; }
+</style>

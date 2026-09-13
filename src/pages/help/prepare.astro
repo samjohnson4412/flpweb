@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Grid from '../../components/Grid.astro';
+import Card from '../../components/Card.astro';
+import CallToAction from '../../components/CallToAction.astro';
+---
+<BaseLayout
+  title="Before a Storm"
+  description="Preparedness workshops, emergency readiness kits, and neighborhood weather stations from the Florida Lantern Project."
+>
+  <Hero
+    eyebrow="Before a storm"
+    title="The cheapest help is the help that arrives early"
+    lede="Most of what makes a hurricane survivable is decided weeks before landfall — whether you have a plan, whether you have documentation, whether anyone nearby knows you're there."
+  />
+
+  <Section>
+    <Grid>
+      <Card title="Preparedness workshops" meta="Free">
+        <p>
+          Practical emergency planning for families and community groups: what to
+          document, what to pack, when to leave, and who to tell.
+        </p>
+      </Card>
+      <Card title="Emergency readiness kits" meta="Sliding scale">
+        <p>
+          Assembled kits for families and businesses. Free for low-income
+          households affected by disaster; sliding-scale pricing otherwise.
+        </p>
+      </Card>
+      <Card title="Weather stations" meta="Sliding scale">
+        <p>
+          We install weather stations and webcams that feed open-source weather
+          networks, improving hyper-local forecasting for the whole neighborhood —
+          not just the property they sit on.
+        </p>
+      </Card>
+      <Card title="Pre-storm property inspection" meta="Sliding scale">
+        <p>
+          A drone survey and written report of your property <em>before</em> a
+          storm. When you file a claim afterwards, you have documented proof of
+          what the roof looked like the week before.
+        </p>
+      </Card>
+    </Grid>
+  </Section>
+
+  <Section tone="surface" title="Why pre-storm documentation matters">
+    <p>
+      After Milton, the families who struggled most weren't always the ones with
+      the worst damage. They were the ones who couldn't prove what the damage
+      replaced. Insurers ask for before-and-after. Most people only have after.
+    </p>
+    <p>
+      A pre-storm inspection is thirty minutes and a PDF. It is the single
+      cheapest thing you can do to protect a claim.
+    </p>
+  </Section>
+
+  <CallToAction title="Want a workshop in your neighborhood?" href="/contact" cta="Get in touch">
+    We run preparedness sessions for schools, churches, HOAs, and community
+    groups across Tampa Bay.
+  </CallToAction>
+</BaseLayout>

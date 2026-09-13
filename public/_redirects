@@ -1,0 +1,34 @@
+# Cloudflare Pages redirects — preserve every URL the Framer site published.
+# Order matters: first match wins.
+
+# Sponsor pages lived at two paths on the old site (~48 duplicate pages).
+# /sponsors/ is now canonical.
+/about/impact/*            /sponsors/:splat            301
+
+# Lanterns for Jamaica has concluded; the campaign is archived, not deleted.
+# These URLs are in printed material and social posts.
+/jamaica                   /response/melissa-2025      301
+/jamaica/adopt             /response/melissa-2025      301
+/jamaica/host              /response/melissa-2025      301
+/blog/hurricane-melissa            /response/melissa-2025  301
+/blog/hurricane-melissa-drive      /response/melissa-2025  301
+/blog/jamaica-schools              /response/melissa-2025  301
+
+# Blog became News.
+/blog                      /news                       301
+/blog/*                    /news                       301
+
+# Two old "sponsor" URLs were never real sponsors: a call-to-action placeholder
+# and a cause page. Point them somewhere useful rather than 404.
+/sponsors/this-could-be-you   /give/sponsor            301
+/sponsors/education-for-all   /sponsors                301
+
+# Gala sponsors page folded into the event page.
+/gala/sponsors             /events/beacons-of-hope     301
+/gala                      /events/beacons-of-hope     301
+
+# Old nav labels people may have bookmarked.
+/about-us                  /about                      301
+/impact                    /response                   301
+/donate                    /give/donate                301
+/volunteer                 /give/volunteer             301

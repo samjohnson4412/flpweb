@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import { SPONSORS } from '../../data/sponsors';
+
+export function getStaticPaths() {
+  return SPONSORS.map((sponsor, i) => ({
+    params: { slug: sponsor.slug },
+    props: {
+      sponsor,
+      others: [
+        SPONSORS[(i + 1) % SPONSORS.length],
+        SPONSORS[(i + 2) % SPONSORS.length],
+        SPONSORS[(i + 3) % SPONSORS.length],
+      ],
+    },
+  }));
+}
+
+const { sponsor, others } = Astro.props;
+---
+<BaseLayout
+  title={sponsor.name}
+  description={`${sponsor.name} supported the Florida Lantern Project. ${sponsor.gift}.`}
+>
+  <Hero eyebrow="Sponsor" title={sponsor.name} lede={sponsor.gift} />
+
+  <Section>
+    <p class="intro">
+      {sponsor.name} donated to support the Florida Lantern Project's disaster
+      relief work — helping fund emergency lodging, storm inspections, and
+      recovery support for Florida families.
+    </p>
+    <p>
+      Contributions like this are how a volunteer-run organization responded to
+      two hurricanes in 2024 without an operating budget. We are grateful, and we
+      would encourage you to give them your business.
+    </p>
+    <p><a class="btn btn--ghost" href="/sponsors">All sponsors</a></p>
+  </Section>
+
+  <Section tone="surface" title="Others who helped">
+    <ul class="others">
+      {others.map((o) => (
+        <li><a href={`/sponsors/${o.slug}`}><strong>{o.name}</strong><span>{o.gift}</span></a></li>
+      ))}
+    </ul>
+  </Section>
+</BaseLayout>
+
+<style>
+  .intro { font-size: var(--step-1); }
+  .others { list-style: none; padding: 0; margin: var(--space-md) 0 0; display: grid; gap: var(--space-sm); grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
+  .others a { display: block; text-decoration: none; background: var(--color-bg); border-left: 4px solid var(--color-accent); border-radius: var(--radius); padding: var(--space-sm); }
+  .others strong { display: block; font-family: var(--font-display); }
+  .others span { display: block; font-size: var(--step--1); color: var(--color-text-muted); }
+</style>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import { ORG } from '../../consts';
+---
+<BaseLayout
+  title="Beacons of Hope Gala"
+  description="Beacons of Hope is the Florida Lantern Project's annual fundraising gala and silent auction."
+>
+  <Hero
+    eyebrow="Annual gala"
+    title="Beacons of Hope"
+    lede="An evening of food, stories, and a silent auction — named for the light show that started all of this."
+  />
+
+  <Section title="2025: A Culinary Journey Through Florida">
+    <p class="intro">
+      Our first gala was held on 7 June 2025 in downtown Tampa: seven courses,
+      each drawn from a chapter of Florida's history, told alongside the stories
+      of families we'd helped through Helene and Milton.
+    </p>
+    <p>
+      Guests heard from Peter, who evacuated a dorm with a cat no shelter would
+      take; from Maria, whose free roof inspection became an SBA loan; and from
+      Amy, who was hit by two hurricanes in nine days. Mayor Jane Castor recorded
+      a message recognizing grassroots disaster response.
+    </p>
+    <dl class="result">
+      <div><dt>Raised</dt><dd>$7,259</dd></div>
+      <div><dt>Supporters</dt><dd>49</dd></div>
+      <div><dt>Auction items donated</dt><dd>54, by 46 businesses</dd></div>
+    </dl>
+    <p class="note">
+      We publish what we raised rather than what we hoped to. The 2025 goal was
+      $50,000 and we did not come close to it — the evening was a better
+      relationship-builder than it was a fundraiser, which is useful to know
+      before planning the next one.
+    </p>
+  </Section>
+
+  <Section tone="surface" title="Thank you to our sponsors">
+    <p>
+      Forty-six Florida businesses donated goods, experiences, and services to the
+      2025 auction — with particular thanks to Xtreme Juice, Total Wine &amp; More,
+      and the Tampa Bay Lightning.
+    </p>
+    <p><a class="btn btn--ghost" href="/sponsors">See every sponsor</a></p>
+  </Section>
+
+  <Section title="2026">
+    <p>
+      Dates for the next Beacons of Hope haven't been set.
+      <a href={`mailto:${ORG.email}?subject=Beacons%20of%20Hope`}>Let us know</a>
+      if you'd like to sponsor it, donate an auction item, or hear when tickets open.
+    </p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .intro { font-size: var(--step-1); }
+  .result { display: grid; gap: 0; margin: var(--space-md) 0; max-width: 34rem; }
+  .result > div { display: grid; grid-template-columns: 1fr auto; padding: 0.7rem 0; border-bottom: 1px solid var(--color-border); }
+  dt { font-weight: 700; } dd { margin: 0; font-family: var(--font-display); font-size: var(--step-1); }
+  .note { font-size: var(--step--1); color: var(--color-text-muted); max-width: var(--measure); }
+</style>

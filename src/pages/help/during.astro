@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Grid from '../../components/Grid.astro';
+import Card from '../../components/Card.astro';
+import Story from '../../components/Story.astro';
+---
+<BaseLayout
+  title="During a Storm"
+  description="Evacuation and transportation assistance, pet-friendly emergency lodging, connectivity, and a storm support hotline."
+>
+  <Hero
+    eyebrow="During a storm"
+    title="When leaving is the right call but not a simple one"
+    lede="Evacuation orders assume you have a car, somewhere to go, and nobody with you who complicates the trip. For a lot of families, none of that is true."
+  />
+
+  <Section>
+    <p class="urgent">
+      <strong>If you are in immediate danger, call 911.</strong> Our hotline is a
+      non-emergency service.
+    </p>
+    <Grid>
+      <Card title="Emergency lodging" meta="Pets welcome">
+        <p>
+          Through hotel partnerships we place families in safe rooms ahead of
+          landfall. Before Milton we secured discounted Hilton rooms in Orlando
+          with breakfast and parking included, and placed more than 20 people.
+        </p>
+        <p><strong>Pets come too.</strong> That is not an exception we make; it is the point.</p>
+      </Card>
+      <Card title="Evacuation & transportation" meta="Including if you have no car">
+        <p>
+          If you have nowhere to go or no way to get there, we arrange it. For one
+          family that meant coordinating an unusually complicated ride for two
+          adults, two kids, two cats and a dog, over a hundred miles inland.
+        </p>
+      </Card>
+      <Card title="Storm support hotline" meta="Non-emergency">
+        <p>
+          Real-time forecasts, radar, shelter status, and answers to the specific
+          questions official hotlines can't take: what your zone means for you,
+          what to do about a cracked window, how to keep power to medical
+          equipment if you're staying.
+        </p>
+      </Card>
+      <Card title="Staying connected" meta="Free">
+        <p>
+          During Milton we provided free one-month unlimited talk and text plans
+          for eSIM-compatible phones, so families cut off from service could still
+          reach each other.
+        </p>
+      </Card>
+    </Grid>
+  </Section>
+
+  <Section tone="surface" title="The questions we actually get">
+    <p class="lede-inline">
+      These came into the hotline during the 2024 storms. Not one of them has a
+      useful answer on a government website.
+    </p>
+    <ul class="quotes">
+      <li>“Can I still leave if I'm in Zone B?”</li>
+      <li>“My window is cracked. What do I do?”</li>
+      <li>“My daughter's on a ventilator, and I'm staying. How can I keep the power on?”</li>
+    </ul>
+    <p>
+      Official guidance told one caller to seek a local public shelter. The
+      nearest one was thirty miles away and she had no car. Being technically
+      correct is not the same as being useful.
+    </p>
+  </Section>
+
+  <Section title="Peter's story">
+    <Story name="Peter" context="Hurricane Milton · emergency lodging">
+      <p>
+        Forced to leave their dorm ahead of Milton, Peter had no family nearby to
+        call. The shelters wouldn't take their cat — their only companion. When
+        they contacted us, they said they were planning to ride out the storm in
+        their car.
+      </p>
+      <p>We could not let that happen. Through our Hilton partnership we placed
+        Peter and their cat in a safe hotel the same day.</p>
+      <blockquote>
+        Wonderful, wonderful people. My cat and I have only been able to safely
+        make it through Hurricane Milton because of the help given to us by this
+        organization. I cannot convey enough how above and beyond they've gone in
+        ensuring our safety.
+      </blockquote>
+    </Story>
+    <p class="more"><a class="btn" href="/help/request">Request assistance</a></p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .urgent {
+    background: rgba(215, 38, 56, 0.08);
+    border-left: 4px solid var(--flp-red-500);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius);
+    max-width: none;
+  }
+  .lede-inline { font-size: var(--step-1); }
+  .quotes { list-style: none; padding: 0; margin: var(--space-md) 0; display: grid; gap: var(--space-sm); }
+  .quotes li {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    border-left: 4px solid var(--color-accent);
+    padding-left: var(--space-sm);
+  }
+  .more { margin-top: var(--space-md); }
+</style>

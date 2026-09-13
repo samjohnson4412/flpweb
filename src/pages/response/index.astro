@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Grid from '../../components/Grid.astro';
+import Card from '../../components/Card.astro';
+import Stats from '../../components/Stats.astro';
+---
+<BaseLayout
+  title="Our Response"
+  description="A permanent record of how the Florida Lantern Project responded to Hurricanes Helene, Milton, and Melissa — what we did, who we helped, and what it took."
+>
+  <Hero
+    eyebrow="Our response"
+    title="What we did, storm by storm"
+    lede="A permanent record rather than a feed. Each storm gets a page that stays up: what happened, what we did, who it reached, and what we'd do differently."
+  />
+
+  <Section>
+    <Grid>
+      <Card title="Hurricane Helene" href="/response/helene-2024" meta="September 2024">
+        <p>
+          The storm that changed what this organization does. We stepped outside
+          our mission to provide urgent support, and never stepped back.
+        </p>
+      </Card>
+      <Card title="Hurricane Milton" href="/response/milton-2024" meta="October 2024">
+        <p>
+          Two weeks after Helene. Emergency lodging for more than 20 people,
+          free phone plans, and dozens of roof inspections across Tampa Bay.
+        </p>
+      </Card>
+      <Card title="Hurricane Melissa" href="/response/melissa-2025" meta="2025 · concluded">
+        <p>
+          Lanterns for Jamaica — an effort to extend Florida's hurricane-tested
+          compassion to the Caribbean. It did not reach the scale we hoped.
+        </p>
+      </Card>
+    </Grid>
+  </Section>
+
+  <Section tone="surface" title="The totals so far">
+    <Stats />
+  </Section>
+
+  <Section title="Why these pages exist">
+    <p>
+      Most of what small nonprofits do disappears into social media, where it is
+      unsearchable a week later and gone entirely if the platform decides so. A
+      family looking for help next hurricane season can't find a Facebook post
+      from 2024. Neither can a grantmaker.
+    </p>
+    <p>
+      So we write it down here, where it stays.
+    </p>
+  </Section>
+</BaseLayout>

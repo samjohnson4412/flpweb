@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('news', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<BaseLayout title="News" description="Updates from the Florida Lantern Project.">
+  <Hero eyebrow="News" title="Updates" lede="What we're doing, what it cost, and what we got wrong." />
+  <Section>
+    {posts.length === 0 ? (
+      <p>Nothing posted yet.</p>
+    ) : (
+      <ul class="posts">
+        {posts.map((p) => (
+          <li>
+            <a href={`/news/${p.id}`}>
+              <time datetime={p.data.date.toISOString()}>{fmt(p.data.date)}</time>
+              <strong>{p.data.title}</strong>
+              <span>{p.data.description}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </Section>
+  <Section tone="surface" title="Looking for our storm response?">
+    <p>Each hurricane has a permanent page with what we did and who it reached.</p>
+    <p><a class="btn btn--ghost" href="/response">Our response</a></p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .posts { list-style: none; padding: 0; margin: var(--space-md) 0 0; }
+  .posts li { border-bottom: 1px solid var(--color-border); }
+  .posts a { display: block; padding: var(--space-md) 0; text-decoration: none; }
+  .posts a:hover strong { color: var(--color-accent); }
+  time { font-family: var(--font-display); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-muted); }
+  .posts strong { display: block; font-family: var(--font-display); font-size: var(--step-2); margin: 0.2rem 0; }
+  .posts span { color: var(--color-text-muted); }
+</style>

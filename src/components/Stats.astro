@@ -1,0 +1,25 @@
+---
+import { STATS } from '../consts';
+---
+<ul class="stats">
+  {STATS.map((s) => (
+    <li>
+      <span class="val">{s.value}</span>
+      <span class="lab">{s.label}</span>
+      <span class="note">{s.note}</span>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .stats {
+    list-style: none; margin: var(--space-md) 0 0; padding: 0;
+    display: grid; gap: var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  }
+  .stats li { border-top: 3px solid var(--color-accent); padding-top: var(--space-sm); }
+  .val { display: block; font-family: var(--font-display); font-size: var(--step-3); font-weight: 700; line-height: 1; }
+  .lab { display: block; margin-top: 0.4rem; font-weight: 700; }
+  .note { display: block; font-size: var(--step--1); color: var(--color-text-muted); margin-top: 0.2rem; }
+  :global(.sec--navy) .note { color: rgba(255,255,255,0.65); }
+</style>

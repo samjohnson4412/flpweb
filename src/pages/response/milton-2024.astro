@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Story from '../../components/Story.astro';
+import Grid from '../../components/Grid.astro';
+---
+<BaseLayout
+  title="Hurricane Milton, 2024"
+  description="How the Florida Lantern Project responded to Hurricane Milton — 20+ people placed in emergency lodging, free eSIM phone plans, and free roof inspections across Tampa Bay."
+>
+  <Hero
+    eyebrow="October 2024"
+    title="Hurricane Milton"
+    lede="Nine days after Helene. Some families were hit twice before anyone had assessed the first round of damage."
+  />
+
+  <Section title="Before landfall: somewhere to go">
+    <p class="intro">
+      On 6 October, three days before landfall, we secured discounted rooms at a
+      Hilton in Orlando — $68 a night, breakfast and parking included — and
+      offered them publicly.
+    </p>
+    <p>
+      That post was shared 700 times. It was the most-shared thing this
+      organization has ever published, and it wasn't an appeal. It was an offer.
+    </p>
+    <p>
+      We placed <strong>more than 20 people</strong> in emergency lodging in the
+      days before the storm. Pets included. That detail is why several of them
+      called us at all.
+    </p>
+  </Section>
+
+  <Section tone="surface" title="The people">
+    <Grid min="320px">
+      <Story name="Peter" context="Evacuated a dorm · one cat">
+        <p>
+          A college student ordered out of their dorm, with no family nearby and a
+          cat no shelter would accept. They told us they were planning to ride out
+          the storm in their car.
+        </p>
+        <p>We placed them both in a hotel the same day.</p>
+        <blockquote>
+          My cat and I have only been able to safely make it through Hurricane
+          Milton because of the help given to us by this organization.
+        </blockquote>
+      </Story>
+      <Story name="Amy" context="Hit by Helene, then Milton · six of them">
+        <p>
+          A single mother with two kids, two cats and a dog. Helene had already
+          flooded her house and totalled her car. Milton arrived before an adjuster
+          could even visit.
+        </p>
+        <p>
+          No car, no backup plan, nowhere to go. We arranged transport and lodging
+          for the entire household — all six of them — more than a hundred miles
+          inland, hours before landfall.
+        </p>
+        <p>No forms. No waitlist. No delay.</p>
+      </Story>
+      <Story name="Maria" context="First-time homeowner · roof damage">
+        <p>
+          Maria had owned her first home for less than a year when Milton took
+          most of her roof.
+        </p>
+        <p>
+          We inspected it, wrote the report, and told her about SBA disaster loans
+          — which she hadn't known were open to homeowners. The loan she secured
+          covered the damage and funded mitigation work, at under 4% with no
+          payments for a year.
+        </p>
+      </Story>
+    </Grid>
+  </Section>
+
+  <Section title="During: staying reachable">
+    <p>
+      On 8 October we offered free one-month unlimited talk and text plans for
+      anyone with an eSIM-compatible phone. Cell service was expected to fail, and
+      a family separated across an evacuation route with a dead phone is a
+      different kind of emergency.
+    </p>
+    <p>
+      We also ran a non-emergency storm hotline: radar, forecasts, shelter status,
+      and the specific questions official lines can't take.
+    </p>
+    <ul class="quotes">
+      <li>“Can I still leave if I'm in Zone B?”</li>
+      <li>“My window is cracked. What do I do?”</li>
+      <li>“My daughter's on a ventilator, and I'm staying. How can I keep the power on?”</li>
+    </ul>
+  </Section>
+
+  <Section tone="surface" title="After: documentation">
+    <p class="intro">
+      On 11 October we began offering free roof and home inspections across the
+      Tampa Bay area. We completed <strong>dozens</strong>.
+    </p>
+    <p>
+      An inspection is a drone flight and a written report. What it's actually for
+      is the moment an insurer asks a family to prove what the damage replaced —
+      and for pointing people at aid programs nobody told them about. That second
+      part turned out to matter as much as the first.
+    </p>
+  </Section>
+
+  <Section title="The totals">
+    <ul class="totals">
+      <li><strong>20+</strong><span>placed in emergency lodging before landfall</span></li>
+      <li><strong>Dozens</strong><span>of free roof and property inspections</span></li>
+      <li><strong>50+</strong><span>individuals and families assisted across both storms</span></li>
+      <li><strong>$0</strong><span>operating budget</span></li>
+    </ul>
+    <p class="note">
+      Delivered through donated hotel capacity, volunteer labour, and partners who
+      answered the phone. That worked once. It is not a plan.
+      <a href="/give/lantern-keeper">This is why we ask for monthly support.</a>
+    </p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .intro { font-size: var(--step-1); }
+  .quotes { list-style: none; padding: 0; margin: var(--space-md) 0; display: grid; gap: var(--space-sm); }
+  .quotes li { font-family: var(--font-display); font-size: var(--step-1); border-left: 4px solid var(--color-accent); padding-left: var(--space-sm); }
+  .totals { list-style: none; padding: 0; margin: var(--space-md) 0; display: grid; gap: var(--space-md); grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); }
+  .totals li { border-top: 3px solid var(--color-accent); padding-top: var(--space-sm); }
+  .totals strong { display: block; font-family: var(--font-display); font-size: var(--step-3); line-height: 1; }
+  .totals span { display: block; margin-top: 0.3rem; color: var(--color-text-muted); font-size: var(--step--1); }
+  .note { max-width: var(--measure); }
+</style>

@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string;
+  href?: string;
+  meta?: string;
+}
+const { title, href, meta } = Astro.props;
+const Tag = href ? 'a' : 'div';
+---
+
+<Tag class="card" href={href}>
+  {meta && <p class="meta">{meta}</p>}
+  <h3>{title}</h3>
+  <div class="body"><slot /></div>
+</Tag>
+
+<style>
+  .card {
+    display: block;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-accent);
+    border-radius: var(--radius);
+    padding: var(--space-md);
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+  }
+  a.card:hover { border-left-color: var(--flp-navy-700); color: inherit; }
+  a.card:hover h3 { color: var(--color-accent); }
+  .card h3 { font-size: var(--step-1); margin-bottom: var(--space-xs); }
+  .meta {
+    font-family: var(--font-display);
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xs);
+  }
+  .body :global(p:last-child) { margin-bottom: 0; }
+</style>

@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Grid from '../../components/Grid.astro';
+import Card from '../../components/Card.astro';
+import { ORG } from '../../consts';
+---
+<BaseLayout
+  title="Volunteer"
+  description="Volunteer with the Florida Lantern Project — hotline, supply distribution, inspections, debris clearing, and event support."
+>
+  <Hero
+    eyebrow="Volunteer"
+    title="We need hands, not just funds"
+    lede="This organization was entirely volunteer-run through the 2024 storms. It still largely is."
+  >
+    <p class="actions"><a class="btn" href={`mailto:${ORG.email}?subject=Volunteering`}>Get in touch</a></p>
+  </Hero>
+
+  <Section title="Where people are useful">
+    <Grid>
+      <Card title="Storm hotline" meta="Remote · during storms">
+        <p>Answering non-emergency questions, checking shelter status, and staying calm with people who aren't.</p>
+      </Card>
+      <Card title="Supply drives & distribution" meta="In person">
+        <p>Collecting, sorting, and getting supplies to where they're needed.</p>
+      </Card>
+      <Card title="Inspections" meta="Skilled">
+        <p>Drone pilots, roofers, contractors, and anyone who can read damage and write it up clearly.</p>
+      </Card>
+      <Card title="Cleanup crews" meta="In person · physical">
+        <p>Debris clearing and haul-outs after a storm. Bring gloves.</p>
+      </Card>
+      <Card title="Events" meta="Seasonal">
+        <p>Setup, staffing, and teardown for fundraisers — and, we hope, for the light show's return.</p>
+      </Card>
+      <Card title="Ambassadors" meta="Ongoing">
+        <p>Talking about the work in your own community, workplace, or congregation.</p>
+      </Card>
+    </Grid>
+  </Section>
+
+  <Section tone="surface" title="What to expect">
+    <p>
+      We're a small organization. You'll deal with actual decision-makers, your
+      time won't be wasted on process, and you'll see the outcome of what you did.
+      In exchange, things are sometimes improvised and occasionally urgent.
+    </p>
+    <p>
+      Tell us what you're good at and roughly when you're available. We'd rather
+      match you to something real than add you to a list.
+    </p>
+    <p><a class="btn" href={`mailto:${ORG.email}?subject=Volunteering`}>Email us</a></p>
+  </Section>
+</BaseLayout>
+
+<style>.actions { margin-top: var(--space-md); }</style>

@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import { ORG } from '../consts';
+/* Ported from the previous site (effective 04/29/2025). Substance unchanged.
+   Fixed: the old page gave the ZIP as 33509; it is 33609. */
+---
+<BaseLayout title="Privacy Policy" description="How the Florida Lantern Project collects, uses, shares, and safeguards your personal information.">
+  <Hero eyebrow="Effective 29 April 2025" title="Privacy Policy" tone="cream" />
+
+  <Section>
+    <div class="legal">
+      <p>
+        The Florida Lantern Project (“FLP”, “we”, “our”, or “us”) is committed to
+        protecting your privacy. This Privacy Policy explains how we collect, use,
+        share, and safeguard your personal information when you interact with us
+        through our website, events, or other services.
+      </p>
+
+      <h2>1. Information we collect</h2>
+      <p>We collect information you provide directly to us, such as when you:</p>
+      <ul>
+        <li>Register for a workshop</li>
+        <li>Request evacuation or transportation assistance</li>
+        <li>Contact the disaster support hotline</li>
+        <li>Request wellness checks, emergency repairs, or home cleanup</li>
+        <li>Request an inspection</li>
+        <li>Apply for other support</li>
+        <li>Purchase services such as drone inspections, weather station installations, or emergency readiness kits</li>
+        <li>Donate or sponsor through Beacons of Hope, Lanterns of Hope, or other fundraising activities</li>
+        <li>Subscribe to our Lantern Keeper monthly giving program</li>
+        <li>Contact us by email, phone, or through our website</li>
+      </ul>
+      <p>The types of information may include:</p>
+      <ul>
+        <li>Name, email address, mailing address, phone number</li>
+        <li>Payment information (for donations, services, or memberships)</li>
+        <li>Information related to your disaster needs or service requests</li>
+        <li>Information related to fundraising events or sponsorships</li>
+      </ul>
+      <p>We may also automatically collect technical information about your interaction with our website, such as IP address, browser type, device information, and pages visited.</p>
+
+      <h2>2. How we use your information</h2>
+      <ul>
+        <li>Deliver disaster preparedness, response, and recovery services</li>
+        <li>Provide weather updates and disaster support information</li>
+        <li>Manage donations, sponsorships, memberships, and event registrations</li>
+        <li>Communicate with you about services, updates, fundraising opportunities, and important news</li>
+        <li>Improve our programs and outreach efforts</li>
+        <li>Comply with legal obligations and reporting requirements</li>
+      </ul>
+
+      <h2>3. How we share your information</h2>
+      <p><strong>We do not sell or rent your personal information.</strong></p>
+      <p>
+        We may share information with trusted partners or service providers who
+        assist us in delivering programs or managing fundraising activities (for
+        example payment processors and software providers), but only under
+        confidentiality agreements. We may also share your information if required
+        by law, or to protect the rights, property, or safety of FLP, its staff, or
+        the community.
+      </p>
+      <div class="emphasis">
+        <p><strong>We believe disaster support is a universal human right.</strong></p>
+        <p>
+          We do not share your information with ICE, Homeland Security, or any
+          immigration enforcement agency. The only way those entities could ever
+          access our records is with force and a court-issued warrant. We are
+          committed to protecting your privacy and will never cooperate with any
+          action that threatens the safety or dignity of the people we serve.
+        </p>
+      </div>
+      <p>
+        However, some assistance programs (such as FEMA or SBA aid) are operated by
+        government agencies we do not control, and applying to them may be
+        available only to US citizens and/or involve different privacy practices.
+        If you are concerned about privacy or data sharing, please contact us
+        before seeking services connected to government programs. We're here to
+        help you make the safest decision.
+      </p>
+
+      <h2>4. Data security</h2>
+      <p>
+        We use reasonable administrative, technical, and physical safeguards to
+        protect your information. However, no method of transmission over the
+        Internet or electronic storage is 100% secure. If you believe your
+        information has been compromised, please contact us immediately.
+      </p>
+
+      <h2>5. Your rights and choices</h2>
+      <ul>
+        <li>Request access to the personal information we hold about you</li>
+        <li>Request that we correct or delete your personal information, subject to legal requirements</li>
+        <li>Opt out of non-essential communications at any time via the unsubscribe link in our emails or by contacting us directly</li>
+      </ul>
+      <p>Opting out of communications may affect your access to some services, especially during disaster response efforts.</p>
+
+      <h2>6. Children's privacy</h2>
+      <p>
+        Our services are not directed to children under 13, and we do not knowingly
+        collect personal information directly from children. We may collect
+        information from parents, legal guardians, or caregivers about children
+        under 13 in order to provide disaster relief services.
+      </p>
+      <p>
+        This is permitted under the Children's Online Privacy Protection Act
+        (COPPA) when the information is provided by a legal guardian to protect the
+        health or safety of the child in an emergency or public safety context. We
+        use it solely to provide essential support to families during and after
+        disasters. If you believe we have collected information about a child
+        without proper authorization, please contact us.
+      </p>
+
+      <h2>7. Third-party links</h2>
+      <p>
+        Our website may contain links to external sites we do not control. We are
+        not responsible for the content or privacy practices of those sites.
+      </p>
+
+      <h2>8. Fundraising and revenue activities</h2>
+      <p>
+        Certain programs — drone inspections, weather station installations,
+        emergency readiness kits, and Lantern Keeper memberships — may involve
+        collecting payment and service-related information. We handle it securely
+        and only to provide services and maintain financial sustainability. All
+        fundraising activities, including Beacons of Hope and Lanterns of Hope,
+        comply with applicable privacy and donor protection laws.
+      </p>
+
+      <h2>9. Changes to this policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Changes will be posted
+        here with an updated effective date.
+      </p>
+
+      <h2>10. Contact us</h2>
+      <p>
+        {ORG.legalName}<br />
+        {ORG.address.street}<br />
+        {ORG.address.city}, {ORG.address.region} {ORG.address.postalCode}<br />
+        <a href={`mailto:${ORG.email}`}>{ORG.email}</a><br />
+        <a href={`tel:${ORG.phoneHref}`}>{ORG.phone}</a>
+      </p>
+    </div>
+  </Section>
+</BaseLayout>
+
+<style>
+  .legal { max-width: var(--measure); }
+  .legal h2 { font-size: var(--step-1); margin-top: var(--space-md); }
+  .legal ul { margin-bottom: var(--space-sm); }
+  .emphasis {
+    background: var(--color-surface); border-left: 4px solid var(--color-accent);
+    padding: var(--space-sm) var(--space-md); border-radius: var(--radius); margin: var(--space-sm) 0;
+  }
+  .emphasis p:last-child { margin-bottom: 0; }
+</style>

@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import Grid from '../components/Grid.astro';
+import Card from '../components/Card.astro';
+import { ORG } from '../consts';
+---
+<BaseLayout title="Contact" description="Contact the Florida Lantern Project in Tampa — request assistance, volunteer, sponsor, or ask about press.">
+  <Hero eyebrow="Contact" title="Get in touch" lede="We're a small team. Email usually reaches a decision-maker directly." />
+
+  <Section>
+    <div class="cols">
+      <div>
+        <h2>Direct</h2>
+        <address>
+          <a href={`mailto:${ORG.email}`}>{ORG.email}</a><br />
+          <a href={`tel:${ORG.phoneHref}`}>{ORG.phone}</a><br /><br />
+          {ORG.legalName}<br />
+          {ORG.address.street}<br />
+          {ORG.address.city}, {ORG.address.region} {ORG.address.postalCode}
+        </address>
+        <p class="social">
+          <a href={ORG.social.facebook} rel="noopener">Facebook</a> ·
+          <a href={ORG.social.instagram} rel="noopener">Instagram</a>
+        </p>
+      </div>
+      <div>
+        <h2>Urgent</h2>
+        <p class="urgent"><strong>If you are in immediate danger, call 911.</strong></p>
+        <p>
+          To request assistance during or after a storm, use
+          <a href="/help/request">the assistance request page</a> — it's the
+          fastest route to someone who can act.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <Section tone="surface" title="What are you getting in touch about?">
+    <Grid>
+      <Card title="I need help" href="/help/request" meta="Assistance" />
+      <Card title="I want to volunteer" href="/give/volunteer" meta="Volunteer" />
+      <Card title="My business wants to sponsor" href="/give/sponsor" meta="Sponsorship" />
+      <Card title="I'm a journalist" href="/about/press" meta="Press" />
+      <Card title="I want to join the board" href="/give/board" meta="Governance" />
+      <Card title="I want your filings" href="/about/transparency" meta="Due diligence" />
+    </Grid>
+  </Section>
+
+  <Section title="Stay in touch">
+    <p>
+      {/* TODO(sam): wire to Givebutter's list. Note it hasn't been mailed in
+          ~15 months, so warm it up before any bulk send — see docs/STRATEGY.md 6c. */}
+      We write occasionally — storm preparedness ahead of the season, what we did
+      afterwards, and news about the light show's return. Never more than monthly.
+    </p>
+    <p>
+      <a class="btn" href={`mailto:${ORG.email}?subject=Add%20me%20to%20the%20list`}>Join the list</a>
+    </p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-md); }
+  h2 { font-size: var(--step-1); }
+  address { font-style: normal; line-height: 1.8; }
+  .social { margin-top: var(--space-sm); }
+  .urgent { background: rgba(215,38,56,0.08); border-left: 4px solid var(--flp-red-500); padding: var(--space-sm) var(--space-md); border-radius: var(--radius); }
+</style>

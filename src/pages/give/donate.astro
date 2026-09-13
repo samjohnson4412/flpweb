@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import { ORG } from '../../consts';
+---
+<BaseLayout
+  title="Make a Donation"
+  description="Donate to the Florida Lantern Project. A 501(c)(3) public charity, EIN 86-3574323."
+>
+  <Hero
+    eyebrow="One-time gift"
+    title="Hurricane season doesn't wait for our fundraising calendar"
+    lede="Gifts made now are what's available when the next storm forms — not the next time we hold an event."
+  >
+    <p class="actions"><a class="btn" href={ORG.social.givebutter}>Donate now</a></p>
+  </Hero>
+
+  <Section title="What your gift does">
+    <p class="intro">
+      In 2024 we assisted more than 50 individuals and families through Hurricanes
+      Helene and Milton on an operating budget of nothing at all — hotel rooms
+      negotiated, a drone, volunteers, and partners who said yes.
+    </p>
+    <p>
+      That is not a sustainable way to run a disaster response, and it is why we
+      ask. Every dollar shortens the distance between a family calling and someone
+      being able to say yes.
+    </p>
+    <p><a href="/response">See what we did &rarr;</a></p>
+  </Section>
+
+  <Section tone="surface" title="Giving monthly goes further">
+    <p>
+      If you're weighing a one-time gift against the same amount spread across a
+      year, the monthly version is materially more useful to us — it's the reserve
+      that lets us book a hotel room the night before landfall.
+    </p>
+    <p><a class="btn btn--ghost" href="/give/lantern-keeper">About Lantern Keepers</a></p>
+  </Section>
+
+  <Section title="Tax information">
+    <p>
+      {ORG.legalName} is a 501(c)(3) public charity. EIN <strong>{ORG.ein}</strong>.
+      Donations are tax-deductible to the extent allowed by law, and you'll receive
+      a receipt by email.
+    </p>
+    <p><a href="/about/transparency">Full transparency and financial information &rarr;</a></p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .actions { margin-top: var(--space-md); }
+  .intro { font-size: var(--step-1); }
+</style>

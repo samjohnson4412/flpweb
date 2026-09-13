@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import { ORG, BOARD } from '../../consts';
+---
+<BaseLayout
+  title="Join the Board"
+  description="The Florida Lantern Project is recruiting board members, including a treasurer."
+>
+  <Hero
+    eyebrow="Board service"
+    title="We're looking for people to help steer this"
+    lede="We meet quarterly. We're small enough that a board member's contribution is visible, and young enough that it's genuinely formative."
+  />
+
+  <Section title="Current board">
+    <ul class="board">
+      {BOARD.map((m) => (
+        <li><strong>{m.name}</strong><span>{m.role}</span></li>
+      ))}
+    </ul>
+    <p class="open">
+      <strong>We do not currently have a treasurer.</strong> That's the seat we
+      most need to fill, and we'd rather say so plainly than leave the gap
+      unmentioned.
+    </p>
+  </Section>
+
+  <Section tone="surface" title="Who we'd especially like to hear from">
+    <ul>
+      <li><strong>A treasurer</strong> — nonprofit finance, bookkeeping, or audit experience</li>
+      <li>Grant writing and institutional fundraising</li>
+      <li>Emergency management or disaster response</li>
+      <li>Insurance, construction, or property assessment</li>
+      <li>Anyone with deep roots in a Tampa Bay community we don't yet reach</li>
+    </ul>
+    <p>
+      You do not need to be wealthy or well-connected. You need to care about this
+      and show up four times a year.
+    </p>
+    <p><a class="btn" href={`mailto:${ORG.email}?subject=Board%20service`}>Start a conversation</a></p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .board { list-style: none; padding: 0; margin: var(--space-md) 0; display: grid; gap: var(--space-sm); }
+  .board li { border-left: 4px solid var(--color-accent); padding-left: var(--space-sm); }
+  .board span { display: block; color: var(--color-text-muted); font-size: var(--step--1); }
+  .open {
+    background: var(--color-surface); border-radius: var(--radius);
+    padding: var(--space-sm) var(--space-md); max-width: var(--measure);
+  }
+</style>

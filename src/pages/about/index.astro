@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Stats from '../../components/Stats.astro';
+import { BOARD } from '../../consts';
+
+const VALUES = [
+  { name: 'Family-Centered Support', body: 'Every decision prioritizes the well-being and stability of families affected by disaster — which in practice usually means counting the pets too.' },
+  { name: 'Community-Driven Impact', body: 'Communities support one another faster than institutions can mobilize. Our job is often to make that easier rather than to replace it.' },
+  { name: 'Breaking Barriers', body: 'Bureaucracy and red tape should never stand between a family and help. We cut through obstacles rather than explaining them.' },
+  { name: 'Integrity & Accountability', body: 'We publish our numbers, including the unflattering ones, and we would rather be checked than trusted.' },
+  { name: 'Innovative Solutions', body: 'Drones, weather stations, eSIM phone plans. Whatever gets help there faster, whether or not it looks like charity work.' },
+];
+---
+<BaseLayout
+  title="About Us"
+  description="The Florida Lantern Project began as a South Tampa holiday light show and became a disaster relief organization after Hurricanes Helene and Milton."
+>
+  <Hero
+    eyebrow="About us"
+    title="We started as a light show"
+    lede="That sounds like a non sequitur until you notice that both jobs are the same one: get light to where it's dark, and get people to show up for each other."
+  />
+
+  <Section title="Our story">
+    <div class="prose">
+      <p>
+        In 2015 a computerized holiday light show went up in a front yard on
+        Sylvan Ramble Street in South Tampa. It grew — flame effects, water,
+        smoke, thousands of individually controllable lights choreographed to
+        music — and it grew again. On peak nights more than 500 people came. Over
+        the years more than 20,000 did, and the show raised roughly $50,000 for
+        local charities feeding and clothing Tampa Bay children. It ended up on
+        NBC Nightly News.
+      </p>
+      <p>
+        By 2023 it had outgrown a residential street. We looked at larger venues.
+        Then, in 2024, Hurricanes Helene and Milton arrived two weeks apart, and
+        the question of where to put a light show stopped being the interesting
+        one.
+      </p>
+      <p>
+        We stepped outside our mission to help, with no budget and no plan beyond
+        the phone numbers of people who owed us favors. We booked hotel rooms.
+        We drove people inland. We flew a drone over damaged roofs and wrote up
+        what we saw so families could file claims. By the end of the year we had
+        assisted more than 50 individuals and families.
+      </p>
+      <p>
+        In 2025 we became the Florida Lantern Project. The name changed; the idea
+        didn't. We still bring light. We just try to do it before the dark part.
+      </p>
+    </div>
+  </Section>
+
+  <Section tone="surface" title="Our impact">
+    <p>
+      Numbers we can stand behind, with the stories underneath them on the
+      <a href="/response">response pages</a>.
+    </p>
+    <Stats />
+  </Section>
+
+  <Section title="Mission and vision">
+    <div class="pair">
+      <div>
+        <h3>Mission</h3>
+        <p>
+          To bring light to communities in times of disaster by providing
+          innovative, immediate, and family-centered relief, critical resources,
+          and community-driven support.
+        </p>
+      </div>
+      <div>
+        <h3>Vision</h3>
+        <p>
+          A Florida where no family faces disaster alone. Through decisive action,
+          we ensure aid reaches those who need it, when they need it, no matter
+          the obstacles.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <Section tone="surface" title="What we actually mean by our values">
+    <ul class="values">
+      {VALUES.map((v) => (
+        <li><strong>{v.name}</strong><p>{v.body}</p></li>
+      ))}
+    </ul>
+  </Section>
+
+  <Section title="Board of directors">
+    <ul class="board">
+      {BOARD.map((m) => (<li><strong>{m.name}</strong><span>{m.role}</span></li>))}
+    </ul>
+    <p>
+      We are currently without a treasurer and actively looking.
+      <a href="/give/board">Board service &rarr;</a>
+    </p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .prose p { font-size: var(--step-0); }
+  .prose p:first-child { font-size: var(--step-1); }
+  .pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-md); margin-top: var(--space-md); }
+  .pair h3 { color: var(--flp-navy-700); }
+  .values { list-style: none; padding: 0; display: grid; gap: var(--space-md); margin-top: var(--space-md); grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
+  .values strong { display: block; font-family: var(--font-display); font-size: var(--step-1); margin-bottom: 0.3rem; }
+  .values p { margin: 0; }
+  .board { list-style: none; padding: 0; margin: var(--space-md) 0; display: grid; gap: var(--space-sm); grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
+  .board li { border-left: 4px solid var(--color-accent); padding-left: var(--space-sm); }
+  .board span { display: block; color: var(--color-text-muted); font-size: var(--step--1); }
+</style>

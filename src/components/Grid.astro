@@ -1,0 +1,13 @@
+---
+interface Props { min?: string; }
+const { min = '260px' } = Astro.props;
+---
+<div class="grid" style={`--min:${min}`}><slot /></div>
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--min), 100%), 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+</style>

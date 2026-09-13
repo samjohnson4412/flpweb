@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Grid from '../../components/Grid.astro';
+import Card from '../../components/Card.astro';
+import { ORG } from '../../consts';
+---
+<BaseLayout
+  title="Corporate Sponsorship"
+  description="Sponsor the Florida Lantern Project. Verification details, EIN, and sponsorship options for Florida businesses."
+>
+  <Hero
+    eyebrow="For businesses"
+    title="Sponsor a program, an event, or a storm response"
+    lede="Florida businesses weather the same hurricanes their customers do. Sponsoring the response is a visible way to be part of it."
+  />
+
+  <Section title="Everything your giving team needs to verify us">
+    <p>
+      Most corporate giving programs stop at the verification step. So here it is
+      up front, rather than three clicks deep.
+    </p>
+    <dl class="facts">
+      <div><dt>Legal name</dt><dd>{ORG.legalName}</dd></div>
+      <div><dt>EIN</dt><dd>{ORG.ein}</dd></div>
+      <div><dt>Status</dt><dd>501(c)(3) public charity</dd></div>
+      <div><dt>State</dt><dd>Florida &middot; registration {ORG.flRegistrationNumber}</dd></div>
+      <div><dt>Address</dt><dd>{ORG.address.street}, {ORG.address.city}, {ORG.address.region} {ORG.address.postalCode}</dd></div>
+      <div><dt>Formerly</dt><dd>{ORG.formerName}</dd></div>
+    </dl>
+    <p class="note">
+      If your form asks for a determination letter or recent filings, they're on
+      the <a href="/about/transparency">transparency page</a>. If it asks for
+      something we haven't published, email us and we'll send it the same day.
+    </p>
+  </Section>
+
+  <Section tone="surface" title="Ways to sponsor">
+    <Grid>
+      <Card title="Program sponsorship" meta="Year-round">
+        <p>Underwrite a specific service — inspections, readiness kits, or a neighborhood weather station with your name on it.</p>
+      </Card>
+      <Card title="Disaster response sponsorship" meta="Activated by event">
+        <p>Commit in advance to a named storm response. The money is there the day it's needed, which is the whole difficulty.</p>
+      </Card>
+      <Card title="Event sponsorship" meta="Seasonal">
+        <p>Our annual Beacons of Hope gala, and the return of the light show as Lanterns of Hope.</p>
+      </Card>
+      <Card title="In-kind goods and services" meta="Any size">
+        <p>Hotel rooms, transport, supplies, professional services. Our 2024 response ran almost entirely on donated capacity.</p>
+      </Card>
+    </Grid>
+  </Section>
+
+  <Section title="A note on in-kind gifts">
+    <p>
+      We're grateful for every donated item, and we've learned to be honest about
+      what they're worth to us. Goods donated to our 2025 auction carried a stated
+      retail value of around $11,700 and realized about $3,300.
+    </p>
+    <p>
+      So if you're choosing between donating a product and sponsoring a program,
+      the sponsorship does considerably more — and we'd rather tell you that than
+      book the larger-sounding number.
+    </p>
+    <p><a class="btn" href={`mailto:${ORG.email}?subject=Corporate%20sponsorship`}>Start a conversation</a></p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .facts { display: grid; gap: 0; margin: var(--space-md) 0; }
+  .facts > div {
+    display: grid; grid-template-columns: minmax(9rem, 14rem) 1fr; gap: var(--space-sm);
+    padding: 0.7rem 0; border-bottom: 1px solid var(--color-border);
+  }
+  dt { font-weight: 700; }
+  dd { margin: 0; }
+  .note { font-size: var(--step--1); color: var(--color-text-muted); }
+  @media (max-width: 520px) { .facts > div { grid-template-columns: 1fr; gap: 0.1rem; } }
+</style>
