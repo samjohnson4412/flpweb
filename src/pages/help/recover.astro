@@ -24,6 +24,19 @@ import { VIDEOS } from '../../data/videos';
   />
 
   <Section>
+    <Figure
+      src={roof}
+      size="wide"
+      alt="Overhead drone photograph of a Spanish tile roof, showing displaced and broken tiles across several sections."
+      caption="A drone survey of a damaged tile roof. The report that comes out of this is what an insurer actually acts on."
+      priority={true}
+    />
+    <p class="credential">
+      <strong>FAA Part 107 certified, and a Florida licensed home inspector.</strong>
+      Plenty of people with a drone will offer you photos after a storm. Rather
+      fewer are licensed to fly commercially, and fewer still are qualified to
+      say what those photos mean to a claim.
+    </p>
     <Grid>
       <Card title="Roof & property inspections" meta="Free after a declared storm">
         <p>
@@ -107,6 +120,14 @@ import { VIDEOS } from '../../data/videos';
 </BaseLayout>
 
 <style>
+  .credential {
+    background: var(--color-surface);
+    border-left: 4px solid var(--color-accent);
+    border-radius: var(--radius);
+    padding: var(--space-sm) var(--space-md);
+    margin-top: var(--space-md);
+    max-width: var(--measure);
+  }
   .pair-figs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));

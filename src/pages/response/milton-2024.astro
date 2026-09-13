@@ -7,6 +7,7 @@ import Grid from '../../components/Grid.astro';
 import Figure from '../../components/Figure.astro';
 import roof from '../../assets/photos/roof-inspection-drone.jpg';
 import briefing from '../../assets/photos/storm-briefing.jpg';
+import tornadoes from '../../assets/photos/milton-tornado-tracks.jpg';
 import Video from '../../components/Video.astro';
 import { VIDEOS } from '../../data/videos';
 ---
@@ -104,6 +105,25 @@ import { VIDEOS } from '../../data/videos';
     </ul>
   </Section>
 
+  <Section title="Milton's other hazard">
+    <p class="intro">
+      Milton is remembered for the surge, but it spun up an extraordinary
+      tornado outbreak across the peninsula on the way in — including well east
+      of the track, in places that expected wind and rain and got something else.
+    </p>
+    <Figure
+      src={tornadoes}
+      alt="A map of Florida overlaid with dozens of red tornado warning polygons stretching from the Gulf coast across to the Atlantic."
+      caption="Tornado warnings during Milton. Every red box is a separate warning."
+      ratio="1 / 1"
+    />
+    <p>
+      It is the reason our storm updates covered more than the cone. A family
+      three counties inland, told they were outside the surge zone, still needed
+      to know what was overhead.
+    </p>
+  </Section>
+
   <Section tone="surface" title="After: documentation">
     <p class="intro">
       On 11 October we began offering free roof and home inspections across the
@@ -115,8 +135,9 @@ import { VIDEOS } from '../../data/videos';
       caption="One of dozens of properties surveyed across Tampa Bay after Milton."
     />
     <p>
-      An inspection is a drone flight and a written report. What it's actually for
-      is the moment an insurer asks a family to prove what the damage replaced —
+      An inspection is a drone flight, flown under FAA Part 107, and a written
+      report by a Florida licensed home inspector. What it's actually for is the
+      moment an insurer asks a family to prove what the damage replaced —
       and for pointing people at aid programs nobody told them about. That second
       part turned out to matter as much as the first.
     </p>

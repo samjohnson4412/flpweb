@@ -9,17 +9,23 @@ interface Props {
   credit?: string;
   ratio?: string;
   priority?: boolean;
+  /** 'text' sits within the reading column, 'wide' runs the full container. */
+  size?: 'text' | 'wide';
 }
-const { src, alt, caption, credit, ratio = '16 / 9', priority = false } = Astro.props;
+const {
+  src, alt, caption, credit, ratio = '16 / 9', priority = false, size = 'text',
+} = Astro.props;
 ---
 
-<figure class="fig" data-reveal style={`--ratio:${ratio}`}>
+<figure class:list={['fig', `fig--${size}`]} data-reveal style={`--ratio:${ratio}`}>
   <div class="frame">
     <Image
       src={src}
       alt={alt}
-      widths={[480, 800, 1200]}
-      sizes="(max-width: 800px) 100vw, 800px"
+      widths={[400, 640, 960]}
+      sizes={size === 'wide'
+        ? '(max-width: 56rem) 100vw, 832px'
+        : '(max-width: 38rem) 100vw, 544px'}
       loading={priority ? 'eager' : 'lazy'}
       decoding="async"
       data-fade={priority ? undefined : ''}
@@ -34,9 +40,14 @@ const { src, alt, caption, credit, ratio = '16 / 9', priority = false } = Astro.
 </figure>
 
 <style>
+  /* Images sit with the text rather than shouting over it. A portrait crop at
+     full container width ran well over a screen tall, which read as a mistake. */
   .fig { margin: var(--space-md) 0 0; }
+  .fig--text { max-width: min(100%, 34rem); }
+  .fig--wide { max-width: min(100%, 52rem); }
   .frame {
     aspect-ratio: var(--ratio);
+    max-height: 62vh;
     overflow: hidden;
     border-radius: var(--radius);
     background: var(--flp-navy-900);

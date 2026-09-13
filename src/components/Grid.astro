@@ -1,6 +1,6 @@
 ---
 interface Props { min?: string; }
-const { min = '260px' } = Astro.props;
+const { min = '300px' } = Astro.props;
 ---
 <div class="grid" style={`--min:${min}`}><slot /></div>
 <style>

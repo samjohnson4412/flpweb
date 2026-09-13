@@ -101,11 +101,14 @@ What's still needed, roughly in order of how much it unblocks.
     people FLP helped: *"It's beautiful thank you so much I'm going to sleep so
     well after today"*. No names visible. With permission these would be among
     the most persuasive content on the site.
-27. **What is `IMG_1625`?** Looks like flight or route tracks across Florida. If
-    it's drone coverage or response routes, it's a good infographic.
-28. **FAA authorisation** — now stated on `/help/recover` based on Sam's own
-    Facebook post. Confirm the current wording (Part 107 certificate? a specific
-    waiver?) so the claim is precise.
+27. ~~What is `IMG_1625`?~~ — **RESOLVED**: tornado warnings during Milton. Now
+    on `/response/milton-2024` with a section on the outbreak.
+28. ~~FAA wording~~ — **RESOLVED**: FAA Part 107 certified, and a Florida
+    licensed home inspector. Stated on `/help/recover`, `/help/prepare`,
+    `/about/transparency` and `/response/milton-2024`.
+28a. **Licence numbers?** Worth publishing the Part 107 certificate number and
+    the Florida home inspector licence number on the transparency page — they
+    are independently verifiable, which is the whole point of that page.
 
 ## Nice to have
 
