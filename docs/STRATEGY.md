@@ -187,17 +187,19 @@ Zero recurring donors is a symptom. Trace the whole history:
 
 | Asset built | People reached | What remains today |
 | --- | --- | --- |
-| Light show, 2015–2023 | **20,000+ visitors** | No list. No contactable audience. |
+| Light show, 2015–2023 | **20,000+ visitors** | **2,500-person email list** (see 6c) |
 | NBC Nightly News + 9 press hits | National | Not linked anywhere you own |
 | Facebook Hilton post | **700 shares** | Rented reach on someone else's platform |
 | Beacons of Hope gala | 49 supporters | **0 recurring donors** |
 | Sponsor program | 47 donations | Re-solicited from scratch annually, at 8% |
 | Jamaica campaign | — | Concluded |
 
-**Every single channel resets to zero each year.** Twenty thousand people came to
-your house and you cannot email one of them. Forty-seven businesses said yes and
-next year you start the 560-application grind again. A national news segment
-aired and it lives on a YouTube link in a Word document.
+**Nearly every channel resets to zero each year.** Forty-seven businesses said
+yes and next year you start the 560-application grind again. A national news
+segment aired and it lives on a YouTube link in a Word document.
+
+The one exception is the email list — which is why it matters far more than its
+current reputation suggests.
 
 This is the actual thesis for the website project, and it's bigger than a Framer
 migration. The site is the **only** asset available that compounds:
@@ -206,12 +208,72 @@ migration. The site is the **only** asset available that compounds:
   every hurricane season, forever. A Facebook post is dead in 48 hours.
 - **A transparency page** that pre-clears sponsors, turning that 8% conversion
   into something better without a single extra application.
-- **An email list you own**, so the next light show audience is still reachable
-  in 2028.
+- **The email list you already own** — 2,500 people, currently treated as a dead
+  asset. See 6c.
 - **Recurring donors**, the only revenue that doesn't need re-earning annually.
 
 Everything in the build order below serves that one idea: stop renting, start
 owning.
+
+## 6c. The 2,500-person list is not the wrong audience. It's been asked the wrong question.
+
+The stated problem: *"most are uninterested in disaster since it was light show."*
+
+That assumes the list is "people who like Christmas lights." Look at who they
+actually are:
+
+- **Tampa Bay households** — the show was a South Tampa neighborhood event
+- **who were here for Helene and Milton**, two weeks apart, in 2024
+- **who already gave money to charity** at the show (~$50,000 of it)
+- **who brought their kids**, repeatedly, for years
+
+They are not disaster-relief *sympathizers*. They are **disaster survivors.** A
+large share of that list had roof damage, lost power, evacuated, or sat through
+both storms. Nobody on it needs to be convinced that hurricanes matter.
+
+### The ask has been backwards
+
+Asking them to *donate to disaster relief* asks them to care about strangers.
+Instead, **offer them the service:**
+
+| Instead of | Offer |
+| --- | --- |
+| "Support families affected by hurricanes" | "Free roof inspection if Milton damaged your home" |
+| "Donate to our disaster fund" | "Pre-storm drone inspection — documentation before you need it" |
+| "Help us prepare communities" | "We'll install a weather station on your street" |
+| "Give monthly" | "Hurricane prep checklist for Tampa Bay homeowners" |
+
+Every one of those is something a Tampa homeowner wants **for themselves**. And
+they map exactly onto the earned-revenue lines in the business plan — drone
+inspections, weather stations, readiness kits, Lantern Keeper. The list isn't
+just a donor base; it is **the market for the paid services**, which the auction
+showed are currently priced into a vacuum.
+
+### And they are the launch audience for the light show's return
+
+"Lanterns of Hope" is the one channel with a proven track record. This list is
+2,500 pre-qualified attendees of the exact thing being revived. Sponsored
+lanterns at $25, at a 10% response, is ~$6,250 — comparable to the entire 2025
+gala, at almost no cost.
+
+Even cold, at a 2% response, 2,500 people yields ~50. **The gala produced 49.**
+
+### Caution: do not blast it
+
+If the list hasn't been mailed in 1–2+ years, a mass send will bounce hard, hit
+spam traps, and can get `floridalanternproject.org` flagged — which would damage
+donation receipts and every other transactional email. Re-engage properly:
+
+1. **Verify** the list (Kickbox, ZeroBounce) and drop the dead addresses
+2. **Warm up** — small batches to the most recently engaged first
+3. **Lead with the light show**, not with an ask. "Remember this? Here's what
+   happened next, and here's what's coming back."
+4. **Let them self-select** — separate "tell me about the light show" from
+   "I'm a Tampa homeowner, tell me about storm prep"
+5. **Sunset** non-openers rather than mailing them forever
+
+**OPEN:** which provider holds the list, and when was it last mailed? Both answers
+change the sequence.
 
 ## 7. What this means for the build
 

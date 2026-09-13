@@ -72,9 +72,11 @@ What's still needed, roughly in order of how much it unblocks.
 20a. **Is the $5,000/year matching donor still willing?** It went entirely
     unclaimed. If still live it's the strongest launch mechanic the site has —
     a real deadline and a 2x multiplier. **Highest-value question on this list.**
-20b. **Is there an email list anywhere?** Mailchimp, Givebutter contacts, a
-    spreadsheet of light show attendees, gala RSVPs? If nothing exists, that is
-    the most valuable thing the new site starts building on day one.
+20b. ~~Is there an email list?~~ — **RESOLVED: yes, 2,500 people** from the light
+    show era. Treated internally as a poor fit for disaster content; see
+    STRATEGY.md 6c for why that's the wrong read. **Follow-ups: which provider
+    holds it, and when was it last mailed?** Both change the re-engagement
+    sequence, and a cold blast risks the sending domain.
 21. **Form 990s and the IRS determination letter** — needed for the transparency
     page. Do you have PDFs?
 
