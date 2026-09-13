@@ -1,43 +1,52 @@
 # Deploying to Cloudflare Pages
 
-## Build settings
+## Build settings (Workers Builds)
 
-| Setting | Value |
+Cloudflare now routes new Git-connected projects through **Workers**, not
+Pages. That screen has no "build output directory" field — the output location
+comes from `wrangler.jsonc` in this repo instead.
+
+| Field | Value |
 | --- | --- |
-| Framework preset | Astro |
 | Build command | `npm run build` |
-| Build output directory | `dist` |
-| Root directory | `/` (leave blank) |
-| Node version | 22 — pinned by `.nvmrc`, no env var needed |
+| Deploy command | `npx wrangler deploy` |
+| Version command | `npx wrangler versions upload` (leave as-is) |
+| Root directory | `/` |
+| Production branch | `main` |
+| Build watch paths — include | `*` |
+| Build watch paths — exclude | `node_modules/**, .git/` |
 
-The site is fully static. No adapter, no Workers, no environment variables
-required for the build to succeed.
+Node 22 is pinned by `.nvmrc`; no environment variable needed.
+
+`wrangler.jsonc` declares `assets.directory = "./dist"`, so the built site is
+served straight from Cloudflare's edge with no server code. Validate it locally
+any time with:
+
+```bash
+npm run build && npx wrangler deploy --dry-run
+```
+
+It should report reading ~161 files from the assets directory.
 
 ## First deploy
 
-1. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** →
-   **Connect to Git**
-2. Authorize GitHub if prompted, then pick `samjohnson4412/flpweb`
-3. Set the production branch (see note below) and the build settings above
-4. **Save and Deploy**
+1. Cloudflare dashboard → **Workers & Pages** → **Create** → **Import a
+   repository**
+2. Pick `samjohnson4412/flpweb`
+3. Enter the build settings above
+4. **Deploy**
 
-The first build takes 2-3 minutes. You get a `*.pages.dev` URL immediately.
+First build takes 2-3 minutes and gives you a `*.workers.dev` URL.
 
 ## Production branch
 
-The repository currently has only one branch, `claude/loving-albattani-qulm7g`,
-which GitHub has made the default. That's a working branch name, not a
-production one.
+`main` exists and carries the full site. Set it as the production branch in
+Cloudflare, and set it as the repository default on GitHub:
 
-Before connecting Cloudflare, create `main` from it on GitHub:
+Settings → General → Default branch → switch to `main`.
 
-- GitHub → the repo → branch dropdown → **View all branches** → **New branch**,
-  name it `main`, source `claude/loving-albattani-qulm7g`
-- Then Settings → General → Default branch → switch to `main`
-
-Cloudflare will then offer `main` as the production branch. Every push to
-`main` redeploys production; pushes to any other branch get their own preview
-URL automatically.
+Pushes to `main` redeploy production. With "Builds for non-production branches"
+checked, every other branch gets its own preview URL.
 
 ## Custom domain
 
@@ -60,8 +69,8 @@ something up. Cancelling the subscription deletes the site.
 
 ## What deploys automatically
 
-- `public/_redirects` — the 109 legacy URL redirects. Pages reads this file
-  natively; nothing to configure.
+- `public/_redirects` — the 109 legacy URL redirects. Workers static assets
+  reads this file natively, same as Pages did; nothing to configure.
 - `dist/sitemap-index.xml` — submit it in Google Search Console after cutover.
 
 ## Verifying the redirects after deploy
@@ -69,7 +78,7 @@ something up. Cancelling the subscription deletes the site.
 Once the site is on a URL, spot-check that old links still work:
 
 ```bash
-SITE=https://new.floridalanternproject.org
+SITE=https://<your-worker>.workers.dev
 for p in /about/impact/publix /jamaica /blog /gala/sponsors; do
   printf '%-28s ' "$p"
   curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' "$SITE$p"
