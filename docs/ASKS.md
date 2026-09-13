@@ -65,11 +65,16 @@ What's still needed, roughly in order of how much it unblocks.
 
 ## Newly raised by the data
 
-19. **Auction fulfilment** — 36 of 47 sold items have no confirmed delivery
-    ($2,846 worth); 4 are recorded as not fulfilled. Unrelated to the website but
-    more urgent than it. See STRATEGY.md #4.
-20. **How many Lantern Keepers did the gala produce?** Determines how hard the
-    whole site pushes recurring giving.
+19. ~~Auction fulfilment~~ — **RESOLVED**: all items were delivered; the sheet
+    was simply never updated.
+20. ~~Lantern Keepers from the gala~~ — **RESOLVED: zero.** The program had no
+    landing page to send the QR code to. See STRATEGY.md #6.
+20a. **Is the $5,000/year matching donor still willing?** It went entirely
+    unclaimed. If still live it's the strongest launch mechanic the site has —
+    a real deadline and a 2x multiplier. **Highest-value question on this list.**
+20b. **Is there an email list anywhere?** Mailchimp, Givebutter contacts, a
+    spreadsheet of light show attendees, gala RSVPs? If nothing exists, that is
+    the most valuable thing the new site starts building on day one.
 21. **Form 990s and the IRS determination letter** — needed for the transparency
     page. Do you have PDFs?
 

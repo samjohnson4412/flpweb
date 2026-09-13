@@ -114,28 +114,17 @@ publish.
 
 ---
 
-## 4. There is an unresolved fulfilment problem
+## 4. The fulfilment sheet is stale, not alarming
 
-From the auction fulfilment sheet:
+The auction fulfilment sheet shows 32 items as "Probobly" and 4 as "No" — but
+**all items were in fact delivered.** The sheet was never updated after the
+event. No action needed.
 
-| Status | Items | Value |
-| --- | ---: | ---: |
-| Confirmed Yes | 11 | $473 |
-| **"Probobly"** | **32** | **$2,536** |
-| **No** | **4** | **$310** |
-
-**36 of 47 sold items have no confirmed delivery.** People paid for those. Four
-are recorded as flatly not fulfilled.
-
-This is the single most urgent item in any of these documents, and it has nothing
-to do with the website. Winners who never received what they paid for are exactly
-the people least likely to attend next year — and most likely to say so publicly.
-A $310 problem becomes a reputation problem at a 49-person event where everyone
-knows each other.
-
-Worth closing out before launch, because a new site will bring renewed attention.
-
----
+Worth noting only as a process point: the record of what happened and what
+actually happened have drifted apart. That matters for the transparency page,
+because impact numbers published on a website need a source you trust a year
+later. Whatever system records a future drive, inspection, or hotel placement
+should be the same one the site reads from.
 
 ## 5. Your own services were market-tested, and the market said no
 
@@ -162,36 +151,85 @@ turns into an SBA loan. That story converts the abstract into arithmetic.
 
 ---
 
-## 6. Recurring giving is the only thing that fixes the underlying problem
+## 6. The gala produced zero Lantern Keepers — because the program doesn't exist
 
-Every revenue source above is episodic: a gala, a campaign, a storm. Disaster
-relief demands the opposite — money in hand *before* the storm, so the answer can
-be yes within hours. The gala script says this out loud:
+Fifty-nine minutes of programming, Amy's story, a QR code on screen, and a
+**$5,000/year donor match** — and the result was **zero monthly donors.**
 
-> Every monthly gift we secure tonight gives us the ability to say "yes" with
-> confidence.
+That is not an audience failure. Look at where the ask had to land:
 
-That's why **Lantern Keeper** is now the site's primary CTA instead of a concluded
-Jamaica campaign. It's also the only ask where the website does the whole job —
-no event, no venue, no volunteers, no fulfilment.
+- **Mid-dinner, after course 5**, competing with food, wine, and conversation
+- **Via a QR code**, pointing at — what, exactly? There is no `/lantern-keeper`
+  page. There is no page explaining what a Lantern Keeper *is*, what it funds,
+  what tiers exist, or that the match doubles it.
+- **To a room of 49 people who had already paid twice**, via ticket and auction
+- **With no follow-up sequence** afterwards
 
-**OPEN:** how many Lantern Keepers did the gala actually produce? That number
-determines how hard the entire site should push it.
+You cannot convert people into a program that has no home. **"Lantern Keeper"
+existed as a spoken sentence and a QR code, not as a thing anyone could go look
+at.** Monthly giving almost never converts in-room anyway; it converts on the
+second and third touch, from a page that answers "what am I joining?"
+
+Two consequences:
+
+1. **The $5,000 match went entirely unclaimed.** That's free money that expired.
+   **OPEN: is that donor still willing?** If so, it's the single strongest launch
+   mechanic the new site has — a real deadline and a 2× multiplier.
+2. **The one remaining justification for the gala is relationships and the
+   videos.** Its fundraising case is now fully closed: $7,259 gross, ~$9,000
+   cost, zero recurring donors.
 
 ---
+
+## 6b. The real problem: nothing you build compounds
+
+Zero recurring donors is a symptom. Trace the whole history:
+
+| Asset built | People reached | What remains today |
+| --- | --- | --- |
+| Light show, 2015–2023 | **20,000+ visitors** | No list. No contactable audience. |
+| NBC Nightly News + 9 press hits | National | Not linked anywhere you own |
+| Facebook Hilton post | **700 shares** | Rented reach on someone else's platform |
+| Beacons of Hope gala | 49 supporters | **0 recurring donors** |
+| Sponsor program | 47 donations | Re-solicited from scratch annually, at 8% |
+| Jamaica campaign | — | Concluded |
+
+**Every single channel resets to zero each year.** Twenty thousand people came to
+your house and you cannot email one of them. Forty-seven businesses said yes and
+next year you start the 560-application grind again. A national news segment
+aired and it lives on a YouTube link in a Word document.
+
+This is the actual thesis for the website project, and it's bigger than a Framer
+migration. The site is the **only** asset available that compounds:
+
+- **Content that ranks** — a `/response/milton-2024` page earns search traffic
+  every hurricane season, forever. A Facebook post is dead in 48 hours.
+- **A transparency page** that pre-clears sponsors, turning that 8% conversion
+  into something better without a single extra application.
+- **An email list you own**, so the next light show audience is still reachable
+  in 2028.
+- **Recurring donors**, the only revenue that doesn't need re-earning annually.
+
+Everything in the build order below serves that one idea: stop renting, start
+owning.
 
 ## 7. What this means for the build
 
 Reordered by expected return:
 
 1. **`/about/transparency`** — unblocks sponsorship conversions. Highest ROI page.
-2. **`/give/lantern-keeper`** — the only fully self-serve revenue channel.
-3. **`/response/*`** — Helene and Milton written up permanently. This is what
+2. **`/give/lantern-keeper`** — build the program that produced zero donors
+   because it had nowhere to live. Needs: what it is, tiers, what each funds,
+   the match (if still live), and a real recurring checkout.
+3. **Email capture on every page** — the current newsletter box needs a real
+   provider behind it. Without a list, the next 20,000 visitors vanish too.
+4. **`/response/*`** — Helene and Milton written up permanently. This is what
    grantmakers ask for, and the "one major grant" goal depends on it.
-4. **Service pages carrying Maria's and Peter's stories** — make the earned-
+5. **Service pages carrying Maria's and Peter's stories** — make the earned-
    revenue offers legible enough to price correctly.
-5. **`/events/lanterns-of-hope`** — the light show is the proven channel.
-6. Sponsor pages, blog, everything else.
+6. **`/events/lanterns-of-hope`** — the light show is the proven channel, and
+   this time it should capture emails at the door.
+7. Sponsor pages, blog, everything else.
 
 Note that the current site's ordering is almost exactly inverted: ~96 of its 109
 pages are sponsor detail pages.
