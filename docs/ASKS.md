@@ -80,6 +80,19 @@ What's still needed, roughly in order of how much it unblocks.
 21. **Form 990s and the IRS determination letter** — needed for the transparency
     page. Do you have PDFs?
 
+## Raised while adding photos
+
+22. **Which address and phone are current?** The site uses 4412 W Sylvan Ramble
+    St and (813) 733-8806. The June 2026 response letter to Higbee uses
+    **6706 Camden Bay Dr, Ste 205, Tampa, FL 33635** and **(813) 921-5733**.
+    These appear in the footer, contact page, transparency page, and schema.org
+    markup, so it matters which is right.
+23. **Status of the AP / PicRights claim (2Q3N6V)?** If it settles, worth
+    knowing so the transparency page can't be blindsided. No site content
+    depends on it.
+24. **More photos** — see `docs/IMAGE-CREDITS.md` for the Drive folders worth
+    pulling next, including `Mayor.mp4` and `PeterISO.mp3`.
+
 ## Nice to have
 
 17. Brand guide, if one exists — exact hex values, type scale, logo clear-space.

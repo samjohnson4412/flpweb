@@ -7,6 +7,8 @@ import Card from '../components/Card.astro';
 import Stats from '../components/Stats.astro';
 import Story from '../components/Story.astro';
 import CallToAction from '../components/CallToAction.astro';
+import Figure from '../components/Figure.astro';
+import lightShow from '../assets/photos/light-show-crowd.jpg';
 import { ORG } from '../consts';
 ---
 
@@ -87,6 +89,11 @@ import { ORG } from '../consts';
       In 2024 the storms came, and the same equipment, volunteers, and stubbornness
       got pointed somewhere new. We still bring light. We just do it earlier now.
     </p>
+    <Figure
+      src={lightShow}
+      alt="A crowd of neighbours filling the street outside a South Tampa house lit in green and purple for the Sylvan Ramble Lights show."
+      caption="Sylvan Ramble Lights, South Tampa. On peak nights more than 500 people came."
+    />
     <p class="more"><a href="/about">Our story &rarr;</a> &nbsp;·&nbsp; <a href="/about/press">Press coverage &rarr;</a></p>
   </Section>
 

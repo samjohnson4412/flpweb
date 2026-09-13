@@ -2,7 +2,7 @@
 interface Props { name: string; context: string; }
 const { name, context } = Astro.props;
 ---
-<article class="story">
+<article class="story" data-reveal>
   <h3>{name}</h3>
   <p class="ctx">{context}</p>
   <div class="body"><slot /></div>

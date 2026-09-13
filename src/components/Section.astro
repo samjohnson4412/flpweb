@@ -9,7 +9,7 @@ const { title, lede, tone = 'default', id } = Astro.props;
 ---
 
 <section class:list={['sec', `sec--${tone}`]} id={id}>
-  <div class="wrap">
+  <div class="wrap" data-reveal>
     {title && <h2>{title}</h2>}
     {lede && <p class="lede">{lede}</p>}
     <slot />

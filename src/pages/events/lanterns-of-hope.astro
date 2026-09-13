@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
+import Figure from '../../components/Figure.astro';
+import lightShow from '../../assets/photos/light-show-crowd.jpg';
 import { ORG } from '../../consts';
 ---
 <BaseLayout
@@ -22,6 +24,12 @@ import { ORG } from '../../consts';
       choreographed to music across a twenty-minute show, for Halloween and again
       at Christmas.
     </p>
+    <Figure
+      src={lightShow}
+      alt="Neighbours gathered in the street watching the Sylvan Ramble Lights display, the house behind them lit in green and purple."
+      caption="A typical night on Sylvan Ramble Street."
+      priority={true}
+    />
     <ul class="totals">
       <li><strong>20,000+</strong><span>visitors across the show's lifetime</span></li>
       <li><strong>~$50,000</strong><span>raised for local charities</span></li>

@@ -4,6 +4,13 @@ const { min = '260px' } = Astro.props;
 ---
 <div class="grid" style={`--min:${min}`}><slot /></div>
 <style>
+  /* Stagger reveals across a row. */
+  .grid > :global(*:nth-child(2)) { --reveal-delay: 80ms; }
+  .grid > :global(*:nth-child(3)) { --reveal-delay: 160ms; }
+  .grid > :global(*:nth-child(4)) { --reveal-delay: 240ms; }
+  .grid > :global(*:nth-child(5)) { --reveal-delay: 320ms; }
+  .grid > :global(*:nth-child(6)) { --reveal-delay: 400ms; }
+
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(var(--min), 100%), 1fr));
