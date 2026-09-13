@@ -1,0 +1,52 @@
+/*
+ * Florida Lantern Project — design tokens
+ *
+ * Palette and type sampled from the live Framer site (Sept 2026) so the
+ * rebuild keeps the brand recognizable. Adjust here, not in components.
+ */
+
+:root {
+  /* Core brand */
+  --flp-navy-900: #11112d; /* deepest navy — hero + footer grounds */
+  --flp-navy-700: #1e3a5f; /* mid navy — section grounds, headings */
+  --flp-amber-500: #e6a400; /* primary accent — the "lantern" gold */
+  --flp-amber-300: #ffcf4e; /* lighter gold — highlights, hover */
+  --flp-cream-100: #f1ece8; /* warm off-white page ground */
+  --flp-red-500: #d72638; /* urgent/alert only — active disaster banners */
+
+  /* Neutrals */
+  --flp-ink: #11112d;
+  --flp-ink-muted: #5f5e6d;
+  --flp-rule: #e0e0e0;
+  --flp-white: #ffffff;
+
+  /* Semantic */
+  --color-bg: var(--flp-cream-100);
+  --color-surface: var(--flp-white);
+  --color-text: var(--flp-ink);
+  --color-text-muted: var(--flp-ink-muted);
+  --color-accent: var(--flp-amber-500);
+  --color-accent-hover: var(--flp-amber-300);
+  --color-border: var(--flp-rule);
+
+  /* Type — Outfit for display, Lato for body (matches current site) */
+  --font-display: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Lato', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.9rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.12rem);
+  --step-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.6rem, 1.4rem + 1vw, 2.1rem);
+  --step-3: clamp(2rem, 1.6rem + 2vw, 3rem);
+  --step-4: clamp(2.5rem, 1.8rem + 3.5vw, 4.25rem);
+
+  /* Space + shape */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+  --radius: 10px;
+  --measure: 68ch;
+  --wrap: 1180px;
+}

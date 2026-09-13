@@ -1,0 +1,70 @@
+---
+import { NAV, NAV_CTA, ORG } from '../consts';
+const { pathname } = Astro.url;
+const isCurrent = (href: string) =>
+  href === '/' ? pathname === '/' : pathname.startsWith(href);
+---
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a href="/" class="brand" aria-label={`${ORG.name} — home`}>
+      <img src="/brand/icon-light.png" alt="" width="32" height="32" />
+      <span>{ORG.name}</span>
+    </a>
+
+    <nav aria-label="Main">
+      <ul>
+        {NAV.map((item) => (
+          <li>
+            <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+              {item.label}
+            </a>
+          </li>
+        ))}
+        <li><a class="btn" href={NAV_CTA.href}>{NAV_CTA.label}</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background: var(--flp-navy-900);
+    color: var(--flp-white);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  .bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    padding-block: var(--space-sm);
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-sm);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav a {
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: var(--step--1);
+    letter-spacing: 0.02em;
+  }
+  nav a[aria-current='page'] { color: var(--color-accent); }
+</style>

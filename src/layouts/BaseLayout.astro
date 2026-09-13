@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { ORG } from '../consts';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+const { title, description, image = '/brand/og-default.png' } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL(image, Astro.site).href;
+// Every page states its own title and description. The Framer site shipped
+// neither on the homepage, which is why it reads as a bare name in search.
+const fullTitle = title === ORG.name ? title : `${title} | ${ORG.name}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <link rel="icon" href="/brand/icon-light.png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" href="/brand/icon-dark.png" media="(prefers-color-scheme: dark)" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Outfit:wght@500;600;700&display=swap"
+    />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'NGO',
+        name: ORG.name,
+        legalName: ORG.legalName,
+        url: Astro.site?.href,
+        email: ORG.email,
+        telephone: ORG.phone,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: ORG.address.street,
+          addressLocality: ORG.address.city,
+          addressRegion: ORG.address.region,
+          postalCode: ORG.address.postalCode,
+          addressCountry: ORG.address.country,
+        },
+        sameAs: [ORG.social.facebook, ORG.social.instagram],
+      })}
+    />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

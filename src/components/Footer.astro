@@ -1,0 +1,77 @@
+---
+import { ORG } from '../consts';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="wrap cols">
+    <div>
+      <p class="charity">A 501(c)(3) public charity.<br />EIN: {ORG.ein}</p>
+    </div>
+
+    <nav aria-label="Footer">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/sponsors">Sponsors</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/non-discrimination-policy">Non-Discrimination</a></li>
+      </ul>
+    </nav>
+
+    <div>
+      <h2>Our Address</h2>
+      <address>
+        {ORG.address.street}<br />
+        {ORG.address.city}, {ORG.address.region} {ORG.address.postalCode}<br />
+        <a href={`mailto:${ORG.email}`}>{ORG.email}</a><br />
+        <a href={`tel:${ORG.phoneHref}`}>{ORG.phone}</a>
+      </address>
+    </div>
+  </div>
+
+  <div class="wrap legal">
+    <p>
+      A COPY OF THE OFFICIAL REGISTRATION ({ORG.flRegistrationNumber}) AND FINANCIAL
+      INFORMATION MAY BE OBTAINED FROM THE DIVISION OF CONSUMER SERVICES BY CALLING
+      TOLL-FREE (800-435-7352) WITHIN THE STATE. REGISTRATION DOES NOT IMPLY
+      ENDORSEMENT, APPROVAL, OR RECOMMENDATION BY THE STATE.
+    </p>
+    <p>&copy; 2021 – {year} {ORG.legalName}</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--flp-navy-900);
+    color: var(--flp-white);
+    margin-top: var(--space-xl);
+    padding-block: var(--space-lg) var(--space-md);
+  }
+  .cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-md);
+  }
+  .site-footer h2 {
+    font-size: var(--step-0);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+  }
+  .site-footer ul { list-style: none; margin: 0; padding: 0; }
+  .site-footer li { margin-bottom: 0.35rem; }
+  .site-footer a { text-decoration: none; }
+  address { font-style: normal; }
+  .charity { font-family: var(--font-display); font-size: var(--step-1); }
+  .legal {
+    margin-top: var(--space-md);
+    padding-top: var(--space-sm);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.72rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .legal p { max-width: none; }
+</style>

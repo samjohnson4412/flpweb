@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ORG } from '../consts';
+
+// NOTE: placeholder hero using the organization's existing verified copy, so the
+// design system is visible end to end. Real homepage content is pending Sam's
+// content brief — see docs/CONTENT-BRIEF.md.
+---
+
+<BaseLayout
+  title={ORG.name}
+  description="The Florida Lantern Project is a Tampa-based 501(c)(3) providing emergency shelter, cleanup support, preparedness workshops, and post-storm inspections to families across Florida and the Caribbean."
+>
+  <section class="hero">
+    <div class="wrap">
+      <h1>No Family Should<br />Face Disaster Alone</h1>
+      <p class="lede">
+        Rapid relief. Real impact. Rooted in community.
+      </p>
+      <p class="actions">
+        <a class="btn" href="/jamaica">Help In Jamaica</a>
+        <a class="btn btn--ghost" href="/about">Learn More About Us</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap intro">
+    <p>
+      The Florida Lantern Project began as a holiday light show — now we bring light
+      to families when it’s needed most. From emergency shelter and cleanup support
+      to preparedness workshops and post-storm inspections, we stand with Florida
+      communities before, during, and after disaster.
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: var(--flp-navy-900);
+    color: var(--flp-white);
+    padding-block: var(--space-xl);
+  }
+  .lede {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    color: var(--color-accent);
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+  }
+  .intro { padding-block: var(--space-lg); }
+  .intro p { font-size: var(--step-1); }
+</style>
