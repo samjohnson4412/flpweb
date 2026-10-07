@@ -10,7 +10,7 @@ import CallToAction from '../components/CallToAction.astro';
 import Figure from '../components/Figure.astro';
 import lightShow from '../assets/photos/light-show-crowd.jpg';
 import audience from '../assets/photos/light-show-audience.jpg';
-import { ORG } from '../consts';
+import { ORG, NOW } from '../consts';
 ---
 
 <BaseLayout
@@ -27,7 +27,18 @@ import { ORG } from '../consts';
     </p>
   </Hero>
 
-  <Section tone="surface" title="What we actually did">
+  <Section title="Where things stand" meta={`As of ${NOW.asOf}`}>
+    <p class="intro">{NOW.lede}</p>
+    <Grid min="280px">
+      {NOW.items.map((item) => (
+        <Card title={item.title}>
+          <p>{item.body}</p>
+        </Card>
+      ))}
+    </Grid>
+  </Section>
+
+  <Section tone="surface" title="What we did in 2024">
     <p class="intro">
       In 2024, Hurricanes Helene and Milton hit Florida two weeks apart. We had no
       budget and no staff. We had hotel partnerships, a drone, volunteers, and a
@@ -37,18 +48,36 @@ import { ORG } from '../consts';
     <p class="more"><a href="/response">See the full response &rarr;</a></p>
   </Section>
 
-  <Section title="Wherever you are in the storm">
+  <Section title="What we can do for you today">
     <Grid>
-      <Card title="Before" href="/help/prepare" meta="Prepare">
-        <p>Preparedness workshops, readiness kits, and neighborhood weather stations that feed open-source forecasting.</p>
+      <Card title="Document your damage" href="/help/recover" meta="Free, year-round">
+        <p>
+          A Florida-licensed home inspector and FAA-licensed drone pilot look at
+          your roof and property, and you get a written report. It does not
+          matter whether the damage is from last week or from Milton.
+        </p>
       </Card>
-      <Card title="During" href="/help/during" meta="Ride it out or get out">
-        <p>Evacuation and transportation help, emergency lodging that takes pets, and a storm hotline that answers real questions.</p>
+      <Card title="Find aid nobody mentioned" href="/help/recover" meta="FEMA · SBA · local">
+        <p>
+          SBA disaster loans are available to homeowners, not just businesses.
+          Almost nobody is told that. We sit down and go through what you may
+          qualify for, and help you file it.
+        </p>
       </Card>
-      <Card title="After" href="/help/recover" meta="Recover">
-        <p>Roof and property inspections, emergency repairs, debris removal, and help navigating FEMA, SBA, and local grants.</p>
+      <Card title="Reach a person" href="/contact" meta="Storm line">
+        <p>
+          Official hotlines give official answers. Ours answers the question you
+          actually asked — about your evacuation zone, your cracked window, your
+          medical equipment, your animals.
+        </p>
       </Card>
     </Grid>
+    <p class="boundary">
+      We are not insurance adjusters and we do not negotiate with your insurer.
+      We inspect, we document, and we hand you the report. What you do with it is
+      entirely yours.
+    </p>
+    <p class="more"><a href="/help">Before, during, and after a storm &rarr;</a></p>
   </Section>
 
   <Section tone="surface" title="One night in October">
@@ -117,10 +146,11 @@ import { ORG } from '../consts';
     </p>
   </Section>
 
-  <CallToAction title="Storms don't wait for fundraisers" href="/give/lantern-keeper" cta="Become a Lantern Keeper">
-    Monthly giving is what lets us say yes within the hour instead of waiting to
-    see what comes in. Even $10 a month keeps the answer ready before the next
-    storm has a name.
+  <CallToAction title="The quiet years are the expensive ones" href="/give/lantern-keeper" cta="Become a Lantern Keeper">
+    Anyone will give after a hurricane. The hard part is staying ready through two
+    seasons when nothing happens — keeping the inspections running and the phone
+    answered so that the next time, we say yes within the hour instead of starting
+    from nothing. Even $10 a month does that.
   </CallToAction>
 </BaseLayout>
 
@@ -128,4 +158,12 @@ import { ORG } from '../consts';
   .actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-md); }
   .intro { font-size: var(--step-1); }
   .more { margin-top: var(--space-md); font-family: var(--font-display); font-weight: 600; }
+  .boundary {
+    margin-top: var(--space-md);
+    max-width: 56ch;
+    font-size: var(--step--1);
+    color: var(--color-text-muted);
+    border-left: 3px solid var(--color-accent);
+    padding-left: var(--space-sm);
+  }
 </style>

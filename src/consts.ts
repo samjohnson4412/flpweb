@@ -38,6 +38,42 @@ export const STATS = [
   { value: '20,000+', label: 'neighbors who came to the light show', note: 'raising ~$50,000 for local charities' },
 ] as const;
 
+/**
+ * The present tense. This is the one thing on the site that goes stale.
+ * Update `asOf` and the items whenever something changes — five minutes, one file.
+ * An undated site reads as abandoned; a dated quiet period reads as honest.
+ */
+export const NOW = {
+  asOf: 'October 2026',
+  lede:
+    'Florida has not taken a hurricane landfall in two seasons. That is good news, ' +
+    'and it is also the hardest season for an organization like ours. Here is what ' +
+    'we are doing in the quiet.',
+  items: [
+    {
+      title: 'Going back to 2024',
+      body:
+        'We are calling the families we helped during Helene and Milton to find out ' +
+        'what actually happened next — which repairs got finished, which claims are ' +
+        'still open two years later, and who is still under a tarp.',
+    },
+    {
+      title: 'Inspections, year-round',
+      body:
+        'Storm damage does not stop mattering when the season ends. Our inspections ' +
+        'run all year, for any Florida homeowner who needs their damage documented ' +
+        'properly by someone licensed to do it.',
+    },
+    {
+      title: 'Getting properly affiliated',
+      body:
+        'We are working through county emergency management and 211 so that when the ' +
+        'next storm comes we arrive as a coordinated responder with an assignment — ' +
+        'not as one more unaffiliated van in the way.',
+    },
+  ],
+} as const;
+
 export const BOARD = [
   { name: 'Samuel Johnson', role: 'Director & President' },
   { name: 'Dominic Schaefer', role: 'Director & Vice-President' },

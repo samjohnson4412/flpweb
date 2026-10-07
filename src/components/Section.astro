@@ -1,15 +1,18 @@
 ---
 interface Props {
   title?: string;
+  /** Small eyebrow above the title — used for date stamps, e.g. "As of October 2026". */
+  meta?: string;
   lede?: string;
   tone?: 'default' | 'surface' | 'navy';
   id?: string;
 }
-const { title, lede, tone = 'default', id } = Astro.props;
+const { title, meta, lede, tone = 'default', id } = Astro.props;
 ---
 
 <section class:list={['sec', `sec--${tone}`]} id={id}>
   <div class="wrap" data-reveal>
+    {meta && <p class="meta">{meta}</p>}
     {title && <h2>{title}</h2>}
     {lede && <p class="lede">{lede}</p>}
     <slot />
@@ -20,6 +23,16 @@ const { title, lede, tone = 'default', id } = Astro.props;
   .sec { padding-block: var(--space-lg); }
   .sec--surface { background: var(--color-surface); }
   .sec--navy { background: var(--flp-navy-900); color: var(--flp-white); }
+  .meta {
+    font-family: var(--font-display);
+    font-size: var(--step--1);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.35rem;
+  }
+  .sec--navy .meta { color: var(--flp-gold, #e8c37a); }
   .lede { font-size: var(--step-1); color: var(--color-text-muted); max-width: 62ch; }
   .sec--navy .lede { color: rgba(255, 255, 255, 0.8); }
 </style>
