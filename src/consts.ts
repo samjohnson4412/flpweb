@@ -74,10 +74,55 @@ export const NOW = {
   ],
 } as const;
 
+/**
+ * Active storm banner. Set `active: false` the moment it stops being true —
+ * a stale storm notice is worse than none. Everything here is deliberately
+ * limited to what we can actually deliver today: inspections, aid navigation,
+ * connectivity and a phone. We are not adjusters and we have no lodging
+ * programme, so neither is promised.
+ */
+export const STORM = {
+  active: true,
+  name: 'Tropical Storm Isaias',
+  slug: '/response/isaias-2026',
+  asOf: 'October 7, 2026',
+  status:
+    'Forecast to reach the northern Gulf Coast as a hurricane late Friday, ' +
+    'somewhere between Gulfport, Mississippi and Panama City, Florida. ' +
+    'A state of emergency covers 25 Florida counties.',
+  offers: [
+    {
+      title: 'Documented damage inspections',
+      body:
+        'Once winds drop and it is safe to fly, a Florida-licensed home inspector ' +
+        'and FAA-licensed drone pilot will survey your roof and property and give ' +
+        'you a written report. Free. You keep it and use it however you choose.',
+    },
+    {
+      title: 'Help finding aid',
+      body:
+        'SBA disaster loans are open to homeowners, not only businesses, and almost ' +
+        'nobody is told that. We will walk through FEMA, SBA and local programmes ' +
+        'with you and help you file.',
+    },
+    {
+      title: 'Power and connectivity',
+      body:
+        'Charging and internet access, and phone or data plans for anyone who loses ' +
+        'service. If you cannot reach your family, you cannot do anything else.',
+    },
+    {
+      title: 'A line a person answers',
+      body:
+        'Not a recording. Ask about your evacuation zone, your windows, medical ' +
+        'equipment, or what to do with your animals.',
+    },
+  ],
+} as const;
+
 export const BOARD = [
   { name: 'Samuel Johnson', role: 'Director & President' },
   { name: 'Dominic Schaefer', role: 'Director & Vice-President' },
-  { name: 'Aly Foley', role: 'Director & Secretary' },
   { name: 'Sandra Jimenez', role: 'Director' },
 ] as const;
 
@@ -114,6 +159,7 @@ export const FOOTER_NAV = [
       { href: '/give/donate', label: 'Make a donation' },
       { href: '/give/volunteer', label: 'Volunteer' },
       { href: '/give/sponsor', label: 'Sponsor us' },
+      { href: '/partner', label: 'Partner with us' },
       { href: '/give/supplies', label: 'Donate supplies' },
     ],
   },

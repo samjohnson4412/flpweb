@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Grid from '../../components/Grid.astro';
+import Card from '../../components/Card.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import PhotoPlaceholder from '../../components/PhotoPlaceholder.astro';
+import Figure from '../../components/Figure.astro';
+import forecast from '../../assets/photos/wind-gust-forecast.jpg';
+import { ORG, STORM } from '../../consts';
+---
+<BaseLayout
+  title={STORM.name}
+  description="What the Florida Lantern Project can help with during and after Tropical Storm Isaias — free documented inspections, aid navigation, connectivity, and a storm line answered by a person."
+>
+  <Hero
+    eyebrow={`Active · as of ${STORM.asOf}`}
+    title={STORM.name}
+    lede={STORM.status}
+    image={forecast}
+    imageAlt=""
+    size="tall"
+  >
+    <p class="actions">
+      <a class="btn" href="/help/request">Request help</a>
+      <a class="btn btn--ghost" href="/partner">Partner with us</a>
+    </p>
+  </Hero>
+
+  <Section>
+    <p class="urgent">
+      <strong>If you are in immediate danger, call 911.</strong> We are not an
+      emergency service and we are not monitored around the clock.
+    </p>
+    <p>
+      Evacuation orders come from your county, not from us. Find yours at
+      <a href="https://www.floridadisaster.org/">floridadisaster.org</a> and go
+      when you are told to go. If your reason for staying is an animal, call us
+      first — that is one of the most common reasons families don't leave, and
+      it is a solvable problem more often than people think.
+    </p>
+  </Section>
+
+  <Section tone="surface" title="What we can help with">
+    <Grid>
+      {STORM.offers.map((o) => (
+        <Card title={o.title}><p>{o.body}</p></Card>
+      ))}
+    </Grid>
+    <p class="boundary">
+      We are not insurance adjusters and we do not negotiate with your insurer.
+      We inspect, we document, and we hand you the report.
+    </p>
+  </Section>
+
+  <Section title="Being honest about where we are">
+    <p>
+      We are based in Tampa. This storm is forecast for the Panhandle, six hours
+      up the road, in counties where almost nobody has heard of us. Writing that
+      on our own website is better than pretending otherwise.
+    </p>
+    <p>
+      So the most useful thing we can do this week is not to arrive unannounced.
+      It is to be reachable, to coordinate through county emergency management
+      and 211 rather than around them, and to come back in the weeks afterward —
+      when the news trucks have gone and people are still trying to get a roof
+      documented and a claim moving. That is the part nobody covers, and it is
+      the part we are actually equipped for.
+    </p>
+    <p>
+      If you are an organization up there with people who need help, the fastest
+      route to us is the partner form. One message from a pastor is worth more
+      than anything we could post.
+    </p>
+  </Section>
+
+  <Section tone="surface" title="After it passes">
+    <PhotoPlaceholder
+      subject="Aerial survey of storm damage along the Gulf Coast"
+      source="To licence: Getty / AP editorial, or shoot it ourselves once we're on the ground. Do not use uncredited stock next to a named family's story."
+      ratio="16 / 9"
+    />
+    <p>
+      Damage assessment is slow, boring, and decisive. An adjuster's first number
+      is rarely their last one, and the difference usually comes down to what was
+      documented and when. If your roof takes damage, photograph it before anyone
+      touches it, keep every receipt, and don't let the insurer's inspection be
+      the only one on record.
+    </p>
+    <p class="more"><a href="/help/recover">What to do after a storm &rarr;</a></p>
+  </Section>
+
+  <CallToAction title="Are you an organization in the path?" href="/partner" cta="Partner with us">
+    Churches, food pantries, senior centres, mobile home communities, clinics —
+    you know who needs help and we don't. Tell us who you serve and we'll bring
+    what we have.
+  </CallToAction>
+</BaseLayout>
+
+<style>
+  .actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-md); }
+  .more { margin-top: var(--space-md); font-family: var(--font-display); font-weight: 600; }
+  .urgent {
+    background: var(--color-surface); border-left: 4px solid var(--color-accent);
+    padding: var(--space-sm) var(--space-md); border-radius: var(--radius);
+    max-width: var(--measure);
+  }
+  .boundary {
+    margin-top: var(--space-md); max-width: 56ch; font-size: var(--step--1);
+    color: var(--color-text-muted); border-left: 3px solid var(--color-accent);
+    padding-left: var(--space-sm);
+  }
+</style>

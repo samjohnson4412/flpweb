@@ -8,9 +8,12 @@ import Stats from '../components/Stats.astro';
 import Story from '../components/Story.astro';
 import CallToAction from '../components/CallToAction.astro';
 import Figure from '../components/Figure.astro';
+import PhotoPlaceholder from '../components/PhotoPlaceholder.astro';
+import StormAlert from '../components/StormAlert.astro';
+import heroPhoto from '../assets/photos/roof-inspection-drone.jpg';
 import lightShow from '../assets/photos/light-show-crowd.jpg';
 import audience from '../assets/photos/light-show-audience.jpg';
-import { ORG, NOW } from '../consts';
+import { ORG, NOW, STORM } from '../consts';
 ---
 
 <BaseLayout
@@ -20,12 +23,17 @@ import { ORG, NOW } from '../consts';
   <Hero
     title="No family should face disaster alone"
     lede="When a storm is coming, the official advice is to seek shelter. But shelters turn away pets. Adjusters can't beat the next hurricane. Aid programs go unmentioned. We are what happens when the standard answer doesn't fit your situation."
+    image={heroPhoto}
+    imageAlt=""
+    size="tall"
   >
     <p class="actions">
       <a class="btn" href="/help">Get help</a>
       <a class="btn btn--ghost" href="/give/lantern-keeper">Become a Lantern Keeper</a>
     </p>
   </Hero>
+
+  {STORM.active && <StormAlert />}
 
   <Section title="Where things stand" meta={`As of ${NOW.asOf}`}>
     <p class="intro">{NOW.lede}</p>
@@ -106,6 +114,11 @@ import { ORG, NOW } from '../consts';
         </p>
       </Story>
     </Grid>
+    <PhotoPlaceholder
+      subject="A family and their pets arriving somewhere safe before landfall"
+      source="Shoot this ourselves, with written permission, the next time we place someone. Never stock — a stock photo beside Peter's or Amy's real story reads as documentation of that story, and it isn't."
+      ratio="3 / 2"
+    />
     <p class="more"><a href="/response">Read more stories &rarr;</a></p>
   </Section>
 

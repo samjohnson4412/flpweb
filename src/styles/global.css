@@ -33,6 +33,11 @@ h3 { font-size: var(--step-2); }
 
 p { margin: 0 0 var(--space-sm); max-width: var(--measure); text-wrap: pretty; }
 
+/* Headings get their own measure. Without this they run the full 1180px wrap
+   while the paragraph beneath stops at 64ch, and the block reads lopsided. */
+h1, h2, h3 { max-width: var(--measure-display); text-wrap: balance; }
+h4, h5, h6 { max-width: var(--measure); text-wrap: balance; }
+
 a { color: inherit; text-underline-offset: 0.2em; }
 a:hover { color: var(--color-accent); }
 

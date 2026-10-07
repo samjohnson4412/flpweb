@@ -53,6 +53,7 @@
   --space-lg: 4rem;
   --space-xl: 6rem;
   --radius: 10px;
-  --measure: 68ch;
+  --measure: 64ch;        /* body copy */
+  --measure-display: 26ch; /* headings — keeps them from outrunning the prose */
   --wrap: 1180px;
 }

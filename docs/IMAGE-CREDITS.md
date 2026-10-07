@@ -84,3 +84,22 @@ All owned by FLP, all in `FLP Media`:
 outdoor event FLP hosted and photographed. That is ordinarily fine, and the
 image was already published on FLP's own channels. If anyone asks to be
 removed, replace the file rather than argue the point.
+
+---
+
+## Planned images (placeholders live on the site)
+
+`PhotoPlaceholder` marks spots worth filling. Each renders a visible dashed
+frame naming the subject and where to get it, so nothing gets quietly filled
+with stock in a hurry. Replace with `<Figure>` and add the provenance above.
+
+| Where | Subject | Sourcing note |
+| --- | --- | --- |
+| `/` (stories) | A family and their pets arriving somewhere safe before landfall | **Shoot ourselves, with written permission.** Stock beside Peter's or Amy's real story reads as documentation of that story. |
+| `/response/isaias-2026` | Aerial survey of storm damage along the Gulf Coast | Licensed editorial (Getty/AP) is acceptable here — it's atmospheric, not attached to a named person. Or shoot it. |
+| `/partner` | A volunteer and a local pastor talking outside a church hall | Shoot at the first partner site, with permission. Never stock. |
+
+**Buying rule.** Atmospheric images — sky, weather, landscape, wide aerials —
+may be licensed stock, captioned as such. Anything that could read as a
+photograph of a specific family, beneficiary, or event we describe must be our
+own, with permission on file.
