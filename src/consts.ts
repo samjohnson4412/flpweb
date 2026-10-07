@@ -30,6 +30,11 @@ export const ORG = {
   flRegistrationNumber: 'CH#####',
 } as const;
 
+/** True while the Ch. 496 registration number is still a placeholder.
+  * Pages that exist to be verified must say "pending" rather than print a
+  * number that does not exist — a sponsor who cannot verify us walks. */
+export const FL_REG_PENDING = !/^CH\d+$/.test(ORG.flRegistrationNumber);
+
 /** Verified impact figures. Every one traceable — see docs/STORIES.md. */
 export const STATS = [
   { value: '50+', label: 'individuals and families assisted', note: 'Helene and Milton, 2024' },

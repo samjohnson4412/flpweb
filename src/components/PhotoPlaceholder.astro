@@ -15,6 +15,8 @@ interface Props {
   size?: 'text' | 'wide';
 }
 const { subject, source, ratio = '16 / 9', size = 'wide' } = Astro.props;
+// Sourcing notes and the licence rule are for us, not for visitors.
+const internal = import.meta.env.DEV;
 ---
 <figure class:list={['ph', `ph--${size}`]} style={`--ratio:${ratio}`}>
   <div class="frame">
@@ -23,9 +25,9 @@ const { subject, source, ratio = '16 / 9', size = 'wide' } = Astro.props;
       <circle cx="8.5" cy="10" r="1.6" stroke="currentColor" stroke-width="1.4"/>
       <path d="M3 17l5-4.5 3.5 3L15 12l6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
     </svg>
-    <p class="subject">{subject}</p>
-    {source && <p class="source">{source}</p>}
-    <p class="rule">FLP-owned or licensed only · log it in IMAGE-CREDITS.md</p>
+    <p class="subject">{internal ? subject : 'Photograph to come'}</p>
+    {internal && source && <p class="source">{source}</p>}
+    {internal && <p class="rule">FLP-owned or licensed only · log it in IMAGE-CREDITS.md</p>}
   </div>
 </figure>
 

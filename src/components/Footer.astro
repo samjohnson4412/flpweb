@@ -1,6 +1,11 @@
 ---
 import { ORG, FOOTER_NAV } from '../consts';
 const year = new Date().getFullYear();
+
+// Never render the placeholder. A fabricated registration number in a
+// Ch. 496 solicitation disclosure is affirmatively false; omitting it is
+// merely incomplete. TODO(sam): real CH number is on the annual renewal.
+const hasReg = /^CH\d+$/.test(ORG.flRegistrationNumber);
 ---
 
 <footer class="site-footer">
@@ -34,7 +39,7 @@ const year = new Date().getFullYear();
       <a href="/non-discrimination-policy">Non-Discrimination Policy</a>
     </p>
     <p>
-      A COPY OF THE OFFICIAL REGISTRATION ({ORG.flRegistrationNumber}) AND FINANCIAL
+      A COPY OF THE OFFICIAL REGISTRATION{hasReg ? ` (${ORG.flRegistrationNumber})` : ''} AND FINANCIAL
       INFORMATION MAY BE OBTAINED FROM THE DIVISION OF CONSUMER SERVICES BY CALLING
       TOLL-FREE (800-435-7352) WITHIN THE STATE. REGISTRATION DOES NOT IMPLY
       ENDORSEMENT, APPROVAL, OR RECOMMENDATION BY THE STATE.

@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
 import Stats from '../../components/Stats.astro';
-import { ORG, BOARD } from '../../consts';
+import { ORG, FL_REG_PENDING, BOARD } from '../../consts';
 ---
 <BaseLayout
   title="Transparency & Financials"
@@ -23,7 +23,7 @@ import { ORG, BOARD } from '../../consts';
       <div><dt>EIN</dt><dd><strong>{ORG.ein}</strong></dd></div>
       <div><dt>Tax status</dt><dd>501(c)(3) public charity</dd></div>
       <div><dt>State of incorporation</dt><dd>Florida, {ORG.incorporated}</dd></div>
-      <div><dt>Florida charitable registration</dt><dd>{ORG.flRegistrationNumber}</dd></div>
+      <div><dt>Florida charitable registration</dt><dd>{FL_REG_PENDING ? <em>Renewal in progress &mdash; number available on request</em> : ORG.flRegistrationNumber}</dd></div>
       <div><dt>Principal address</dt><dd>{ORG.address.street}<br />{ORG.address.city}, {ORG.address.region} {ORG.address.postalCode}</dd></div>
       <div><dt>Contact</dt><dd><a href={`mailto:${ORG.email}`}>{ORG.email}</a> &middot; <a href={`tel:${ORG.phoneHref}`}>{ORG.phone}</a></dd></div>
     </dl>

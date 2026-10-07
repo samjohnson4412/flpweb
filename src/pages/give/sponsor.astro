@@ -4,7 +4,7 @@ import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
 import Grid from '../../components/Grid.astro';
 import Card from '../../components/Card.astro';
-import { ORG } from '../../consts';
+import { ORG, FL_REG_PENDING } from '../../consts';
 ---
 <BaseLayout
   title="Corporate Sponsorship"
@@ -25,7 +25,7 @@ import { ORG } from '../../consts';
       <div><dt>Legal name</dt><dd>{ORG.legalName}</dd></div>
       <div><dt>EIN</dt><dd>{ORG.ein}</dd></div>
       <div><dt>Status</dt><dd>501(c)(3) public charity</dd></div>
-      <div><dt>State</dt><dd>Florida &middot; registration {ORG.flRegistrationNumber}</dd></div>
+      <div><dt>State</dt><dd>Florida &middot; registration {FL_REG_PENDING ? <em>renewal in progress</em> : ORG.flRegistrationNumber}</dd></div>
       <div><dt>Address</dt><dd>{ORG.address.street}, {ORG.address.city}, {ORG.address.region} {ORG.address.postalCode}</dd></div>
       <div><dt>Formerly</dt><dd>{ORG.formerName}</dd></div>
     </dl>
