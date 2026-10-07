@@ -80,6 +80,36 @@ What's still needed, roughly in order of how much it unblocks.
 21. **Form 990s and the IRS determination letter** — needed for the transparency
     page. Do you have PDFs?
 
+## Raised while adding photos
+
+22. **Which address and phone are current?** The site uses 4412 W Sylvan Ramble
+    St and (813) 733-8806. The June 2026 response letter to Higbee uses
+    **6706 Camden Bay Dr, Ste 205, Tampa, FL 33635** and **(813) 921-5733**.
+    These appear in the footer, contact page, transparency page, and schema.org
+    markup, so it matters which is right.
+23. **Status of the AP / PicRights claim (2Q3N6V)?** If it settles, worth
+    knowing so the transparency page can't be blindsided. No site content
+    depends on it.
+24. **More photos** — see `docs/IMAGE-CREDITS.md` for the Drive folders worth
+    pulling next, including `Mayor.mp4` and `PeterISO.mp3`.
+
+## From the photo review
+
+25. **Consent for `IMG_1043`** — two young children, faces clear. Needs written
+    parental permission before publication. It's a good photo; worth asking.
+26. **Consent for the thank-you texts** (`IMG_1044/1045/1047`) — messages from
+    people FLP helped: *"It's beautiful thank you so much I'm going to sleep so
+    well after today"*. No names visible. With permission these would be among
+    the most persuasive content on the site.
+27. ~~What is `IMG_1625`?~~ — **RESOLVED**: tornado warnings during Milton. Now
+    on `/response/milton-2024` with a section on the outbreak.
+28. ~~FAA wording~~ — **RESOLVED**: FAA Part 107 certified, and a Florida
+    licensed home inspector. Stated on `/help/recover`, `/help/prepare`,
+    `/about/transparency` and `/response/milton-2024`.
+28a. **Licence numbers?** Worth publishing the Part 107 certificate number and
+    the Florida home inspector licence number on the transparency page — they
+    are independently verifiable, which is the whole point of that page.
+
 ## Nice to have
 
 17. Brand guide, if one exists — exact hex values, type scale, logo clear-space.

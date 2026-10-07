@@ -1,0 +1,210 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import PhotoPlaceholder from '../components/PhotoPlaceholder.astro';
+import { ORG } from '../consts';
+
+/**
+ * TODO(sam): point this at a real handler before launch — same options as
+ * /help/request. Until then the page routes to email and phone, which work.
+ * Submissions should land somewhere you'll actually read, and every partner
+ * who fills this in deserves a reply within a day or they won't send a second.
+ */
+const FORM_ENDPOINT: string | null = null;
+---
+<BaseLayout
+  title="Partner With Us"
+  description="Churches, pantries, schools, clinics and community organizations: tell us who you serve and we'll bring free inspections, aid navigation, connectivity and a storm line to your people."
+>
+  <Hero
+    eyebrow="For organizations"
+    title="You know who needs help. We don't."
+    lede="We can inspect a roof, document damage properly, find aid people were never told about, and get a phone working again. What we cannot do is know which family on your street is sitting in the dark. You already do."
+  >
+    <p class="actions">
+      <a class="btn" href="#form">Start the form</a>
+    </p>
+  </Hero>
+
+  <Section title="Why we're asking">
+    <p>
+      In 2024 we had free phone and data plans to give away after Helene and
+      Milton. Almost nobody took them. Not because people didn't need them —
+      because a free offer from an organization you've never heard of, posted on
+      Facebook, reads like a scam. And it should.
+    </p>
+    <p>
+      The same offer handed over by someone's pastor, or the woman who runs the
+      pantry they've used for nine years, is a completely different thing. That
+      trust isn't something we can build in the four days after a storm. It's
+      something you already have, and we'd rather borrow it honestly than try to
+      manufacture it.
+    </p>
+    <p>
+      So this is the whole arrangement: <strong>you tell us who needs what, and
+      we bring what we have.</strong> No cost to you, no cost to them, no
+      obligation, and nothing we'll ask you to promote.
+    </p>
+  </Section>
+
+  <Section title="What we can actually bring" rule space="tight">
+    <ul class="offer">
+      <li><strong>Documented property inspections.</strong> Free, year-round, by a Florida-licensed home inspector and FAA-licensed drone pilot. Written report, theirs to keep.</li>
+      <li><strong>Aid navigation.</strong> FEMA, SBA and local programmes — including the fact that SBA disaster loans are open to homeowners, not just businesses.</li>
+      <li><strong>Connectivity.</strong> Phone and data plans, charging, internet access after an outage.</li>
+      <li><strong>A storm line answered by a person</strong>, in English or Portuguese.</li>
+    </ul>
+    <p class="boundary">
+      We are not insurance adjusters and we do not negotiate with insurers. We
+      inspect, document, and hand over the report. We will also tell you plainly
+      when something is outside what we can do, and who to call instead.
+    </p>
+  </Section>
+
+  <Section id="form" title="Tell us about your organization" rule space="loose">
+    {FORM_ENDPOINT ? (
+      <form class="form" method="POST" action={FORM_ENDPOINT}>
+        <div class="row">
+          <label>
+            <span>Organization <abbr title="required">*</abbr></span>
+            <input type="text" name="org" required autocomplete="organization" />
+          </label>
+          <label>
+            <span>What kind?</span>
+            <select name="orgtype">
+              <option value="">Choose one</option>
+              <option>Church or faith community</option>
+              <option>Food pantry or meal programme</option>
+              <option>School or childcare</option>
+              <option>Clinic or health service</option>
+              <option>Senior centre or elder services</option>
+              <option>Mobile home or manufactured housing community</option>
+              <option>Neighbourhood or tenants association</option>
+              <option>Local business</option>
+              <option>Other nonprofit</option>
+              <option>Something else</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="row">
+          <label>
+            <span>Your name <abbr title="required">*</abbr></span>
+            <input type="text" name="name" required autocomplete="name" />
+          </label>
+          <label>
+            <span>Your role</span>
+            <input type="text" name="role" placeholder="Pastor, director, volunteer coordinator…" />
+          </label>
+        </div>
+
+        <div class="row">
+          <label>
+            <span>Email <abbr title="required">*</abbr></span>
+            <input type="email" name="email" required autocomplete="email" />
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" name="phone" autocomplete="tel" />
+          </label>
+        </div>
+
+        <div class="row">
+          <label>
+            <span>City and county <abbr title="required">*</abbr></span>
+            <input type="text" name="location" required placeholder="e.g. Panama City, Bay County" />
+          </label>
+          <label>
+            <span>Roughly how many people do you serve?</span>
+            <input type="text" name="reach" placeholder="A rough number is fine" />
+          </label>
+        </div>
+
+        <fieldset>
+          <legend>What do your people most often need?</legend>
+          <label class="check"><input type="checkbox" name="need" value="inspection" /> Roof or property inspections</label>
+          <label class="check"><input type="checkbox" name="need" value="claims" /> Help understanding an insurance decision</label>
+          <label class="check"><input type="checkbox" name="need" value="aid" /> FEMA, SBA, or local aid navigation</label>
+          <label class="check"><input type="checkbox" name="need" value="phones" /> Phone or data plans</label>
+          <label class="check"><input type="checkbox" name="need" value="power" /> Charging and internet after an outage</label>
+          <label class="check"><input type="checkbox" name="need" value="transport" /> Transportation or evacuation help</label>
+          <label class="check"><input type="checkbox" name="need" value="pets" /> Somewhere that will take their animals</label>
+          <label class="check"><input type="checkbox" name="need" value="unsure" /> Not sure yet — we'd like to talk</label>
+        </fieldset>
+
+        <label>
+          <span>What languages are spoken in your community?</span>
+          <input type="text" name="languages" placeholder="e.g. Spanish, Haitian Creole, Portuguese" />
+        </label>
+
+        <label>
+          <span>Anything else we should know?</span>
+          <textarea name="details" rows="5"></textarea>
+        </label>
+
+        <button class="btn" type="submit">Send</button>
+      </form>
+    ) : (
+      <div class="fallback">
+        <h2>Reach us directly</h2>
+        <p>
+          Our partner form is being wired up. These reach the same person and
+          are faster anyway:
+        </p>
+        <p class="contact">
+          <a class="btn" href={`tel:${ORG.phoneHref}`}>Call {ORG.phone}</a>
+          <a class="btn btn--ghost" href={`mailto:${ORG.email}?subject=Partnering%20with%20Florida%20Lantern%20Project`}>Email us</a>
+        </p>
+        <h3>Please include</h3>
+        <ul>
+          <li>Your organization, and what kind it is</li>
+          <li>Your name, role, and the best way to reach you</li>
+          <li>City and county</li>
+          <li>Roughly how many people you serve, and what they most often need</li>
+          <li>What languages are spoken in your community</li>
+        </ul>
+      </div>
+    )}
+  </Section>
+
+  <Section tone="surface" title="What happens next">
+    <PhotoPlaceholder
+      subject="A volunteer and a local pastor talking outside a church hall"
+      source="Shoot this ourselves at the first partner site — a real partnership, with permission. Never a stock photo of a church next to a claim about our partners."
+      ratio="3 / 2"
+    />
+    <p>
+      One of us replies, usually the same day. We'll ask what your people
+      actually need rather than telling you what we offer, and if the answer is
+      that we're not useful to you, we'll say so and point you somewhere better.
+    </p>
+    <p>
+      There is no agreement to sign, no fee, and nothing you have to promote. If
+      it works, it works, and you call us the next time.
+    </p>
+  </Section>
+</BaseLayout>
+
+<style>
+  .actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-md); }
+  .offer { max-width: var(--measure); padding-left: 1.1rem; }
+  .offer li { margin-bottom: var(--space-xs); }
+  .contact { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin: var(--space-md) 0; }
+  .boundary {
+    margin-top: var(--space-md); max-width: 56ch; font-size: var(--step--1);
+    color: var(--color-text-muted); border-left: 3px solid var(--color-accent);
+    padding-left: var(--space-sm);
+  }
+  .form { max-width: 44rem; display: grid; gap: var(--space-md); }
+  .row { display: grid; gap: var(--space-md); grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr)); }
+  .form label > span, .form legend { display: block; font-weight: 700; margin-bottom: 0.3rem; }
+  .form input, .form select, .form textarea {
+    width: 100%; padding: 0.6rem 0.7rem; font: inherit;
+    border: 1px solid var(--color-border); border-radius: var(--radius);
+    background: var(--color-bg); color: inherit;
+  }
+  .form fieldset { border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-md); }
+  .check { display: block; font-weight: 400; margin-bottom: 0.35rem; }
+  .check input { width: auto; margin-right: 0.45rem; }
+</style>

@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
 import Stats from '../../components/Stats.astro';
-import { ORG, BOARD } from '../../consts';
+import { ORG, FL_REG_PENDING, BOARD } from '../../consts';
 ---
 <BaseLayout
   title="Transparency & Financials"
@@ -23,7 +23,7 @@ import { ORG, BOARD } from '../../consts';
       <div><dt>EIN</dt><dd><strong>{ORG.ein}</strong></dd></div>
       <div><dt>Tax status</dt><dd>501(c)(3) public charity</dd></div>
       <div><dt>State of incorporation</dt><dd>Florida, {ORG.incorporated}</dd></div>
-      <div><dt>Florida charitable registration</dt><dd>{ORG.flRegistrationNumber}</dd></div>
+      <div><dt>Florida charitable registration</dt><dd>{FL_REG_PENDING ? <em>Renewal in progress &mdash; number available on request</em> : ORG.flRegistrationNumber}</dd></div>
       <div><dt>Principal address</dt><dd>{ORG.address.street}<br />{ORG.address.city}, {ORG.address.region} {ORG.address.postalCode}</dd></div>
       <div><dt>Contact</dt><dd><a href={`mailto:${ORG.email}`}>{ORG.email}</a> &middot; <a href={`tel:${ORG.phoneHref}`}>{ORG.phone}</a></dd></div>
     </dl>
@@ -34,7 +34,22 @@ import { ORG, BOARD } from '../../consts';
     </p>
   </Section>
 
-  <Section tone="surface" title="Documents">
+  <Section title="Credentials" rule>
+    <p>
+      Our inspection work is not goodwill with a camera attached. It is carried
+      out under:
+    </p>
+    <ul class="creds">
+      <li><strong>FAA Part 107</strong> — remote pilot certification for commercial drone operation</li>
+      <li><strong>Florida licensed home inspector</strong> — qualified to assess and report on structural damage</li>
+    </ul>
+    <p class="note">
+      That combination is why our post-storm reports are usable in an insurance
+      claim rather than just a set of photographs.
+    </p>
+  </Section>
+
+  <Section title="Documents" rule>
     <p>
       {/* TODO(sam): drop PDFs into public/documents/ and link them here. */}
       We will provide any of the following on request, usually the same day:
@@ -50,7 +65,7 @@ import { ORG, BOARD } from '../../consts';
     <p><a class="btn" href={`mailto:${ORG.email}?subject=Document%20request`}>Request documents</a></p>
   </Section>
 
-  <Section title="Governance">
+  <Section title="Governance" rule>
     <ul class="board">
       {BOARD.map((m) => (<li><strong>{m.name}</strong><span>{m.role}</span></li>))}
     </ul>
@@ -76,7 +91,7 @@ import { ORG, BOARD } from '../../consts';
     </p>
   </Section>
 
-  <Section title="How we talk about numbers">
+  <Section title="How we talk about numbers" rule>
     <p>
       Two commitments, because charity arithmetic is often optimistic:
     </p>
@@ -94,7 +109,7 @@ import { ORG, BOARD } from '../../consts';
     </ul>
   </Section>
 
-  <Section tone="surface" title="Policies">
+  <Section title="Policies" rule>
     <p>
       <a href="/privacy-policy">Privacy policy</a> &nbsp;·&nbsp;
       <a href="/non-discrimination-policy">Non-discrimination policy</a>
@@ -125,4 +140,6 @@ import { ORG, BOARD } from '../../consts';
   .gap { background: var(--color-surface); border-radius: var(--radius); padding: var(--space-sm) var(--space-md); max-width: var(--measure); }
   .commitments { list-style: none; padding: 0; display: grid; gap: var(--space-sm); margin-top: var(--space-md); }
   .commitments li { border-left: 4px solid var(--color-accent); padding-left: var(--space-sm); max-width: var(--measure); }
+  .creds { list-style: none; padding: 0; display: grid; gap: var(--space-sm); margin: var(--space-md) 0; }
+  .creds li { border-left: 4px solid var(--color-accent); padding-left: var(--space-sm); max-width: var(--measure); }
 </style>

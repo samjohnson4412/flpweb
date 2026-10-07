@@ -4,6 +4,12 @@ import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
 import Story from '../../components/Story.astro';
 import Grid from '../../components/Grid.astro';
+import Figure from '../../components/Figure.astro';
+import roof from '../../assets/photos/roof-inspection-drone.jpg';
+import briefing from '../../assets/photos/storm-briefing.jpg';
+import tornadoes from '../../assets/photos/milton-tornado-tracks.jpg';
+import Video from '../../components/Video.astro';
+import { VIDEOS } from '../../data/videos';
 ---
 <BaseLayout
   title="Hurricane Milton, 2024"
@@ -32,7 +38,7 @@ import Grid from '../../components/Grid.astro';
     </p>
   </Section>
 
-  <Section tone="surface" title="The people">
+  <Section title="The people" rule>
     <Grid min="320px">
       <Story name="Peter" context="Evacuated a dorm · one cat">
         <p>
@@ -72,9 +78,10 @@ import Grid from '../../components/Grid.astro';
         </p>
       </Story>
     </Grid>
+    <Video video={VIDEOS.roadToSafety} />
   </Section>
 
-  <Section title="During: staying reachable">
+  <Section title="During: staying reachable" rule>
     <p>
       On 8 October we offered free one-month unlimited talk and text plans for
       anyone with an eSIM-compatible phone. Cell service was expected to fail, and
@@ -85,6 +92,12 @@ import Grid from '../../components/Grid.astro';
       We also ran a non-emergency storm hotline: radar, forecasts, shelter status,
       and the specific questions official lines can't take.
     </p>
+    <Figure
+      src={briefing}
+      alt="A storm briefing graphic over a surge forecast map of Florida, explaining that the storm is perpendicular to the coast and that the area just south of the eye will see catastrophic surge."
+      caption="One of the plain-language briefings we published as Milton approached."
+      ratio="3 / 4"
+    />
     <ul class="quotes">
       <li>“Can I still leave if I'm in Zone B?”</li>
       <li>“My window is cracked. What do I do?”</li>
@@ -92,20 +105,45 @@ import Grid from '../../components/Grid.astro';
     </ul>
   </Section>
 
+  <Section title="Milton's other hazard" rule>
+    <p class="intro">
+      Milton is remembered for the surge, but it spun up an extraordinary
+      tornado outbreak across the peninsula on the way in — including well east
+      of the track, in places that expected wind and rain and got something else.
+    </p>
+    <Figure
+      src={tornadoes}
+      alt="A map of Florida overlaid with dozens of red tornado warning polygons stretching from the Gulf coast across to the Atlantic."
+      caption="Tornado warnings during Milton. Every red box is a separate warning."
+      ratio="1 / 1"
+    />
+    <p>
+      It is the reason our storm updates covered more than the cone. A family
+      three counties inland, told they were outside the surge zone, still needed
+      to know what was overhead.
+    </p>
+  </Section>
+
   <Section tone="surface" title="After: documentation">
     <p class="intro">
       On 11 October we began offering free roof and home inspections across the
       Tampa Bay area. We completed <strong>dozens</strong>.
     </p>
+    <Figure
+      src={roof}
+      alt="Overhead drone photograph of a Spanish tile roof with displaced and broken tiles."
+      caption="One of dozens of properties surveyed across Tampa Bay after Milton."
+    />
     <p>
-      An inspection is a drone flight and a written report. What it's actually for
-      is the moment an insurer asks a family to prove what the damage replaced —
+      An inspection is a drone flight, flown under FAA Part 107, and a written
+      report by a Florida licensed home inspector. What it's actually for is the
+      moment an insurer asks a family to prove what the damage replaced —
       and for pointing people at aid programs nobody told them about. That second
       part turned out to matter as much as the first.
     </p>
   </Section>
 
-  <Section title="The totals">
+  <Section title="The totals" rule>
     <ul class="totals">
       <li><strong>20+</strong><span>placed in emergency lodging before landfall</span></li>
       <li><strong>Dozens</strong><span>of free roof and property inspections</span></li>

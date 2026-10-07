@@ -4,6 +4,8 @@ import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
 import Stats from '../../components/Stats.astro';
 import { BOARD } from '../../consts';
+import Video from '../../components/Video.astro';
+import { VIDEOS } from '../../data/videos';
 
 const VALUES = [
   { name: 'Family-Centered Support', body: 'Every decision prioritizes the well-being and stability of families affected by disaster — which in practice usually means counting the pets too.' },
@@ -54,15 +56,16 @@ const VALUES = [
     </div>
   </Section>
 
-  <Section tone="surface" title="Our impact">
+  <Section title="Our impact" rule>
     <p>
       Numbers we can stand behind, with the stories underneath them on the
       <a href="/response">response pages</a>.
     </p>
     <Stats />
+    <Video video={VIDEOS.mayor} />
   </Section>
 
-  <Section title="Mission and vision">
+  <Section title="Mission and vision" rule>
     <div class="pair">
       <div>
         <h3>Mission</h3>
@@ -91,7 +94,7 @@ const VALUES = [
     </ul>
   </Section>
 
-  <Section title="Board of directors">
+  <Section title="Board of directors" rule>
     <ul class="board">
       {BOARD.map((m) => (<li><strong>{m.name}</strong><span>{m.role}</span></li>))}
     </ul>

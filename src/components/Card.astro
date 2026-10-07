@@ -8,7 +8,7 @@ const { title, href, meta } = Astro.props;
 const Tag = href ? 'a' : 'div';
 ---
 
-<Tag class="card" href={href}>
+<Tag class="card" href={href} data-reveal>
   {meta && <p class="meta">{meta}</p>}
   <h3>{title}</h3>
   <div class="body"><slot /></div>
@@ -26,7 +26,18 @@ const Tag = href ? 'a' : 'div';
     color: inherit;
     height: 100%;
   }
-  a.card:hover { border-left-color: var(--flp-navy-700); color: inherit; }
+  .card {
+    transition:
+      transform var(--dur-fast) var(--ease-out),
+      box-shadow var(--dur-fast) var(--ease-out),
+      border-left-color var(--dur-fast) var(--ease-out);
+  }
+  a.card:hover {
+    border-left-color: var(--flp-navy-700);
+    color: inherit;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgb(17 17 45 / 0.10);
+  }
   a.card:hover h3 { color: var(--color-accent); }
   .card h3 { font-size: var(--step-1); margin-bottom: var(--space-xs); }
   .meta {
