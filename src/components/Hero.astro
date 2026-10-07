@@ -49,6 +49,20 @@ const showGlow = glow && tone === 'navy' && !hasImage;
 
 <style>
   .hero { padding-block: var(--space-lg); position: relative; overflow: hidden; isolation: isolate; }
+
+  /* Bridge. A dark hero cutting straight to a light page is the single
+     harshest seam on the site; this carries the hero's weight a little way
+     down so the eye travels instead of stopping. */
+  .hero--navy::after,
+  .hero--image::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: clamp(2.5rem, 7vh, 5rem);
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, rgb(10 20 38 / 0.45));
+  }
   .inner { position: relative; z-index: 2; }
   .hero--navy { background: var(--flp-navy-900); color: var(--flp-white); }
   .hero--cream { background: var(--color-bg); border-bottom: 1px solid var(--color-border); }

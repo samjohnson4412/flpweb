@@ -48,7 +48,7 @@ const FORM_ENDPOINT: string | null = null;
     </p>
   </Section>
 
-  <Section tone="surface" title="What we can actually bring">
+  <Section title="What we can actually bring" rule space="tight">
     <ul class="offer">
       <li><strong>Documented property inspections.</strong> Free, year-round, by a Florida-licensed home inspector and FAA-licensed drone pilot. Written report, theirs to keep.</li>
       <li><strong>Aid navigation.</strong> FEMA, SBA and local programmes — including the fact that SBA disaster loans are open to homeowners, not just businesses.</li>
@@ -62,7 +62,7 @@ const FORM_ENDPOINT: string | null = null;
     </p>
   </Section>
 
-  <Section id="form" title="Tell us about your organization">
+  <Section id="form" title="Tell us about your organization" rule space="loose">
     {FORM_ENDPOINT ? (
       <form class="form" method="POST" action={FORM_ENDPOINT}>
         <div class="row">

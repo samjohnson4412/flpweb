@@ -34,7 +34,7 @@ import { ORG, BOARD } from '../../consts';
     </p>
   </Section>
 
-  <Section title="Credentials">
+  <Section title="Credentials" rule>
     <p>
       Our inspection work is not goodwill with a camera attached. It is carried
       out under:
@@ -49,7 +49,7 @@ import { ORG, BOARD } from '../../consts';
     </p>
   </Section>
 
-  <Section tone="surface" title="Documents">
+  <Section title="Documents" rule>
     <p>
       {/* TODO(sam): drop PDFs into public/documents/ and link them here. */}
       We will provide any of the following on request, usually the same day:
@@ -65,7 +65,7 @@ import { ORG, BOARD } from '../../consts';
     <p><a class="btn" href={`mailto:${ORG.email}?subject=Document%20request`}>Request documents</a></p>
   </Section>
 
-  <Section title="Governance">
+  <Section title="Governance" rule>
     <ul class="board">
       {BOARD.map((m) => (<li><strong>{m.name}</strong><span>{m.role}</span></li>))}
     </ul>
@@ -91,7 +91,7 @@ import { ORG, BOARD } from '../../consts';
     </p>
   </Section>
 
-  <Section title="How we talk about numbers">
+  <Section title="How we talk about numbers" rule>
     <p>
       Two commitments, because charity arithmetic is often optimistic:
     </p>
@@ -109,7 +109,7 @@ import { ORG, BOARD } from '../../consts';
     </ul>
   </Section>
 
-  <Section tone="surface" title="Policies">
+  <Section title="Policies" rule>
     <p>
       <a href="/privacy-policy">Privacy policy</a> &nbsp;·&nbsp;
       <a href="/non-discrimination-policy">Non-discrimination policy</a>

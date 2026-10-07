@@ -42,7 +42,7 @@ import { ORG, STORM } from '../../consts';
     </p>
   </Section>
 
-  <Section tone="surface" title="What we can help with">
+  <Section title="What we can help with" rule space="loose">
     <Grid>
       {STORM.offers.map((o) => (
         <Card title={o.title}><p>{o.body}</p></Card>
@@ -54,7 +54,7 @@ import { ORG, STORM } from '../../consts';
     </p>
   </Section>
 
-  <Section title="Being honest about where we are">
+  <Section title="Being honest about where we are" rule>
     <p>
       We are based in Tampa. This storm is forecast for the Panhandle, six hours
       up the road, in counties where almost nobody has heard of us. Writing that
@@ -75,7 +75,7 @@ import { ORG, STORM } from '../../consts';
     </p>
   </Section>
 
-  <Section tone="surface" title="After it passes">
+  <Section tone="surface" title="After it passes" space="tight">
     <PhotoPlaceholder
       subject="Aerial survey of storm damage along the Gulf Coast"
       source="To licence: Getty / AP editorial, or shoot it ourselves once we're on the ground. Do not use uncredited stock next to a named family's story."
