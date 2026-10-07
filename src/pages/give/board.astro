@@ -14,7 +14,7 @@ import { ORG, BOARD } from '../../consts';
     lede="We meet quarterly. We're small enough that a board member's contribution is visible, and young enough that it's genuinely formative."
   />
 
-  <Section title="Current board">
+  <Section title="Current board" seam={false}>
     <ul class="board">
       {BOARD.map((m) => (
         <li><strong>{m.name}</strong><span>{m.role}</span></li>

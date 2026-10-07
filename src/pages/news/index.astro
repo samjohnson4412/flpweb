@@ -12,7 +12,7 @@ const fmt = (d: Date) =>
 ---
 <BaseLayout title="News" description="Updates from the Florida Lantern Project.">
   <Hero eyebrow="News" title="Updates" lede="What we're doing, what it cost, and what we got wrong." />
-  <Section>
+  <Section seam={false}>
     {posts.length === 0 ? (
       <p>Nothing posted yet.</p>
     ) : (

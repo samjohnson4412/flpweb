@@ -16,7 +16,7 @@ import Stats from '../../components/Stats.astro';
     lede="A permanent record rather than a feed. Each storm gets a page that stays up: what happened, what we did, who it reached, and what we'd do differently."
   />
 
-  <Section>
+  <Section seam={false}>
     <Grid>
       <Card title="Hurricane Helene" href="/response/helene-2024" meta="September 2024">
         <p>
@@ -43,7 +43,7 @@ import Stats from '../../components/Stats.astro';
     <Stats />
   </Section>
 
-  <Section title="Why these pages exist" rule>
+  <Section title="Why these pages exist">
     <p>
       Most of what small nonprofits do disappears into social media, where it is
       unsearchable a week later and gone entirely if the platform decides so. A

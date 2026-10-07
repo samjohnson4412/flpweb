@@ -18,7 +18,7 @@ const articles = PRESS.filter((p) => p.kind === 'article');
     lede="All of the coverage below is from our light show era, under the name Sylvan Ramble Lights. The disaster relief work hasn't been written about yet."
   />
 
-  <Section title="Broadcast">
+  <Section title="Broadcast" seam={false}>
     <ul class="list">
       {broadcast.map((p) => (
         <li>
@@ -44,7 +44,7 @@ const articles = PRESS.filter((p) => p.kind === 'article');
     </ul>
   </Section>
 
-  <Section title="Press enquiries" rule>
+  <Section title="Press enquiries">
     <p>
       For interviews, footage, or background on our disaster response work,
       email <a href={`mailto:${ORG.email}`}>{ORG.email}</a> or call

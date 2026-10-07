@@ -15,7 +15,7 @@ import { ORG, FL_REG_PENDING, BOARD } from '../../consts';
     lede="If you're a grantmaker, a corporate giving officer, or a donor doing due diligence, this page exists so you don't have to email us first."
   />
 
-  <Section title="Organization details">
+  <Section title="Organization details" seam={false}>
     <dl class="facts">
       <div><dt>Legal name</dt><dd>{ORG.legalName}</dd></div>
       <div><dt>Formerly known as</dt><dd>{ORG.formerName} — name changed 2025</dd></div>
@@ -34,7 +34,7 @@ import { ORG, FL_REG_PENDING, BOARD } from '../../consts';
     </p>
   </Section>
 
-  <Section title="Credentials" rule>
+  <Section title="Credentials">
     <p>
       Our inspection work is not goodwill with a camera attached. It is carried
       out under:
@@ -49,7 +49,7 @@ import { ORG, FL_REG_PENDING, BOARD } from '../../consts';
     </p>
   </Section>
 
-  <Section title="Documents" rule>
+  <Section title="Documents" tone="surface">
     <p>
       {/* TODO(sam): drop PDFs into public/documents/ and link them here. */}
       We will provide any of the following on request, usually the same day:
@@ -65,7 +65,7 @@ import { ORG, FL_REG_PENDING, BOARD } from '../../consts';
     <p><a class="btn" href={`mailto:${ORG.email}?subject=Document%20request`}>Request documents</a></p>
   </Section>
 
-  <Section title="Governance" rule>
+  <Section title="Governance">
     <ul class="board">
       {BOARD.map((m) => (<li><strong>{m.name}</strong><span>{m.role}</span></li>))}
     </ul>
@@ -91,7 +91,7 @@ import { ORG, FL_REG_PENDING, BOARD } from '../../consts';
     </p>
   </Section>
 
-  <Section title="How we talk about numbers" rule>
+  <Section title="How we talk about numbers">
     <p>
       Two commitments, because charity arithmetic is often optimistic:
     </p>
@@ -109,7 +109,7 @@ import { ORG, FL_REG_PENDING, BOARD } from '../../consts';
     </ul>
   </Section>
 
-  <Section title="Policies" rule>
+  <Section title="Policies" tone="surface">
     <p>
       <a href="/privacy-policy">Privacy policy</a> &nbsp;·&nbsp;
       <a href="/non-discrimination-policy">Non-discrimination policy</a>

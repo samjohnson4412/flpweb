@@ -25,7 +25,7 @@ const VALUES = [
     lede="That sounds like a non sequitur until you notice that both jobs are the same one: get light to where it's dark, and get people to show up for each other."
   />
 
-  <Section title="Our story">
+  <Section title="Our story" seam={false}>
     <div class="prose">
       <p>
         In 2015 a computerized holiday light show went up in a front yard on
@@ -56,7 +56,7 @@ const VALUES = [
     </div>
   </Section>
 
-  <Section title="Our impact" rule>
+  <Section title="Our impact" tone="surface">
     <p>
       Numbers we can stand behind, with the stories underneath them on the
       <a href="/response">response pages</a>.
@@ -65,7 +65,7 @@ const VALUES = [
     <Video video={VIDEOS.mayor} />
   </Section>
 
-  <Section title="Mission and vision" rule>
+  <Section title="Mission and vision">
     <div class="pair">
       <div>
         <h3>Mission</h3>
@@ -94,7 +94,7 @@ const VALUES = [
     </ul>
   </Section>
 
-  <Section title="Board of directors" rule>
+  <Section title="Board of directors">
     <ul class="board">
       {BOARD.map((m) => (<li><strong>{m.name}</strong><span>{m.role}</span></li>))}
     </ul>
