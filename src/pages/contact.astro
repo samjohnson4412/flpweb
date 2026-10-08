@@ -9,7 +9,7 @@ import { ORG } from '../consts';
 <BaseLayout title="Contact" description="Contact the Florida Lantern Project in Tampa — request assistance, volunteer, sponsor, or ask about press.">
   <Hero eyebrow="Contact" title="Get in touch" lede="We're a small team. Email usually reaches a decision-maker directly." />
 
-  <Section>
+  <Section seam={false}>
     <div class="cols">
       <div>
         <h2>Direct</h2>
@@ -48,7 +48,7 @@ import { ORG } from '../consts';
     </Grid>
   </Section>
 
-  <Section title="Stay in touch" rule>
+  <Section title="Stay in touch">
     <p>
       {/* TODO(sam): wire to Givebutter's list. Note it hasn't been mailed in
           ~15 months, so warm it up before any bulk send — see docs/STRATEGY.md 6c. */}

@@ -1,71 +1,109 @@
 ---
 interface Props {
   title?: string;
-  /** Small eyebrow above the title — used for date stamps, e.g. "As of October 2026". */
+  /** Eyebrow above the title — a category or a date stamp. */
   meta?: string;
   lede?: string;
   tone?: 'default' | 'surface' | 'navy';
   /**
-   * Vertical weight. This is how the page groups itself:
-   *   tight  — continues the thought above it
-   *   default— a new section within the same movement
-   *   loose  — opens a new movement
-   * Uniform spacing everywhere is what makes a page read as disconnected slabs.
+   * Vertical weight — how the page groups itself.
+   *   tight   continues the thought above it
+   *   default a new section in the same movement
+   *   loose   opens a new movement
    */
   space?: 'tight' | 'default' | 'loose';
-  /** Hairline rule above the heading. Set false to suppress on the first section. */
-  rule?: boolean;
+  /** Suppress the seam mark — use on the first section under a hero. */
+  seam?: boolean;
+  /**
+   * Header alignment. Left is the default and the right answer wherever prose
+   * follows — centred body copy is measurably harder to read. Centre is only
+   * for a header sitting over a symmetrical, full-width grid with no
+   * paragraphs under it, where a hard-left heading looks orphaned.
+   */
+  align?: 'left' | 'center';
+  /**
+   * 'stack'  header above content, full width (the default)
+   * 'split'  header in a narrow left rail, content in a wider right column.
+   *          Fills the dead space to the right of a 64ch paragraph and gives
+   *          the page a vertical spine. Stacks below 60rem.
+   */
+  layout?: 'stack' | 'split';
   id?: string;
 }
 const {
-  title, meta, lede, tone = 'default', space = 'default', rule, id,
+  title, meta, lede, tone = 'default', space = 'default', seam = true,
+  align = 'left', layout = 'stack', id,
 } = Astro.props;
-
-// Adjacent same-tone sections need *something* between them, or they merge into
-// one undifferentiated run. A hairline is quieter than a colour change.
-// Default off: a section immediately after a tonal change is already divided.
-const showRule = rule ?? false;
 ---
 
-<section class:list={['sec', `sec--${tone}`, `sp--${space}`, showRule && 'sec--ruled']} id={id}>
+<section
+  class:list={['sec', `sec--${tone}`, `sp--${space}`, seam && 'sec--seam', align === 'center' && 'sec--centred', `lay--${layout}`]}
+  id={id}
+>
   <div class="wrap inner" data-reveal>
-    {(meta || title) && (
-      <header class="head">
-        {meta && <p class="meta">{meta}</p>}
-        {title && <h2>{title}</h2>}
-      </header>
-    )}
-    {lede && <p class="lede">{lede}</p>}
-    <slot />
+    {seam && <span class="tick" aria-hidden="true"></span>}
+    <div class="cols">
+      {(meta || title || lede) && (
+        <header class="head">
+          {meta && <p class="meta">{meta}</p>}
+          {title && <h2>{title}</h2>}
+          {lede && <p class="lede">{lede}</p>}
+        </header>
+      )}
+      <div class="body"><slot /></div>
+    </div>
   </div>
 </section>
 
 <style>
-  .sec { padding-block: var(--space-lg); }
-  .sp--tight { padding-block: var(--space-md); }
-  .sp--loose { padding-block: var(--space-xl); }
+  .sec { padding-block: var(--space-lg); position: relative; }
+  .sp--tight  { padding-block: var(--space-md); }
+  .sp--loose  { padding-block: var(--space-xl); }
 
   .sec--surface { background: var(--color-surface); }
-  .sec--navy { background: var(--flp-navy-900); color: var(--flp-white); }
+  .sec--navy    { background: var(--flp-navy-900); color: var(--flp-white); }
 
-  /* Between two sections sharing a ground, a short accent tick on the left
-     spine instead of a colour change. It marks the division without slabbing
-     the page, and it lines every section head up on the same vertical axis. */
+  /* The seam. A hairline across the full width marks the join, and a short
+     gold tick sits *on* it, aligned to the content's left edge — so the
+     boundary reads as a deliberate mark in a repeating system rather than
+     the accidental edge where one colour stops and another starts. */
+  .sec--seam { border-top: 1px solid var(--color-border); }
+  .sec--navy.sec--seam { border-top-color: rgb(255 255 255 / 0.14); }
+
   .inner { position: relative; }
-  .sec--ruled .inner::before {
-    content: '';
+  .tick {
     position: absolute;
-    top: calc(var(--space-lg) * -0.52);
     left: 0;
-    width: clamp(2.5rem, 14%, 7rem);
-    border-top: 2px solid var(--color-accent);
-    opacity: 0.5;
+    width: 3.25rem;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 2px;
   }
-  .sec--ruled.sp--tight .inner::before { top: calc(var(--space-md) * -0.52); }
-  .sec--ruled.sp--loose .inner::before { top: calc(var(--space-xl) * -0.52); }
+  .sp--default .tick { top: calc(var(--space-lg) * -1 - 2px); }
+  .sp--tight   .tick { top: calc(var(--space-md) * -1 - 2px); }
+  .sp--loose   .tick { top: calc(var(--space-xl) * -1 - 2px); }
+  .sec--navy .tick { background: var(--flp-gold, #e8c37a); }
 
+  /* Header anatomy is identical everywhere, so every section announces
+     itself the same way and the page reads as chapters, not slabs. */
   .head { margin-bottom: var(--space-sm); }
-  .head > * { margin-bottom: 0; }
+  .head > :last-child { margin-bottom: 0; }
+
+  /* Split layout. The header sits in its own rail so the prose column and the
+     content column each have a right edge, instead of text trailing off into
+     1180px of nothing. */
+  @media (min-width: 60rem) {
+    .lay--split .cols {
+      display: grid;
+      grid-template-columns: minmax(14rem, 19rem) 1fr;
+      gap: clamp(2rem, 5vw, 4.5rem);
+      align-items: start;
+    }
+    .lay--split .head { margin-bottom: 0; position: sticky; top: var(--space-md); }
+    .lay--split .head :global(h2) { max-width: none; }
+    .lay--split .lede { font-size: var(--step-0); max-width: none; }
+    .lay--split .body > :global(p) { max-width: var(--measure); }
+  }
   .meta {
     font-family: var(--font-display);
     font-size: var(--step--1);
@@ -77,5 +115,13 @@ const showRule = rule ?? false;
   }
   .sec--navy .meta { color: var(--flp-gold, #e8c37a); }
   .lede { font-size: var(--step-1); color: var(--color-text-muted); max-width: 62ch; }
-  .sec--navy .lede { color: rgba(255, 255, 255, 0.8); }
+
+  /* Centred header. The tick moves to the middle with it, and the lede gets
+     centred too — but only the header block. Body copy stays left wherever
+     the slot puts it. */
+  .sec--centred .head, .sec--centred .lede { text-align: center; }
+  .sec--centred .head :global(h2) { margin-inline: auto; }
+  .sec--centred .lede { margin-inline: auto; }
+  .sec--centred .tick { left: 50%; transform: translateX(-50%); }
+  .sec--navy .lede { color: rgb(255 255 255 / 0.8); }
 </style>

@@ -17,7 +17,7 @@ const fmt = post.data.date.toLocaleDateString('en-US', {
 ---
 <BaseLayout title={post.data.title} description={post.data.description}>
   <Hero eyebrow={fmt} title={post.data.title} lede={post.data.description} />
-  <Section>
+  <Section seam={false}>
     <article class="prose"><Content /></article>
     <p class="back"><a href="/news">&larr; All news</a></p>
   </Section>
