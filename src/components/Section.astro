@@ -21,28 +21,37 @@ interface Props {
    * paragraphs under it, where a hard-left heading looks orphaned.
    */
   align?: 'left' | 'center';
+  /**
+   * 'stack'  header above content, full width (the default)
+   * 'split'  header in a narrow left rail, content in a wider right column.
+   *          Fills the dead space to the right of a 64ch paragraph and gives
+   *          the page a vertical spine. Stacks below 60rem.
+   */
+  layout?: 'stack' | 'split';
   id?: string;
 }
 const {
   title, meta, lede, tone = 'default', space = 'default', seam = true,
-  align = 'left', id,
+  align = 'left', layout = 'stack', id,
 } = Astro.props;
 ---
 
 <section
-  class:list={['sec', `sec--${tone}`, `sp--${space}`, seam && 'sec--seam', align === 'center' && 'sec--centred']}
+  class:list={['sec', `sec--${tone}`, `sp--${space}`, seam && 'sec--seam', align === 'center' && 'sec--centred', `lay--${layout}`]}
   id={id}
 >
   <div class="wrap inner" data-reveal>
     {seam && <span class="tick" aria-hidden="true"></span>}
-    {(meta || title) && (
-      <header class="head">
-        {meta && <p class="meta">{meta}</p>}
-        {title && <h2>{title}</h2>}
-      </header>
-    )}
-    {lede && <p class="lede">{lede}</p>}
-    <slot />
+    <div class="cols">
+      {(meta || title || lede) && (
+        <header class="head">
+          {meta && <p class="meta">{meta}</p>}
+          {title && <h2>{title}</h2>}
+          {lede && <p class="lede">{lede}</p>}
+        </header>
+      )}
+      <div class="body"><slot /></div>
+    </div>
   </div>
 </section>
 
@@ -78,7 +87,23 @@ const {
   /* Header anatomy is identical everywhere, so every section announces
      itself the same way and the page reads as chapters, not slabs. */
   .head { margin-bottom: var(--space-sm); }
-  .head > * { margin-bottom: 0; }
+  .head > :last-child { margin-bottom: 0; }
+
+  /* Split layout. The header sits in its own rail so the prose column and the
+     content column each have a right edge, instead of text trailing off into
+     1180px of nothing. */
+  @media (min-width: 60rem) {
+    .lay--split .cols {
+      display: grid;
+      grid-template-columns: minmax(14rem, 19rem) 1fr;
+      gap: clamp(2rem, 5vw, 4.5rem);
+      align-items: start;
+    }
+    .lay--split .head { margin-bottom: 0; position: sticky; top: var(--space-md); }
+    .lay--split .head :global(h2) { max-width: none; }
+    .lay--split .lede { font-size: var(--step-0); max-width: none; }
+    .lay--split .body > :global(p) { max-width: var(--measure); }
+  }
   .meta {
     font-family: var(--font-display);
     font-size: var(--step--1);
