@@ -1,64 +1,57 @@
-# What I need from you: FLP rebuild in Framer
+# FLP Framer rebuild: what's still open
 
-These are ordered by how much each one unblocks. Send them in any order, in any format: paste text, drop files in the Google Drive `flp` folder, or send links. I'll keep building around anything that's missing and leave a clearly marked gap.
+Updated October 8, 2026, after your answers. Everything you answered is now built into the Framer branch "FLP rebuild". This list is only what's left.
 
-## 1. Decisions (quick answers)
+## Before publishing (these must change)
 
-1. **Which site goes live?** Is the Framer rebuild replacing the Cloudflare/Astro version as the real floridalanternproject.org? Or did the Cloudflare one already go live? This decides whether we keep paying for Framer and where the domain points.
-2. **Can I work on a Framer branch?** My plan is to build on a separate branch and leave the live Framer site untouched until you say "publish." Yes or no?
-3. **Is it OK to replace the old Framer pages?** That means /jamaica, /gala, the old /about/impact sponsor pages and so on. I'll add redirects so old links still work.
-4. **Is Isaias still an active story?** Should the storm banner and the /response/isaias-2026 page go up? Did it reach Florida, and did FLP do anything?
-5. **Which bio do you want on the About page?** Pick one of the drafts from the other thread, or send your own.
+1. **Florida charitable registration number.** The site shows `CH00000` in two places: the footer disclosure on every page, and Transparency → Organization details. Send the real number and I'll swap both. Don't publish with the placeholder; it's a state-required disclosure.
+2. **Home inspector license number.** Transparency → Credentials shows `#000000`.
+3. **Form destinations (about 5 minutes in the Framer editor).** I can't set these from my side. For each form, select the form frame, then in the right panel under **Send To** choose **Email** → `info@floridalanternproject.org`:
+   - /help/request (assistance requests)
+   - /partner (organizations)
+   - /give/volunteer (volunteers)
+   - /events/lanterns-of-hope (light show mailing list)
+   - /contact (newsletter)
+4. **Newsletter → Givebutter contacts.** Framer can't write to Givebutter directly. Pick one:
+   - **(a)** Send the newsletter form to a Webhook, and have a Zapier zap catch it and run Givebutter's "Create Contact" action. This is automatic.
+   - **(b)** Send it to email and add people in Givebutter by hand. Fine at low volume.
 
-## 2. Blocking facts (the site is wrong or incomplete without these)
+## When you have it
 
-6. **Florida charitable registration number (CH#####).** The state requires it in the solicitation disclosure. Without it I'll leave that line out rather than show a placeholder.
-7. **Your officer title** (Founder & President, Executive Director, etc.).
-8. **Titles for Dominic Schaefer and Sandra Jimenez.** Is the board still just the three of you?
-9. **Treasurer.** Still vacant? Should the site keep openly recruiting for it?
-10. **Phone number for the storm line.** Is it (813) 733-8806, or a separate number?
-11. **Email address that receives form submissions** (help requests, partner organizations, volunteers, newsletter). Framer forms can send to an email address or a Google Sheet.
+5. **A quote from Mayor Castor's video.** YouTube blocks me from pulling captions. Send the line you want and I'll set it as a pull quote above the video on About.
+6. **The IRS affirmation letter under the new name**, once it arrives. Transparency currently points people to the IRS search, which is enough until then.
+7. **Photos for the two remaining photo slots** (dashed boxes on the site):
+   - **/response/isaias-2026: aerial or street-level storm damage on the Gulf Coast.** Your own, or a news or editorial photo you license with paperwork you keep. Never plain stock next to real storm coverage.
+   - **/partner: a volunteer with a local partner** (pastor, pantry lead) outside their building. It has to be your own photo of a real partner, with their permission.
 
-## 3. Giving (Givebutter)
+## Licensed stock (optional; for mood only, never as "documentation")
 
-12. **The donate link** for the general Givebutter campaign or form.
-13. **A real monthly Lantern Keeper plan in Givebutter**, and its link. This is the main call to action on the site; the gala produced zero monthly donors partly because this page didn't exist. Suggested tiers: $10, $25, $50 a month.
-14. **Newsletter signup.** Should it go into Givebutter contacts, or somewhere else (Mailchimp, etc.)?
+If you buy stock, these are the slots where it helps. Each would replace a plain navy header:
 
-## 4. Credentials (for the transparency page, all publicly checkable)
+| Page | What the image is for | Look for |
+|---|---|---|
+| /help | "Tell us where you are in the storm" | Dark storm clouds over a Florida neighborhood; no people |
+| /give | "Five ways to help" | Warm lantern or porch light at dusk |
+| /events | Events landing | Holiday lights, a crowd at night, soft focus (your own light show photos work too) |
+| /contact | "Get in touch" | Tampa skyline at blue hour |
+| /blog | News | Bay or sky texture, very quiet |
 
-15. **FAA Part 107 certificate number.**
-16. **Florida home inspector license number.**
-17. **IRS determination letter (PDF).**
-18. **Most recent Form 990 or 990-N** (PDF or link).
-19. **Florida annual report / Sunbiz link** showing the legal name change.
+Rule of thumb: stock can set a mood. It must never look like it shows a family we helped or a storm we responded to.
 
-## 5. Media
+## Decided and done (for the record)
 
-20. **Gala films uploaded to YouTube (unlisted is fine), with the links:**
-    - `2_The RoadToSafety.mp4` (goes on the Milton page)
-    - `3_Roofs.mp4` (goes on After a Storm)
-    - `5_Mayor.mp4` (goes on About)
-    - Also `1_From Lights to Lifelines` and `4_Guiding Families to Safety`, if you can find them.
-21. **A usable quote line from Mayor Castor's video**, if you want one pulled out as text.
-22. **A headshot of you**, plus headshots of the board if you want them shown.
-23. **A full-resolution original of the Milton tornado map** (IMG_1625; the copy I have is only 585px).
-24. **Consent for two held-back items:**
-    - **IMG_1043** (two identifiable children): written parental consent, or I leave it out.
-    - **The thank-you texts** (IMG_1044, 1045, 1047): OK from the senders to publish them anonymously?
-25. **Light show footage.** Your YouTube channel links or any highlight video from the light show years.
-26. **Licensed stock budget.** You said you'd buy some. I'll mark every slot where an atmospheric photo would help (sky, storm, Tampa skyline). Real events and real people stay your own photos only. Tell me your budget, or a site you already have an account on (Adobe Stock, Shutterstock, Unsplash+).
-
-## 6. Links and accounts
-
-27. **Social links:** Facebook, Instagram, YouTube, LinkedIn, TikTok — whichever exist.
-28. **Press links:** the NBC Nightly News segment URL and any of the Tampa Bay Times, Fox 13, WFLA, ABC Action News or Bay News 9 pieces you can find.
-29. **Sponsor logos.** Do you have permission files or the original logo files? Otherwise I'll use name-only sponsor cards; that's what the old site effectively did.
-30. **Framer plan.** Which plan are you on? It limits the number of pages and CMS items; there are 46 sponsors.
-
-## 7. Nice to have (helps, but doesn't block)
-
-31. **Any 2024 numbers you can confirm:** families helped, roofs inspected, hotel nights, which counties.
-32. **"Two years later" updates:** how are Peter, Maria and Amy doing now? That makes the strongest proof on the site.
-33. **Haunted house details:** years, attendance, and what it raised.
-34. **Anything else about the light show's return** (Lanterns of Hope) that you want promised publicly, or kept vague.
+- Framer replaces Cloudflare; the real domain stays on Framer. The work is on a branch until you say "publish."
+- Old pages: replaced and unpublished, with redirects.
+- Isaias page stays active.
+- Bio: the website bio from the other thread, rewritten without pronouns, title "President".
+- Board: Samuel Johnson (President), Dominic Schaefer (Vice President), Miqueias Torres de Almeida (Secretary), Sandra Jimenez (Director). Headshots added, and the treasurer isn't mentioned anywhere.
+- Phone (813) 733-8806. FAA Part 107 #004295077 is on Transparency.
+- Givebutter: Donate → flp-2026-general-icpnek, Lantern Keeper → lantern-keeper-85kbxv. These are easy to swap per season.
+- Filings: Transparency links to the IRS and Sunbiz lookups instead of hosting the PDFs, because the PDFs include board members' home addresses and your cell number.
+- Legal name change date corrected to January 2026, with state document number N21000004590.
+- Videos embedded: Mayor (About), Roof Inspections (After a Storm), The Road to Safety (Milton), and two light show videos (Lanterns of Hope).
+- IMG_1043 and the thank-you texts are on the Milton page. The texts are typed out as quotes, with no names.
+- Sponsor logos are on the sponsor list and each sponsor's page.
+- Press links verified. The 2023 Spectrum piece is relabelled "Bay News 9".
+- Peter's update is on Milton and the homepage. The haunted house (300 people on Halloween night) is on Lanterns of Hope.
+- Lanterns of Hope stays deliberately vague: no dates, venue or promises.
