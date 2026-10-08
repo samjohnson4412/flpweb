@@ -23,7 +23,7 @@ The source of truth for anything written about FLP: the website, emails, posts a
 - **Giving:** donations run through Givebutter, with links that change per season or campaign. Current: general fund https://givebutter.com/flp-2026-general-icpnek; Lantern Keeper monthly https://givebutter.com/lantern-keeper-85kbxv.
 - **Newsletter:** sign-ups go to Givebutter contacts. Sent never more than monthly, covering storm preparedness, what FLP did afterward, and light show news.
 - **Base and service area:** based in Tampa Bay; describe the service area as "Florida".
-- **Website:** floridalanternproject.org runs on Framer. The rebuild is on the Framer branch "FLP rebuild". The Cloudflare/Astro site was never pointed at the domain.
+- **Website:** floridalanternproject.org runs on Framer. The rebuild was merged into main and published on October 8, 2026. The Cloudflare/Astro site was never pointed at the domain.
 
 ## History: the light show (Sylvan Ramble Lights)
 
