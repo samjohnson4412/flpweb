@@ -1,12 +1,12 @@
 # FLP Framer rebuild: what's still open
 
-Updated October 8, 2026, after your answers. Everything you answered is now built into the Framer branch "FLP rebuild". This list is only what's left.
+Updated October 8, 2026. The "FLP rebuild" branch was merged into main and published to floridalanternproject.org on October 8, 2026 (Framer version 2e4f07d3d). This list is only what's left.
 
-## Before publishing (these must change)
+## Still to do now that the site is live
 
-1. **Florida charitable registration number.** The site shows `CH00000` in two places: the footer disclosure on every page, and Transparency → Organization details. Send the real number and I'll swap both. Don't publish with the placeholder; it's a state-required disclosure.
+1. **Florida charitable registration (Ch. 496).** It has lapsed and is being renewed, so the site shows no registration number. The site asks for donations, so finish the renewal quickly, then send the new number and I'll add it to the footer disclosure and Transparency.
 2. **Home inspector license (pending with the state).** Every license claim was removed from the site on Oct 8: the Transparency card, the bio, and the inspection wording on Home, Before/After a Storm, Milton, Isaias and Partner. Once the license is active, send the number and I'll restore them.
-3. **Form destinations (about 5 minutes in the Framer editor).** I can't set these from my side. For each form, select the form frame, then in the right panel under **Send To** choose **Email** → `info@floridalanternproject.org`:
+3. **Form destinations (about 5 minutes in the Framer editor; urgent now that the site is live).** I can't set these from my side, and until they're set, form submissions may not reach you. For each form, select the form frame, then in the right panel under **Send To** choose **Email** → `info@floridalanternproject.org`:
    - /help/request (assistance requests)
    - /partner (organizations)
    - /give/volunteer (volunteers)
@@ -40,7 +40,7 @@ Rule of thumb: stock can set a mood. It must never look like it shows a family w
 
 ## Decided and done (for the record)
 
-- Framer replaces Cloudflare; the real domain stays on Framer. The work is on a branch until you say "publish."
+- Framer replaces Cloudflare; the real domain stays on Framer. The rebuild was merged and published on October 8, 2026.
 - Old pages: replaced and unpublished, with redirects.
 - Isaias page stays active.
 - Bio: the website bio from the other thread, rewritten without pronouns, title "President".
