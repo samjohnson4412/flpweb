@@ -5,7 +5,7 @@ Updated October 8, 2026, after your answers. Everything you answered is now buil
 ## Before publishing (these must change)
 
 1. **Florida charitable registration number.** The site shows `CH00000` in two places: the footer disclosure on every page, and Transparency → Organization details. Send the real number and I'll swap both. Don't publish with the placeholder; it's a state-required disclosure.
-2. **Home inspector license number.** Transparency → Credentials shows `#000000`.
+2. **Home inspector license (pending with the state).** Every license claim was removed from the site on Oct 8: the Transparency card, the bio, and the inspection wording on Home, Before/After a Storm, Milton, Isaias and Partner. Once the license is active, send the number and I'll restore them.
 3. **Form destinations (about 5 minutes in the Framer editor).** I can't set these from my side. For each form, select the form frame, then in the right panel under **Send To** choose **Email** → `info@floridalanternproject.org`:
    - /help/request (assistance requests)
    - /partner (organizations)
@@ -45,7 +45,7 @@ Rule of thumb: stock can set a mood. It must never look like it shows a family w
 - Isaias page stays active.
 - Bio: the website bio from the other thread, rewritten without pronouns, title "President".
 - Board: Samuel Johnson (President), Dominic Schaefer (Vice President), Miqueias Torres de Almeida (Secretary), Sandra Jimenez (Director). Headshots added, and the treasurer isn't mentioned anywhere.
-- Phone (813) 733-8806. FAA Part 107 #004295077 is on Transparency.
+- Phone (813) 733-8806. FAA Part 107 #004295077 is on Transparency. The site makes no home inspector license claims until the license is issued.
 - Givebutter: Donate → flp-2026-general-icpnek, Lantern Keeper → lantern-keeper-85kbxv. These are easy to swap per season.
 - Filings: Transparency links to the IRS and Sunbiz lookups instead of hosting the PDFs, because the PDFs include board members' home addresses and your cell number.
 - Legal name change date corrected to January 2026, with state document number N21000004590.
