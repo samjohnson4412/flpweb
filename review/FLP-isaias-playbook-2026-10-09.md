@@ -15,6 +15,7 @@ We're staying in Tampa: reachable by phone, coordinating through county emergenc
   - The forecast is updated to October 9.
   - The Saturday post no longer mentions the insurer's inspection.
   - Email 3 no longer asks for unflattering numbers.
+  - Added a Secondary recovery (weeks 2–8) section with trip criteria, and three intake questions (9 to 11) about FEMA, insurance claims and tarped roofs.
 - Square brackets mark placeholders to fill in before sending.
 - The forecast changes by the hour. Check the National Hurricane Center (nhc.noaa.gov) before sending or posting anything.
 
@@ -77,6 +78,7 @@ Do these top to bottom.
 - [ ] **If invited up:** help with FEMA and SBA paperwork, and fly the drone once the county clears it. Partner organizations can also request phone and data plans for the people they serve.
 - [ ] **Every day:** keep the line answered and log every call; forward it to a second person when you can't pick up.
 - [ ] Post the "what we're doing" update, with only true numbers.
+- [ ] Check the intake log against the trip criteria in Secondary recovery. If they are met, start planning a partner-hosted trip for weeks 2 to 6.
 - [ ] In Tampa, start calling the 2024 families back. That work needs no storm.
 
 ### Week 3–4, October 26 – November 8
@@ -84,6 +86,36 @@ Do these top to bottom.
 - [ ] Send Email 3, the report-back. Add a Lantern Keeper ask only if the registration renewal is done.
 - [ ] Switch the Isaias page from active to concluded, with what we did.
 - [ ] Get FLP listed with 211, and join the Hillsborough COAD and Pinellas VOAD. That's what makes the next storm reach us.
+
+## Secondary recovery (weeks 2–8)
+
+The first week belongs to FEMA, the Red Cross, utility crews and the news. The gaps open in weeks 2 to 8, after most of them have moved on. That is where FLP is most useful, and it is the most likely reason we would travel.
+
+**What people need in weeks 2 to 8**
+
+- Documentation to dispute a low first offer or file a supplemental insurance claim
+- Help with FEMA appeals after a denial letter
+- Help completing SBA disaster loan applications before the deadline
+- Drone documentation for roofs that are still under tarps or that no one has documented yet
+
+**Deadlines to check.** FEMA registration and SBA physical-damage loan applications usually close about 60 days after the disaster declaration. Look up the actual dates once Isaias is declared, add them here, and mention them on every callback.
+
+**Start by phone.** Paperwork help, FEMA registration and SBA applications do not require being there. Begin with the callback list from the intake sheet.
+
+**When to plan a trip.** Go only when all of these are true:
+
+- [ ] The intake log shows clustered need in one county (several households needing documentation or paperwork help), not scattered calls.
+- [ ] A local partner (a church, pantry or county agency) invites us and can host a location for a day or two.
+- [ ] The county has cleared drone operations and the roads are open.
+- [ ] The trip is covered: fuel and lodging donated or sponsored by a partner or business, or within FLP's budget. FLP has about $2,000 in the bank, and there is no public fundraising until the registration renewal is done. In-kind help from a partner or sponsor is not a public solicitation.
+
+**What a trip looks like.** One or two days based at the partner's location, ideally in weeks 2 to 6:
+
+- Drone documentation with written reports, by appointment, starting with households from the intake log
+- FEMA, SBA and insurance paperwork help at a table on site
+- Callbacks to everyone in that county from the intake log before the trip, so people know when and where to come
+
+**How to say it publicly.** "We are coordinating with local organizations and will only travel into affected areas when requested and when conditions are safe." If a trip is confirmed, announce it through the host partner first, then on our own channels, with the date, location and what to bring (insurance claim number, FEMA registration number, photos of the damage).
 
 ## Phone script: emergency management, 211, COAD
 
@@ -316,6 +348,11 @@ Ask these in order on every call and log the answers in the sheet. The list beco
 6. "Do you have a working phone and data?"
 7. "Do you own or rent? Do you have homeowners or flood insurance?"
 8. "Can I call you back in a few days to check on you?" Never skip this one.
+9. "Have you registered with FEMA?" If yes, note the registration number.
+10. "Have you filed an insurance claim, and has an adjuster come out yet?"
+11. "Is any part of your roof still uncovered or under a tarp?"
+
+Questions 9 to 11 show who will need help in secondary recovery. Ask them on callbacks too, since the answers change week to week.
 
 ## Sources
 
