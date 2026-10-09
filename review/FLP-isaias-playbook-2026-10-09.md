@@ -7,7 +7,7 @@ We're staying in Tampa: reachable by phone, coordinating through county emergenc
 ## Notes for the reviewing agent
 
 - This is FLP's playbook for Hurricane Isaias (October 2026). It holds the emails, social posts, phone script and storm line intake questions Sam is sending now.
-- `FLP-FACTS.md` in this repo is the source of truth for every fact and content rule. Where this file and FLP-FACTS.md disagree, FLP-FACTS.md wins.
+- FLP-FACTS.md in this repo is the source of truth for every fact and content rule. Where this file and FLP-FACTS.md disagree, FLP-FACTS.md wins.
 - Changes made on October 9:
   - FLP is coordinating, not self-deploying, so every "we're driving up" or "we'll be in your area" line is gone.
   - The offer of charging and Wi-Fi on the ground is gone. Those are for FLP's own use, or go through partner organizations.
@@ -51,7 +51,7 @@ Do these top to bottom.
 
 - [ ] Finish the Florida charitable registration renewal, and send Claude the CH number when it's issued.
 - [x] Set the five Framer form destinations and publish the site. Done: the site is live with the Isaias page and the storm line.
-- [ ] Make sure (813) 733-8806 gets answered. Voicemail greeting: "You've reached the Florida Lantern Project storm line. If you are in danger, hang up and call 911. Otherwise leave your name, number and city, and we'll call you back today."
+- [ ] Make sure (813) 733-8806 gets answered. Voicemail greeting: "You've reached the Florida Lantern Project storm line. If you are in immediate danger, hang up and call 911. Otherwise, please leave your name, phone number, and city, and we'll return your call as soon as we can."
 - [ ] Make a Google Sheet with one column per intake question (see Storm line intake).
 - [ ] Call county emergency management in Escambia, Santa Rosa, Okaloosa, Walton and Bay, plus 211 for those counties. Use the phone script. Write down every name.
 - [ ] Send Email 1 to at least 30 Panhandle churches, pantries, senior centers, Habitat affiliates and mobile home park managers.
@@ -91,9 +91,9 @@ Keep it under 30 seconds; they are busy. The point of the call is a name.
 
 > "Hi, this is Sam Johnson with the Florida Lantern Project, a Florida 501(c)(3) based in Tampa.
 >
-> We're reachable by phone, and we'd rather coordinate through you than show up unannounced. I'm an FAA Part 107 certified drone pilot, and after it passes I can document roof and property damage with a written report families can use for insurance and SBA. We also run a phone line a person answers, and we help people through FEMA and SBA paperwork.
+> We're staying in Tampa for now and coordinating through local agencies rather than showing up on our own. I'm an FAA Part 107 certified drone pilot, and after the storm we can help document roof and property damage with aerial photos and a written report. We also help people work through FEMA, SBA, and other recovery programs, and we operate a non-emergency storm line.
 >
-> Who should I talk to about where we'd be useful, and who handles drone flights under the temporary flight restriction?"
+> I wanted to ask who we should coordinate with if those services would be useful in your county, and who handles drone operations or temporary flight restrictions after the storm?"
 
 Then stop talking and write down the name, number and anything they ask for.
 
@@ -103,13 +103,13 @@ Then stop talking and write down the name, number and anything they ask for.
 >
 > Hi [Name],
 >
-> Thanks for taking my call today. As promised, here's what we can offer [County] after Isaias, at no cost:
+> Thank you for taking my call today. As promised, here is what the Florida Lantern Project may be able to provide in [County] after Hurricane Isaias, at no cost:
 >
-> - Drone documentation of roof and property damage, flown under FAA Part 107, with a written report families keep
-> - Help applying for FEMA, SBA disaster loans and local programs
-> - A phone line a person answers: (813) 733-8806
+> - Drone documentation of roof and property damage, conducted under FAA Part 107, with a written report for the household
+> - Help understanding and applying for FEMA, SBA disaster loans, and local assistance programs
+> - Our non-emergency storm line at (813) 733-8806
 >
-> We're coordinating from Tampa. If there's a place in [County] where we'd be useful, tell us and we'll work out how to get there.
+> We are coordinating from Tampa rather than deploying on our own. If there is a need in [County] where our services would be useful, please let me know and we can coordinate with you.
 >
 > Sam Johnson
 > President, Florida Lantern Project, Inc. · EIN 86-3574323
@@ -119,19 +119,19 @@ Then stop talking and write down the name, number and anything they ask for.
 
 Send by email, text or Facebook message. Keep it short; nobody reads a long message 24 hours out.
 
-**Subject:** Free help for your people after Isaias
+**Subject:** Free post-storm help for families you serve
 
 > Hi,
 >
-> I'm Sam Johnson with the Florida Lantern Project, a Florida 501(c)(3) based in Tampa. After Hurricanes Helene and Milton in 2024 we helped more than 50 households, and we want to help people in your area after Isaias passes.
+> I'm Sam Johnson with the Florida Lantern Project, a Florida 501(c)(3) based in Tampa. After Hurricanes Helene and Milton in 2024, we assisted more than 50 individuals and families. With Hurricane Isaias approaching the northern Gulf Coast, I wanted to make sure organizations in the area know what we may be able to provide after the storm.
 >
-> Everything below is free, and I'm not asking you for anything:
+> There is no cost for any of these services:
 >
-> - **Drone documentation of roof and property damage**, once it's safe to fly, with a written report families keep for their insurer or an SBA disaster loan. I'm an FAA Part 107 certified drone pilot.
-> - **Help with FEMA, SBA and local aid.** SBA disaster loans are open to homeowners and renters, not only businesses, and most people are never told.
-> - **A phone line a person answers:** (813) 733-8806.
+> - **Drone documentation of roof and property damage**, once conditions are safe to fly, with a written report the household can keep. I'm an FAA Part 107 certified remote pilot.
+> - **Help navigating FEMA, SBA, and local assistance programs.** SBA disaster loans may be available to homeowners and renters, not only businesses.
+> - **A non-emergency storm line:** (813) 733-8806.
 >
-> People don't trust an offer from a stranger, but they trust one from you. If this would help anyone you serve, pass it on however you normally reach them, or send me their name and number.
+> We know your community is much more likely to hear about us through an organization they already trust. If any of these services could be useful to the people you serve, please feel free to share our information or connect us directly.
 >
 > Stay safe this weekend.
 >
@@ -148,17 +148,21 @@ The list hasn't been mailed in about 15 months and lives in Tampa, not the Panha
 
 **Subject:** Do you know anyone in the Panhandle?
 
-> It's been a while since we wrote. This isn't a donation ask.
+> It's been a while since we've sent an email, but with Hurricane Isaias approaching the northern Gulf Coast, there's something simple you may be able to help us with.
 >
-> Hurricane Isaias is forecast to come ashore late tonight or early Saturday, near Pensacola or along the Alabama coast. Pensacola, Fort Walton Beach, Destin and Panama City are under hurricane warnings.
+> FLP is based in Tampa, so we don't have the same connections in the Panhandle that we have here. If you have family, friends, coworkers, a church, or another connection anywhere around Pensacola, Fort Walton Beach, Destin, or Panama City, please forward this email to them.
 >
-> After it passes, we can help people there for free: help with FEMA and SBA paperwork, a phone line a person answers, and drone documentation of roof damage with a written report for their insurer or an SBA loan.
+> After the storm, we may be able to help at no cost with:
 >
-> The problem is that we're known in Tampa and almost nobody up there has heard of us. **If you have family, friends, coworkers or a church anywhere from Pensacola to Panama City, please forward this to them.** One forward from you does more than anything we could post.
+> - FEMA, SBA, and local assistance paperwork
+> - Drone documentation of roof and property damage, with a written report
+> - Non-emergency storm questions by phone at (813) 733-8806
 >
-> Our storm line is **(813) 733-8806**. Everything we're offering is at floridalanternproject.org/response/isaias-2026.
+> We are coordinating with organizations already in the area rather than simply showing up after the storm.
 >
-> And if you're reading this in Tampa: we're glad it isn't us this time, and we'll be ready when it is.
+> More information is available at floridalanternproject.org/response/isaias-2026.
+>
+> And for everyone here in Tampa, we're grateful this one isn't headed our way. We'll keep doing the work now that helps us be better prepared when the next one is.
 >
 > Sam Johnson
 > Florida Lantern Project
@@ -169,21 +173,23 @@ The list hasn't been mailed in about 15 months and lives in Tampa, not the Panha
 
 Fill in the brackets with real numbers only, and leave out any line whose number is too small to help. Add the last paragraph only if the Florida registration renewal is done.
 
-**Subject:** What we did for Isaias, and what we didn't
+**Subject:** An update on our Hurricane Isaias response
 
-> Three weeks ago we asked you to forward an email to anyone you knew in the Panhandle. [Number] of you did, and here's what came of it.
+> A few weeks ago, we asked you to share our information with people you knew in the areas affected by Hurricane Isaias. Here's what happened afterward.
 >
-> - [Number] people called the storm line
-> - [Number] households got help with FEMA, SBA or insurance paperwork
-> - [Number] roofs documented by drone, with written reports [or: we weren't asked to come up, so we stayed in Tampa and helped by phone]
+> - [Number] people contacted the storm line
+> - [Number] households received help with FEMA, SBA, or other recovery paperwork
+> - [Number] properties were documented by drone in [County]
 >
-> [One real story, first name only and with permission: what happened, what we did, where things stand now.]
+> [If FLP did not deploy: We were not asked to deploy to the affected area, so we stayed in Tampa and provided assistance by phone.]
 >
-> What we learned: [one line, for example "we're still unknown north of Tallahassee, and most calls came from people who already knew us."] We're fixing that by joining 211 and our county emergency networks, so the next storm reaches us wherever it lands.
+> [One short real story, using a first name only and with permission.]
 >
-> [Only if the registration renewal is done:] The reason we could answer at all is that the answer doesn't depend on a fundraiser. Lantern Keepers give monthly so we're ready before a storm has a name. If that's you: floridalanternproject.org/give/lantern-keeper
+> One thing this storm reinforced is that FLP still has much stronger connections in Tampa Bay than we do in other parts of Florida. We're working on that by building relationships with 211, emergency-management networks, and community organizations before the next storm.
 >
-> Thank you for reading, and for forwarding.
+> [ONLY IF REGISTRATION IS CURRENT: If you would like to help us maintain that year-round readiness, our Lantern Keeper program provides monthly support for the storm line, damage documentation, and other response costs: floridalanternproject.org/give/lantern-keeper]
+>
+> Thank you to everyone who shared our information or connected us with someone who needed it.
 >
 > Sam Johnson
 > Florida Lantern Project
@@ -196,70 +202,113 @@ Facebook gets the full text and Instagram the short caption. Use your own photos
 
 **Facebook**
 
-> Hurricane Isaias is forecast to come ashore late tonight or early Saturday, near Pensacola or along the Alabama coast.
+> Hurricane Isaias is approaching the northern Gulf Coast, with the Florida Panhandle among the areas preparing for impacts tonight.
 >
-> We're based in Tampa, and almost nobody up there has heard of us. That's why we're asking you. If you have family or friends anywhere from Pensacola to Panama City, share this with them.
+> FLP is based in Tampa, so we're asking for some help reaching people farther north. If you have family, friends, coworkers, a church, or another connection in the Panhandle, please share this with them.
 >
-> After the storm, everything below is free:
-> • Drone documentation of roof damage, with a written report for your insurer or an SBA loan
-> • Help with FEMA, SBA and local aid paperwork
-> • A phone line a real person answers: (813) 733-8806
+> After the storm, we may be able to help at no cost with:
+> • Drone documentation of roof and property damage, with a written report
+> • Help navigating FEMA, SBA, and local assistance programs
+> • Non-emergency storm questions by phone at (813) 733-8806
+>
+> We are coordinating with local organizations and will only travel into affected areas when requested and when conditions are safe.
 >
 > If you're in danger, call 911 first. We are not an emergency service. floridalanternproject.org/response/isaias-2026
 
 **Instagram**
 
-> Isaias is headed for the Panhandle. Got family between Pensacola and Panama City? Send them this. Free drone roof documentation, help with FEMA and SBA, and a line a person answers: (813) 733-8806. Link in bio.
+> Hurricane Isaias is approaching the northern Gulf Coast tonight.
+>
+> If you know someone in the Florida Panhandle, please send them our information. After the storm, FLP may be able to help with free drone damage documentation, FEMA and SBA assistance, and non-emergency questions by phone.
+>
+> Storm line: (813) 733-8806
+>
+> If you are in immediate danger, call 911.
+>
+> More information at the link in our bio.
 
 ### Friday evening: the line is open
 
 **Facebook**
 
-> Isaias comes ashore tonight. If you're in the warning area and you're deciding whether to stay or go, please go when your county tells you to. Find your evacuation order at floridadisaster.org.
+> Hurricane Isaias is expected to make landfall tonight.
 >
-> If your reason for staying is a pet, call us first: (813) 733-8806. Shelters that refuse animals are one of the most common reasons families don't leave, and it's often solvable.
+> If local officials tell you to evacuate, please follow their instructions. You can find official evacuation and emergency information through your county and at floridadisaster.org.
 >
-> If you are in danger right now, call 911.
+> If pets or transportation are making it difficult for you to leave, you can call the FLP storm line at (813) 733-8806 and we'll see whether we can help identify an option.
+>
+> Our line is non-emergency. If you are in immediate danger, call 911.
 
 **Instagram**
 
-> Landfall tonight. Go when your county says go. If your pet is the reason you're staying, call us first: (813) 733-8806. In danger right now? Call 911.
+> Hurricane Isaias is expected to make landfall tonight.
+>
+> Follow evacuation instructions from your county. If pets or transportation are making it difficult for you to leave, call our non-emergency storm line at (813) 733-8806 and we'll see whether we can help identify an option.
+>
+> If you are in immediate danger, call 911.
 
 ### Saturday: after it passes
 
 **Facebook**
 
-> If Isaias damaged your roof, do these things before anyone touches it:
+> If your home was damaged by Hurricane Isaias, document what happened as soon as it is safe to do so.
 >
-> 1. Stay off the roof and away from downed lines.
-> 2. Photograph every side of the house and every room with damage, with the date showing.
-> 3. Keep every receipt: tarps, lodging, food, repairs.
-> 4. Call your insurer and write down the claim number and the name of who you spoke to.
-> 5. Keep copies of every report and letter about the damage.
+> A few things to remember:
 >
-> Once it's safe to fly, we document roof damage by drone and give you a written report you keep. Free. (813) 733-8806.
+> 1. Stay off damaged roofs and away from downed power lines.
+> 2. Take clear photos and video of visible damage before cleanup or repairs begin, when possible.
+> 3. Keep receipts for temporary repairs, lodging, and other storm-related expenses.
+> 4. If you file an insurance claim, save the claim number and your communications with the insurer.
+> 5. Keep copies of reports, estimates, photographs, and other documents related to the damage.
+>
+> Once conditions are safe for drone operations, FLP may be able to provide free aerial documentation of roof and property damage with a written report.
+>
+> Call (813) 733-8806 or visit floridalanternproject.org/help/request.
 
 **Instagram**
 
-> Roof damage from Isaias? Before anyone touches it: photograph everything, keep every receipt, write down your claim number. Then call us for free drone documentation: (813) 733-8806.
+> Storm damage from Isaias?
+>
+> Once it is safe, photograph and video visible damage before cleanup or repairs begin when possible. Keep receipts, claim information, estimates, reports, and other records together.
+>
+> FLP may also be able to provide free drone documentation of roof and property damage once conditions are safe to fly.
+>
+> (813) 733-8806
+> Link in bio.
 
 ### Week 1 or 2: what we're doing (only true numbers)
 
 **Facebook**
 
-> An update from the week after Isaias. So far we've [taken X calls on the storm line / helped X families with FEMA and SBA paperwork / documented X roofs by drone in [County], at the invitation of [partner]].
+> A quick update on FLP's Hurricane Isaias response:
 >
-> If you or someone you know is still waiting on an adjuster or wondering whether you qualify for an SBA disaster loan, call (813) 733-8806. Homeowners and renters can both apply, and most people are never told.
+> So far, we've:
+>
+> • Taken [X] calls through the storm line
+> • Helped [X] households with FEMA, SBA, or other recovery paperwork
+> • Documented [X] properties by drone in [County], in coordination with [partner]
+>
+> [Delete any line that does not apply.]
+>
+> If you are still working through storm damage or trying to understand what assistance may be available, call us at (813) 733-8806.
+>
+> SBA disaster loans may be available to eligible homeowners and renters as well as businesses.
 
 **Instagram**
 
-> One week after Isaias: [X] calls, [X] families helped with paperwork. Still stuck on a claim? (813) 733-8806.
+> An update on our Hurricane Isaias response:
+>
+> [X] storm-line calls
+> [X] households helped with recovery paperwork
+> [X] properties documented by drone in [County]
+>
+> If you're still trying to figure out FEMA, SBA, or other recovery options, call (813) 733-8806.
 
 ## Storm line intake
 
 Ask these in order on every call and log the answers in the sheet. The list becomes the recovery route and the numbers for Email 3.
 
-1. "Are you safe right now?" If not: "Please hang up and call 911." Stay on until they agree.
+1. "Are you somewhere safe right now?" If no: "If you are in immediate danger, please hang up and call 911."
 2. "What's your name and the best number to reach you?"
 3. "Where are you? Address or nearest cross streets, and county."
 4. "Who's with you, people and animals?"
