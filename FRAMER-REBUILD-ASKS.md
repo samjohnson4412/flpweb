@@ -6,12 +6,7 @@ Updated October 8, 2026. The "FLP rebuild" branch was merged into main and publi
 
 1. **Florida charitable registration (Ch. 496).** It has lapsed and is being renewed, so the site shows no registration number. The site asks for donations, so finish the renewal quickly, then send the new number and I'll add it to the footer disclosure and Transparency.
 2. **Home inspector license (pending with the state).** Every license claim was removed from the site on Oct 8: the Transparency card, the bio, and the inspection wording on Home, Before/After a Storm, Milton, Isaias and Partner. Once the license is active, send the number and I'll restore them.
-3. **Form destinations (about 5 minutes in the Framer editor; urgent now that the site is live).** I can't set these from my side, and until they're set, form submissions may not reach you. For each form, select the form frame, then in the right panel under **Send To** choose **Email** → `info@floridalanternproject.org`:
-   - /help/request (assistance requests)
-   - /partner (organizations)
-   - /give/volunteer (volunteers)
-   - /events/lanterns-of-hope (light show mailing list)
-   - /contact (newsletter)
+3. **Form destinations:** done. Sam set all five forms to send to info@floridalanternproject.org on October 9, 2026.
 4. **Newsletter → Givebutter contacts.** Framer can't write to Givebutter directly. Pick one:
    - **(a)** Send the newsletter form to a Webhook, and have a Zapier zap catch it and run Givebutter's "Create Contact" action. This is automatic.
    - **(b)** Send it to email and add people in Givebutter by hand. Fine at low volume.
